@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<wheel xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../../shared/xml/schema/wheel.xsd">
+    <metadata brand="MICHELIN" name="AXIOBIB" category="TRACTOR" />
+    <default>
+        <physics radius="0.9377" visualOffset="0.005" width="0.65" mass="0.359" tireType="mud" frictionScale="1.60" maxLongStiffness="11" maxLatStiffness="130" maxLatStiffnessLoad="2" />
+        <tire filename="wheels/axioBib/650_65R38.i3d" nodeLeft="0|0" nodeRight="0|0" maxDeformation="0.0847" tireTrackAtlasIndex="0" hasMudMesh="true" />
+        <outerRim filename="$data/shared/wheels/rims/rim001.i3d" node="1|0" widthAndDiam="23 38" />
+        <innerRim filename="$data/shared/wheels/rims/rim001.i3d" nodeLeft="3|0" nodeRight="3|1" widthAndDiam="23 38" />
+    </default>
+    <configurations>
+        <configuration id="dual">
+            <innerRim filename="-" />
+        </configuration>
+        <configuration id="rim3">
+            <innerRim filename="$data/shared/wheels/rims/rim003.i3d" nodeLeft="1|0" nodeRight="1|1" widthAndDiam="23 38" />
+        </configuration>
+        <configuration id="weight3">
+            <additional filename="$data/shared/wheels/weights/weight003.i3d" nodeLeft="0|0" nodeRight="0|1" offset="0.05" scale="0.47 0.85 0.85" mass="0.6" />
+        </configuration>
+    </configurations>
+</wheel>

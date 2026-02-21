@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="yarderCarriage" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>ECKO FLEX</name>
+        <rotation>0</rotation>
+        <image>$data/store/store_empty.png</image>
+        <price>650</price>
+        <lifetime>600</lifetime>
+        <brand>KOLLER</brand>
+        <category>forestryWinches</category>
+        <showInStore>false</showInStore>
+        <canBeSold>false</canBeSold>
+        <shopTranslationOffset>0 0 0</shopTranslationOffset>
+        <vertexBufferMemoryUsage>289536</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>86272</indexBufferMemoryUsage>
+        <textureMemoryUsage>327680</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_weight</typeDesc>
+        <filename>$data/vehicles/koller/eckoFlex/eckoFlex.i3d</filename>
+        <size width="2" length="1" />
+        <components>
+            <component centerOfMass="0 -0.1 0" solverIterationCount="10" mass="1000" />
+            <component centerOfMass="0 0 0" solverIterationCount="10" mass="2000" />
+            <component centerOfMass="0 0 0" solverIterationCount="10" mass="1500" />
+            <joint component1="1" component2="2" node="componentJointLifter" rotMinLimit="-70 0 0" rotLimit="40 0 0" transLimit="0 0 0" rotDriveVelocity="0 0 0" maxRotDriveForce="1 1 1"/>
+            <joint component1="2" component2="3" node="componentJointRope" rotLimit="0 0 0" transLimit="0 0 0" rotDriveVelocity="0 0 0" maxRotDriveForce="0.5 0.5 0.5"/>
+            <collisionPair component1="1" component2="3" enabled="false"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT" />
+        <mapHotspot available="true" />
+        <canBeReset>false</canBeReset>
+        <showInVehicleMenu>true</showInVehicleMenu>
+    </base>
+
+    <yarderCarriage length="2.2" rollSpacing="0.741" pullRopeTargetNode="pullRopeTargetNode" pushRopeTargetNode="pushRopeTargetNode" maxNumTrees="10" maxTreeMass="50">
+        <ropeAlignmentNode node="pullRopeAlignmentNode" />
+        <joint node="jointNode" attachTime="0.75" minDistance="1.7" maxDistance="500"/>
+
+        <rope originNode="ropeOrigin" rootHook="hookRootNode" rootHookReferenceNode="hookRootNodeRef" treeRopeLength="0.5">
+            <mainRope filename="$data/shared/forestry/ropes.i3d" ropeNode="4" diameter="0.015" uvScale="4"/>
+            <componentJoint index="2" rotLimitActive="0 90 90"/>
+            <attach mainNode="mainAttachRope" additionalNode="additionalAttachRope">
+                <mainRope filename="$data/shared/forestry/ropes.i3d" ropeNode="4" diameter="0.015" uvScale="4" emissiveColor="0 2 0 1"/>
+                <additionalRope filename="$data/shared/forestry/ropes.i3d" ropeNode="4" diameter="0.015" uvScale="4" emissiveColor="0 2 0 1"/>
+                <marker filename="$data/shared/forestry/targetTreeMarker.i3d" width="0.1" offset="0.005" color="0 2 0"/>
+            </attach>
+            <objectChange node="ropeOrigin" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="hookRootNode_detached" visibilityActive="false" visibilityInactive="true"/>
+        </rope>
+
+        <additionalRopes>
+            <additionalRope referenceNode="additionalHook01EndPartRef">
+                <rope filename="$data/shared/forestry/ropes.i3d" ropeNode="4" diameter="0.015" uvScale="4"/>
+
+                <hookNode node="additionalHook01YRot" alignYRot="true"/>
+                <hookNode node="additionalHook01XRot" alignXRot="true" minRot="-30" maxRot="30"/>
+                <hookNode node="additionalHook01EndPart" alignToTarget="true"/>
+            </additionalRope>
+            <additionalRope referenceNode="additionalHook02EndPartRef">
+                <rope filename="$data/shared/forestry/ropes.i3d" ropeNode="4" diameter="0.015" uvScale="4"/>
+
+                <hookNode node="additionalHook02YRot" alignYRot="true"/>
+                <hookNode node="additionalHook02XRot" alignXRot="true" minRot="-30" maxRot="30"/>
+                <hookNode node="additionalHook02EndPart" alignToTarget="true"/>
+            </additionalRope>
+            <additionalRope referenceNode="additionalHook03EndPartRef">
+                <rope filename="$data/shared/forestry/ropes.i3d" ropeNode="4" diameter="0.015" uvScale="4"/>
+
+                <hookNode node="additionalHook03YRot" alignYRot="true"/>
+                <hookNode node="additionalHook03XRot" alignXRot="true" minRot="-30" maxRot="30"/>
+                <hookNode node="additionalHook03EndPart" alignToTarget="true"/>
+            </additionalRope>
+        </additionalRopes>
+
+        <treeHook filename="$data/shared/forestry/treeHook01.xml"/>
+
+        <sounds>
+            <detachTree file="$data/vehicles/koller/k300/sounds/detachTree.wav" pitchScale="1" innerRadius="3" outerRadius="20" supportsReverb="false">
+                <volume indoor="0.7" outdoor="2"/>
+            </detachTree>
+            <attachTree file="$data/vehicles/koller/k300/sounds/attachTree.wav" pitchScale="1" innerRadius="3" outerRadius="20" supportsReverb="false">
+                <volume indoor="0.7" outdoor="2"/>
+            </attachTree>
+            <lower file="$data/vehicles/koller/k300/sounds/carriageLoopLower.wav" volumeScale="1" pitchScale="1" innerRadius="3" outerRadius="20" supportsReverb="false" fadeIn="0.1" fadeOut="0.1">
+                <volume indoor="0.4" outdoor="1"/>
+            </lower>
+            <lift file="$data/vehicles/koller/k300/sounds/carriageLoopLower.wav" volumeScale="1" pitchScale="0.8" innerRadius="3" outerRadius="20" supportsReverb="false" fadeIn="0.1" fadeOut="0.1">
+                <volume indoor="0.4" outdoor="1"/>
+            </lift>
+            <liftLimit file="$data/vehicles/koller/k300/sounds/carriageLimit01.wav" pitchScale="1" innerRadius="5" outerRadius="25" supportsReverb="false" fadeIn="0.1" fadeOut="0.1">
+                <volume indoor="0.7" outdoor="3"/>
+            </liftLimit>
+        </sounds>
+    </yarderCarriage>
+
+    <cylindered>
+        <movingTools>
+        </movingTools>
+
+        <movingParts>
+            <movingPart node="lifterArm" referencePoint="lifterArmRef" referenceFrame="lifterArmRefFrame" isActiveDirty="true" maxUpdateDistance="1000"/>
+            <movingPart node="safetyArm01" referencePoint="pullRopeAlignmentNode" referenceFrame="safetyArm01RefFrame" limitedAxis="1" isActiveDirty="true" maxUpdateDistance="1000"/>
+            <movingPart node="safetyArm02" referencePoint="pullRopeAlignmentNode" referenceFrame="safetyArm02RefFrame" limitedAxis="2" isActiveDirty="true" maxUpdateDistance="1000" scaleZ="true"/>
+        </movingParts>
+    </cylindered>
+
+    <wearable wearDuration="270" workMultiplier="2" fieldMultiplier="2"/>
+    <washable dirtDuration="270" washDuration="1" workMultiplier="2" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="eckoFlex_main_component1" node="0>" />
+        <i3dMapping id="eckoFlex_vis" node="0>0" />
+        <i3dMapping id="pullRopeTargetNode" node="0>0|0" />
+        <i3dMapping id="pullRopeAlignmentNode" node="0>0|0|0" />
+        <i3dMapping id="pushRopeHook" node="0>0|1" />
+        <i3dMapping id="pushRopeTargetNode" node="0>0|1|0" />
+        <i3dMapping id="lifterArmRefFrame" node="0>0|2" />
+        <i3dMapping id="lifterArm" node="0>0|2|0" />
+        <i3dMapping id="ropeOriginRot" node="0>0|2|0|0" />
+        <i3dMapping id="ropeOrigin" node="0>0|2|0|0|0" />
+        <i3dMapping id="hookRootNode" node="0>0|2|0|0|0|0" />
+        <i3dMapping id="hookRootNodeRef" node="0>0|2|0|0|0|0|0" />
+        <i3dMapping id="hookPart" node="0>0|2|0|0|0|0|1" />
+        <i3dMapping id="additionalHooks" node="0>0|2|0|0|0|0|2" />
+        <i3dMapping id="additionalHook01YRot" node="0>0|2|0|0|0|0|2|0" />
+        <i3dMapping id="additionalHook01XRot" node="0>0|2|0|0|0|0|2|0|0" />
+        <i3dMapping id="additionalHook01EndPart" node="0>0|2|0|0|0|0|2|0|0|0" />
+        <i3dMapping id="additionalHook01EndPartRef" node="0>0|2|0|0|0|0|2|0|0|0|0" />
+        <i3dMapping id="additionalHook02YRot" node="0>0|2|0|0|0|0|2|1" />
+        <i3dMapping id="additionalHook02XRot" node="0>0|2|0|0|0|0|2|1|0" />
+        <i3dMapping id="additionalHook02EndPart" node="0>0|2|0|0|0|0|2|1|0|0" />
+        <i3dMapping id="additionalHook02EndPartRef" node="0>0|2|0|0|0|0|2|1|0|0|0" />
+        <i3dMapping id="additionalHook03YRot" node="0>0|2|0|0|0|0|2|2" />
+        <i3dMapping id="additionalHook03XRot" node="0>0|2|0|0|0|0|2|2|0" />
+        <i3dMapping id="additionalHook03EndPart" node="0>0|2|0|0|0|0|2|2|0|0" />
+        <i3dMapping id="additionalHook03EndPartRef" node="0>0|2|0|0|0|0|2|2|0|0|0" />
+        <i3dMapping id="additionalAttachRope" node="0>0|2|0|0|0|0|3" />
+        <i3dMapping id="mainAttachRope" node="0>0|2|0|0|1" />
+        <i3dMapping id="hookRootNode_detached" node="0>0|2|0|1" />
+        <i3dMapping id="safetyArm01RefFrame" node="0>0|3" />
+        <i3dMapping id="safetyArm01" node="0>0|3|0" />
+        <i3dMapping id="safetyArm02RefFrame" node="0>0|3|0|0" />
+        <i3dMapping id="safetyArm02" node="0>0|3|0|0|0" />
+        <i3dMapping id="componentJointLifter" node="0>0|4" />
+        <i3dMapping id="eckoFlex_lifter_component2" node="1>" />
+        <i3dMapping id="lifterArmRef" node="1>0" />
+        <i3dMapping id="componentJointRope" node="1>1" />
+        <i3dMapping id="jointNode" node="2>0" />
+    </i3dMappings>
+</vehicle>

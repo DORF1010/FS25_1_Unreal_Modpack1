@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="motor_configuration_decals.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="7" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_diffuse.png"/>
+    <File fileId="6" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_normal.png"/>
+    <File fileId="5" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_specular.png"/>
+    <File fileId="1" filename="$data/vehicles/fendt/vario1000/vario1000Gen2Decals_diffuse.png"/>
+    <File fileId="2" filename="$data/vehicles/fendt/vario1000/vario1000Gen2Decals_normal.png"/>
+    <File fileId="3" filename="$data/vehicles/fendt/vario1000/vario1000_vmask.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="vario1000Gen2Decals_calibratedPaint_mat" materialId="41" customShaderId="4" customShaderVariation="vmaskUV2_normalUV3">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="5"/>
+      <Custommap name="detailNormal" fileId="6"/>
+      <Custommap name="detailDiffuse" fileId="7"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="motor_configuration_decals.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="configuration1038_decal" translation="0.012974 2.40198 0.688957" shapeId="1" clipDistance="80" nodeId="577" castsShadows="false" receiveShadows="true" decalLayer="2" materialIds="41"/>
+    <Shape name="configuration1042_decal" translation="0.012974 2.40198 0.688957" shapeId="2" clipDistance="80" nodeId="578" castsShadows="false" receiveShadows="true" decalLayer="2" materialIds="41"/>
+    <Shape name="configuration1046_decal" translation="0.012974 2.40198 0.688957" shapeId="3" clipDistance="80" nodeId="579" castsShadows="false" receiveShadows="true" decalLayer="2" materialIds="41"/>
+    <Shape name="configuration1050_decal" translation="0.012974 2.40198 0.688957" shapeId="4" clipDistance="80" nodeId="580" castsShadows="false" receiveShadows="true" decalLayer="2" materialIds="41"/>
+  </Scene>
+
+</i3D>

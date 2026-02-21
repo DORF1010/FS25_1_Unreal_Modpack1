@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="dolly" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Adapter</name>
+        <specs>
+            <combination filterCategory="frontLoaders"/>
+            <combination filterCategory="frontLoaderVehicles"/>
+            <combination filterCategory="teleLoaderVehicles"/>
+            <combination filterCategory="skidSteerVehicles"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_dolly</function>
+        </functions>
+        <image>frontloaderPalletFork/store_frontloaderPalletFork.png</image>
+        <price>1000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>ALBUTT</brand>
+        <category>frontLoaderTools skidSteerTools wheelLoaderTools teleLoaderTools</category>
+        <shopTranslationOffset>0 0.005 0.5</shopTranslationOffset>
+        <shopRotationOffset>0.388 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>30208</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>7680</indexBufferMemoryUsage>
+        <textureMemoryUsage>262144</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_frontloaderTool</typeDesc>
+        <filename>frontloaderPalletFork/frontloaderPalletFork.i3d</filename>
+        <size width="1.35" length="1.5" height="0.8" lengthOffset="-0.02"/>
+        <supportsPickUp>true</supportsPickUp>
+        <components>
+            <component centerOfMass="0 -0.2 -0.5" solverIterationCount="20" mass="100" />
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT" />
+        <mapHotspot type="TOOL" />
+    </base>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="frontloader"    upperTranslationLimit="0 0 0"/>
+            <inputAttacherJoint node="attacherJoint" jointType="skidSteer"      upperTranslationLimit="0 0 0"/>
+            <inputAttacherJoint node="attacherJointLow" jointType="wheelLoader" upperTranslationLimit="0 0 0"/>
+            <inputAttacherJoint node="attacherJointLow" jointType="telehandler" upperTranslationLimit="0 0 0"/>
+        </inputAttacherJoints>
+    </attachable>
+
+    <attacherJoints>
+        <attacherJoint jointType="frontloader" node="attacherJointTool" rootNode="frontloaderPalletFork_main_component1" allowsJointLimitMovement="false" allowsLowering="false" rotLimitSpring="500 500 500" rotLimitDamping="3 3 3" transLimitSpring="500 500 500" transLimitDamping="3 3 3" lowerRotLimit="0 0 0" lowerTransLimit="0 0 0">
+            <schema position="1 0" rotation="0" invertX="false" />
+        </attacherJoint>
+        <attacherJoint jointType="skidSteer" node="attacherJointTool" rootNode="frontloaderPalletFork_main_component1" allowsJointLimitMovement="false" allowsLowering="false" rotLimitSpring="500 500 500" rotLimitDamping="3 3 3" transLimitSpring="500 500 500" transLimitDamping="3 3 3"  lowerRotLimit="0 0 0" lowerTransLimit="0 0 0">
+            <schema position="1 0" rotation="0" invertX="false" />
+        </attacherJoint>
+        <attacherJoint jointType="wheelLoader" node="attacherJointToolLow" rootNode="frontloaderPalletFork_main_component1" allowsJointLimitMovement="false" allowsLowering="false" rotLimitSpring="500 500 500" rotLimitDamping="3 3 3" transLimitSpring="500 500 500" transLimitDamping="3 3 3" lowerRotLimit="0 0 0" lowerTransLimit="0 0 0">
+            <schema position="1 0" rotation="0" invertX="false" />
+        </attacherJoint>
+        <attacherJoint jointType="wheelLoader" node="attacherJointToolLow" rootNode="frontloaderPalletFork_main_component1" allowsJointLimitMovement="false" allowsLowering="false" rotLimitSpring="500 500 500" rotLimitDamping="3 3 3" transLimitSpring="500 500 500" transLimitDamping="3 3 3" lowerRotLimit="0 0 0" lowerTransLimit="0 0 0">
+            <schema position="1 0" rotation="0" invertX="false" />
+			<subType name="volvoL180H" showWarning="false"/>
+        </attacherJoint>
+        <attacherJoint jointType="telehandler" node="attacherJointToolLow" rootNode="frontloaderPalletFork_main_component1" allowsJointLimitMovement="false" allowsLowering="false" rotLimitSpring="500 500 500" rotLimitDamping="3 3 3" transLimitSpring="500 500 500" transLimitDamping="3 3 3" lowerRotLimit="0 0 0" lowerTransLimit="0 0 0">
+            <schema position="1 0" rotation="0" invertX="false" />
+        </attacherJoint>
+        <sounds>
+            <attach template="attach01" linkNode="attacherJointTool" />
+        </sounds>
+    </attacherJoints>
+
+    <ai>
+        <agentAttachment width="1.3" height="0.8" length="1.4"/>
+    </ai>
+
+    <tensionBeltObject>
+        <meshNodes>
+            <meshNode node="tensionBeltMesh01"/>
+        </meshNodes>
+    </tensionBeltObject>
+
+    <foliageBending>
+        <bendingNode minX="-0.65" maxX="0.65" minZ="-0.7" maxZ="-0.53" yOffset="0.2" />
+    </foliageBending>
+
+	<designConfigurations title="$l10n_configuration_decals" isYesNoOption="true">
+		<designConfiguration name="$l10n_configuration_valueNo"/>
+		<designConfiguration name="$l10n_configuration_valueYes" isDefault="true">
+			<objectChange node="0>0|3" visibilityActive="true" visibilityInactive="false"/>
+		</designConfiguration>
+	</designConfigurations>
+
+	<baseColorConfigurations useDefaultColors="true">
+		<material materialSlotName="chassisMainColor"/>
+		<baseColorConfiguration materialTemplateName="ALBUTT_BLACK1"/>
+		<baseColorConfiguration materialTemplateName="ALBUTT_GREY1"/>
+		<baseColorConfiguration materialTemplateName="ALBUTT_GREEN1"/>
+		<baseColorConfiguration materialTemplateName="ALBUTT_BLUE1"/>
+		<baseColorConfiguration materialTemplateName="ALBUTT_RED1"/>
+	</baseColorConfigurations>
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90"  workMultiplier="2" fieldMultiplier="2" washDuration="1"/>
+
+    <i3dMappings>
+        <i3dMapping id="frontloaderPalletFork_main_component1" node="0>" />
+        <i3dMapping id="attacherJoint" node="0>0|0" />
+        <i3dMapping id="attacherJointLow" node="0>0|7" />
+        <i3dMapping id="attacherJointTool" node="0>0|5" />
+        <i3dMapping id="attacherJointToolLow" node="0>0|6" />
+        <i3dMapping id="jointNode" node="0>0|2" />
+        <i3dMapping id="tensionBeltMesh01" node="0>0|4" />
+    </i3dMappings>
+</vehicle>

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="frontloaderPalletFork.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.11"/>
+  </Asset>
+
+  <Files>
+    <File fileId="5" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="17" filename="$data/shared/default_normal.png"/>
+    <File fileId="15" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_diffuse.png"/>
+    <File fileId="14" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_normal.png"/>
+    <File fileId="13" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_specular.png"/>
+    <File fileId="7" filename="$data/shared/detailLibrary/flat_normal.png"/>
+    <File fileId="8" filename="$data/shared/detailLibrary/metallic/silverScratched_diffuse.png"/>
+    <File fileId="6" filename="$data/shared/detailLibrary/metallic/silverScratched_specular.png"/>
+    <File fileId="19" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_diffuse.png"/>
+    <File fileId="18" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_specular.png"/>
+    <File fileId="2" filename="$data/shared/white_diffuse.png"/>
+    <File fileId="16" filename="$data/vehicles/albutt/frontloaderBaleSpike/frontloaderBaleSpikeDecals_diffuse.png"/>
+    <File fileId="3" filename="$data/vehicles/albutt/frontloaderPalletFork/frontloaderPalletFork_normal.png"/>
+    <File fileId="4" filename="$data/vehicles/albutt/frontloaderPalletFork/frontloaderPalletFork_vmask.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="frontloaderBaleSpikeDecals_metalPainted_mat" materialId="5" customShaderId="5" customShaderVariation="vmaskUV2">
+      <Texture fileId="16"/>
+      <Normalmap fileId="17"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="18"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="19"/>
+    </Material>
+    <Material name="frontloaderPalletFork_metalPaintedBlack_mat" materialId="6" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="13"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+      <CustomParameter name="colorScale" value="0.05 0.05 0.05"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="frontloaderPalletFork_silverScratched_mat" materialId="7" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+    </Material>
+    <Material name="lambert1" materialId="8" diffuseColor="0.501961 0.501961 0.501961 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="frontloaderPalletFork.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="frontloaderPalletFork_main_component1" shapeId="1" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="14" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8">
+      <Shape name="frontloaderPalletFork_vis" shapeId="2" clipDistance="300" nodeId="15" castsShadows="true" receiveShadows="true" skinBindNodeIds="15" materialIds="7,6">
+        <TransformGroup name="attacherJoint" translation="0 0.63125 -0.662314" rotation="-90 261.108 89.8575" nodeId="16"/>
+        <TransformGroup name="movingParts" nodeId="17"/>
+        <TransformGroup name="jointNode" translation="0 0.056734 -0.000634" nodeId="18"/>
+        <Shape name="exterior_decals" translation="0 0.617595 -0.544865" shapeId="3" clipDistance="50" nodeId="19" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="5"/>
+        <Shape name="tensionBeltMesh01" translation="0 0.359042 -0.561854" shapeId="4" nodeId="20" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8"/>
+        <TransformGroup name="attacherJointTool" translation="6.48038e-09 0.732523 -0.560967" rotation="90.0001 -86.9201 -90.0001" nodeId="21"/>
+        <TransformGroup name="attacherJointToolLow" translation="0 0.241074 -0.487007" rotation="0 -90 0" nodeId="22"/>
+        <TransformGroup name="attacherJointLow" translation="0 0.0899939 -0.712886" rotation="0 -90 0" nodeId="23"/>
+      </Shape>
+    </Shape>
+  </Scene>
+
+</i3D>

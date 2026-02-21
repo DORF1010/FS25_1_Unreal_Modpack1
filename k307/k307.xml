@@ -1,0 +1,583 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="yarderTower" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>K 307c-H + ECKO FLEX</name>
+        <specs>
+            <power>200</power>
+        </specs>
+        <functions>
+            <function>$l10n_function_yarder</function>
+            <function>$l10n_function_yarder_uphill_downhill</function>
+        </functions>
+        <rotation>0</rotation>
+        <image>$data/vehicles/koller/k307/store_k307.png</image>
+        <price>80000</price>
+        <lifetime>600</lifetime>
+        <brand>KOLLER</brand>
+        <category>forestryWinches</category>
+        <shopTranslationOffset>0 0.021 0</shopTranslationOffset>
+        <shopRotationOffset>-0.045 0 -0.033</shopRotationOffset>
+        <vertexBufferMemoryUsage>2724352</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>971008</indexBufferMemoryUsage>
+        <textureMemoryUsage>1376256</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_yarder</typeDesc>
+        <filename>k307/k307.i3d</filename>
+        <size width="2.6" length="5.5" lengthOffset="0.55" height="3.8"/>
+        <components>
+            <component centerOfMass="0 0.5 -0.25" solverIterationCount="10" mass="8500"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT"/>
+        <mapHotspot type="OTHER"/>
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" saveId="DEFAULT">
+                <wheels>
+                    <wheel dimensions="500_50R17" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.15" repr="wheelFrontLeft"  forcePointRatio="0.25" initialCompression="35" suspTravel="0.06" spring="95" damper="25" yOffset="0.025"/>
+                        <wheelChock parkingNode="wheelChock02_01" filename="$data/shared/assets/wheelChocks/wheelChock02.i3d" isInverted="true"/>
+                    </wheel>
+                    <wheel dimensions="500_50R17" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.15" repr="wheelFrontRight" forcePointRatio="0.25" initialCompression="35" suspTravel="0.06" spring="95" damper="25" yOffset="0.025"/>
+                    </wheel>
+                    <wheel dimensions="500_50R17" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.15" repr="wheelBackLeft"   forcePointRatio="0.25" initialCompression="35" suspTravel="0.06" spring="95" damper="25" yOffset="0.025"/>
+                        <wheelChock parkingNode="wheelChock02_02" filename="$data/shared/assets/wheelChocks/wheelChock02.i3d" isInverted="false"/>
+                    </wheel>
+                    <wheel dimensions="500_50R17" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.15" repr="wheelBackRight"  forcePointRatio="0.25" initialCompression="35" suspTravel="0.06" spring="95" damper="25" yOffset="0.025"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueWheelMedium" price="0" saveId="MEDIUM">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="400_55R22_5 295_75R22_5 315_80R22_5 340_80R18">
+						<physics yOffset="-0.1" zOffset="0.05"/>
+					</wheel>
+                    <wheel dimensions="400_55R22_5 295_75R22_5 315_80R22_5 340_80R18">
+						<physics yOffset="-0.1" zOffset="0.05"/>
+					</wheel>
+                    <wheel dimensions="400_55R22_5 295_75R22_5 315_80R22_5 340_80R18">
+						<physics yOffset="-0.1"/>
+					</wheel>
+                    <wheel dimensions="400_55R22_5 295_75R22_5 315_80R22_5 340_80R18">
+						<physics yOffset="-0.1"/>
+					</wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" price="0" saveId="BROAD">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="445_65R22_5">
+						<physics yOffset="-0.2" zOffset="0.05"/>
+					</wheel>
+                    <wheel dimensions="445_65R22_5">
+						<physics yOffset="-0.2" zOffset="0.05"/>
+					</wheel>
+                    <wheel dimensions="445_65R22_5">
+						<physics yOffset="-0.2"/>
+					</wheel>
+                    <wheel dimensions="445_65R22_5">
+						<physics yOffset="-0.2"/>
+					</wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelNarrow" price="0" saveId="NARROW">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="275_70R22_5">
+						<physics yOffset="-0.1"/>
+					</wheel>
+                    <wheel dimensions="275_70R22_5">
+						<physics yOffset="-0.1"/>
+					</wheel>
+                    <wheel dimensions="275_70R22_5">
+						<physics yOffset="-0.1"/>
+					</wheel>
+                    <wheel dimensions="275_70R22_5">
+						<physics yOffset="-0.1"/>
+					</wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" saveId="TWIN_ALL">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="9_5R24 9_5__24 275_70R22_5">
+						<physics xOffset="-0.1" yOffset="-0.1"/>
+                        <additionalWheel configId="dual" offset="0.08">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel dimensions="9_5R24 9_5__24 275_70R22_5">
+						<physics xOffset="-0.1" yOffset="-0.1"/>
+                        <additionalWheel configId="dual" offset="0.08">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel dimensions="9_5R24 9_5__24 275_70R22_5">
+						<physics xOffset="-0.1" yOffset="-0.1"/>
+                        <additionalWheel configId="dual" offset="0.1">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.03 1.03"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel dimensions="9_5R24 9_5__24 275_70R22_5">
+						<physics xOffset="-0.1" yOffset="-0.1"/>
+                        <additionalWheel configId="dual" offset="0.1">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.03 1.03"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+        </wheelConfigurations>
+
+        <!--<hubMaterial materialTemplateName="KOLLER_YELLOW1"/>-->
+
+        <hubs>
+            <hub linkNode="wheelFrontLeft"  filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="true"  scale="0.22 0.22 0.22" offset="0.013"/>
+            <hub linkNode="wheelFrontRight" filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="false" scale="0.22 0.22 0.22" offset="0.013"/>
+            <hub linkNode="wheelBackLeft"   filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="true"  scale="0.22 0.22 0.22" offset="0.013"/>
+            <hub linkNode="wheelBackRight"  filename="$data/shared/wheels/hubs/hub_n6_1.xml" isLeft="false" scale="0.22 0.22 0.22" offset="0.013"/>
+        </hubs>
+    </wheels>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="0" linkNode="chockSupport01" filename="$data/shared/assets/wheelChocks/wheelChockSupport01.i3d"/>
+        <dynamicallyLoadedPart node="0" linkNode="chockSupport02" filename="$data/shared/assets/wheelChocks/wheelChockSupport01.i3d"/>
+        <dynamicallyLoadedPart node="0" linkNode="eckoFlex_detached" filename="$data/vehicles/koller/eckoFlex/eckoFlex_detached.i3d"/>
+        <dynamicallyLoadedPart node="1|1" linkNode="electric_connectorLinkNode02" filename="$data/shared/connectionHoses/connectors.i3d"/>
+        <dynamicallyLoadedPart node="2|0" linkNode="electric_socketLinkNode" filename="$data/shared/connectionHoses/connectors.i3d"/>
+    </dynamicallyLoadedParts>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="trailer" attacherHeight="0.966"/>
+        </inputAttacherJoints>
+        <support animationName="moveSupport"/>
+        <brakeForce force="1.1"/>
+    </attachable>
+
+    <licensePlates>
+        <licensePlate node="licensePlateBack" position="BACK" preferedType="ELONGATED" placementArea="0.07 0.275 0.07 0.275">
+            <objectChange node="plateNumberLight02_01" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="plateNumberLight02_02" visibilityActive="true" visibilityInactive="false"/>
+        </licensePlate>
+    </licensePlates>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="airDoubleYellow" node="airYellow" length="0.6" diameter="0.012" isTwoPointHose="true" adapterNode="airYellow_connectorLinkNode">
+            <objectChange node="airYellow_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="airDoubleRed" node="airRed" length="0.6" diameter="0.012" isTwoPointHose="true" adapterNode="airRed_connectorLinkNode">
+            <objectChange node="airRed_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="electric" node="electric" length="1.6" diameter="0.008" straighteningFactor="1" adapterNode="electric_connectorLinkNode01">
+            <objectChange node="electric_detached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+    </connectionHoses>
+
+    <lights>
+        <sharedLight linkNode="redTriangle_01_01" filename="$data/shared/assets/reflectors/lizard/redTriangle_01.xml" />
+        <sharedLight linkNode="redTriangle_01_02" filename="$data/shared/assets/reflectors/lizard/redTriangle_01.xml" />
+        <sharedLight linkNode="redRectangle_01_01" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml" />
+        <sharedLight linkNode="redRectangle_01_02" filename="$data/shared/assets/lights/lizard/sideMarker05Orange.xml" />
+        <sharedLight linkNode="sideMarker16Static_left" filename="$data/shared/assets/lights/lizard/sideMarker16_left.xml" />
+        <sharedLight linkNode="sideMarker16Static_right" filename="$data/shared/assets/lights/lizard/sideMarker16_right.xml" />
+        <sharedLight linkNode="sideMarker06White_01" filename="$data/shared/assets/lights/lizard/sideMarker06White.xml" />
+        <sharedLight linkNode="sideMarker06White_02" filename="$data/shared/assets/lights/lizard/sideMarker06White.xml" />
+        <sharedLight linkNode="plateNumberLight02_01" filename="$data/shared/assets/lights/lizard/plateNumberLight02.xml" />
+        <sharedLight linkNode="plateNumberLight02_02" filename="$data/shared/assets/lights/lizard/plateNumberLight02.xml" />
+
+        <realLights>
+            <high>
+                <light node="backLightsHigh" lightTypes="0" />
+                <light node="licensePlateLightHigh" lightTypes="0" />
+                <turnLightLeft node="turnLightLeftBack" />
+                <turnLightRight node="turnLightRightBack" />
+                <brakeLight node="backLightsHigh" />
+            </high>
+        </realLights>
+
+        <staticLightCompounds>
+            <staticLightCompound>
+                <node node="backLight_static" intensity="5"/>
+                <node node="backLightGlass_static" intensity="1"/>
+            </staticLightCompound>
+        </staticLightCompounds>
+    </lights>
+
+    <yarderTower controlTrigger="controlTrigger" foldMinLimit="1">
+        <placement height="10" minHeightOffset="-"/>
+        <carriage filename="xml/eckoFlex.xml" maxSpeed="50" acceleration="0.01" deceleration="0.05" startOffset="1.5" endOffset="0.5" maxTreeMass="50"/>
+
+        <hooks>
+            <tree filename="$data/shared/forestry/treeHook01.xml" />
+            <ground filename="$data/shared/forestry/groundHook01.xml"/>
+        </hooks>
+
+        <ropes>
+            <setupRope node="mainRopeNode" colorInvalid="4 0 0" colorValid="0 4 0" maxOffset="0" filename="$data/shared/forestry/ropes.i3d" ropeNode="0" diameterTree="0.07" diameterPlayer="0.015"/>
+            <mainRope node="mainRopeNode" rotNode="mainRopeArm" maxAngle="360" maxLength="100000" diameter="0.02" maxOffset="0.4" offsetReferenceLength="5" filename="$data/shared/forestry/ropes.i3d" ropeNode="0">
+                <objectChange node="mainRopeDetached" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="mainRopeDetachedHook" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="eckoFlex_detached" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="pullRope_attached" visibilityActive="true" visibilityInactive="false"/>
+                <ropeLengthNode node="mainRopeRoll" minLength="0" maxLength="100000" minScale="1 1 1" maxScale="1 0.4 0.4"/>
+                <ropeLengthNode node="mainRopeRollJoint" minLength="0" maxLength="100000" minTrans="0.418 1.540 -0.858" maxTrans="0.418 1.540 -1.082"/>
+            </mainRope>
+            <pullRope node="pullRopeNode" rotNode="pullRopeArm02" diameter="0.02" maxOffset="0.25" offsetReferenceLength="7" filename="$data/shared/forestry/ropes.i3d" ropeNode="0">
+                <ropeLengthNode node="pullRopeRollRot" minLength="0" maxLength="100000" minRot="0 0 0" maxRot="-30000 0 0"/>
+                <ropeLengthNode node="pullRopeRoll" minLength="0" maxLength="100000" minScale="1 1 1" maxScale="1 0.3 0.3"/>
+                <ropeLengthNode node="pullRopeRollJoint" minLength="0" maxLength="100000" minTrans="-0.161 2.277 0.639" maxTrans="-0.161 2.213 0.488"/>
+                <ropeLengthNode node="pullRope_attached" minLength="0" maxLength="100000" shaderParameterName="offsetUV" minShaderParameter="0 0 0 0" maxShaderParameter="0 -200 0 0"/>
+            </pullRope>
+            <pushRope diameter="0.02" yOffset="0.6" maxOffset="0.25" offsetReferenceLength="7" filename="$data/shared/forestry/ropes.i3d" ropeNode="0"/>
+
+            <supportRopes centerNode="mainRopeArm" treeRadius="25">
+                <supportRope node="supportRope01" rotNode="supportRope01Rot" raycastRotY="0" angleReferenceNode="supportRope01AngleRef" treeYOffset="0.5" maxAngle="60" filename="$data/shared/forestry/ropes.i3d" ropeNode="3">
+                    <objectChange node="supportRope01Detached" visibilityActive="false" visibilityInactive="true"/>
+                    <objectChange node="supportRope01DetachedHook" visibilityActive="false" visibilityInactive="true"/>
+                    <ropeLengthNode node="supportRope01Roll" minLength="0" maxLength="25" minScale="1 1 1" maxScale="1 0.4 0.4"/>
+                    <ropeLengthNode node="supportRope01RollJoint" minLength="0" maxLength="25" minTrans="-0.032 2.664 -1.533" maxTrans="-0.038 2.765 -1.486"/>
+                </supportRope>
+                <supportRope node="supportRope02" rotNode="supportRope02Rot" raycastRotY="0" angleReferenceNode="supportRope02AngleRef" treeYOffset="0.5" maxAngle="60" filename="$data/shared/forestry/ropes.i3d" ropeNode="3">
+                    <objectChange node="supportRope02Detached" visibilityActive="false" visibilityInactive="true"/>
+                    <objectChange node="supportRope02DetachedHook" visibilityActive="false" visibilityInactive="true"/>
+                    <ropeLengthNode node="supportRope02Roll" minLength="0" maxLength="25" minScale="1 1 1" maxScale="1 0.4 0.4"/>
+                    <ropeLengthNode node="supportRope02RollJoint" minLength="0" maxLength="25" minTrans="-0.039 2.797 -0.855" maxTrans="-0.039 2.772 -0.944"/>
+                </supportRope>
+                <supportRope node="supportRope03" rotNode="supportRope03Rot" raycastRotY="0" angleReferenceNode="supportRope03AngleRef" treeYOffset="0.5" maxAngle="60" filename="$data/shared/forestry/ropes.i3d" ropeNode="3">
+                    <objectChange node="supportRope03Detached" visibilityActive="false" visibilityInactive="true"/>
+                    <objectChange node="supportRope03DetachedHook" visibilityActive="false" visibilityInactive="true"/>
+                    <ropeLengthNode node="supportRope03Roll" minLength="0" maxLength="25" minScale="1 1 1" maxScale="1 0.4 0.4"/>
+                    <ropeLengthNode node="supportRope03RollJoint" minLength="0" maxLength="25" minTrans="-0.035 2.199 -0.723" maxTrans="-0.035 2.174 -0.821"/>
+                </supportRope>
+                <supportRope node="supportRope04" rotNode="supportRope04Rot" raycastRotY="0" angleReferenceNode="supportRope04AngleRef" treeYOffset="0.5" maxAngle="60" filename="$data/shared/forestry/ropes.i3d" ropeNode="3">
+                    <objectChange node="supportRope04Detached" visibilityActive="false" visibilityInactive="true"/>
+                    <objectChange node="supportRope04DetachedHook" visibilityActive="false" visibilityInactive="true"/>
+                    <ropeLengthNode node="supportRope04Roll" minLength="0" maxLength="25" minScale="1 1 1" maxScale="1 0.4 0.4"/>
+                    <ropeLengthNode node="supportRope04RollJoint" minLength="0" maxLength="25" minTrans="-0.190 2.072 -1.603" maxTrans="-0.190 2.188 -1.603"/>
+                </supportRope>
+            </supportRopes>
+        </ropes>
+
+        <sounds>
+            <carriageDriveMovePos file="$data/vehicles/koller/k300/sounds/yarderLoopDown.wav" fadeIn="0.1" fadeOut="0.1" innerRadius="3" outerRadius="30" supportsReverb="false">
+                <volume indoor="0.4" outdoor="1"/>
+            </carriageDriveMovePos>
+            <carriageDriveMoveNeg file="$data/vehicles/koller/k300/sounds/yarderLoopDown.wav" fadeIn="0.1" fadeOut="0.1" innerRadius="3" outerRadius="30" supportsReverb="false">
+                <volume indoor="0.4" outdoor="1"/>
+            </carriageDriveMoveNeg>
+            <carriageMoveNeg file="$data/vehicles/koller/k300/sounds/carriageLoopUp.wav" fadeIn="0.1" fadeOut="0.1" innerRadius="3" outerRadius="30" supportsReverb="false">
+                <volume indoor="0.8" outdoor="2.3"/>
+                <pitch indoor="1" outdoor="1">
+                    <modifier type="CARRIAGE_SPEED" value="0" modifiedValue="0.3"/>
+                    <modifier type="CARRIAGE_SPEED" value="0.5" modifiedValue="0.5"/>
+                    <modifier type="CARRIAGE_SPEED" value="0.8" modifiedValue="0.6"/>
+                    <modifier type="CARRIAGE_SPEED" value="1" modifiedValue="0.7"/>
+                </pitch>
+            </carriageMoveNeg>
+            <carriageMovePos file="$data/vehicles/koller/k300/sounds/carriageLoopDown.wav" fadeIn="0.1" fadeOut="0.1" innerRadius="3" outerRadius="30" pitchScale="0.8" supportsReverb="false">
+                <volume indoor="0.7" outdoor="2.5"/>
+                <pitch indoor="1" outdoor="1">
+                    <modifier type="CARRIAGE_SPEED" value="0" modifiedValue="0.9"/>
+                    <modifier type="CARRIAGE_SPEED" value="0.3" modifiedValue="0.95"/>
+                    <modifier type="CARRIAGE_SPEED" value="0.7" modifiedValue="1.0"/>
+                    <modifier type="CARRIAGE_SPEED" value="1" modifiedValue="1.2"/>
+                </pitch>
+            </carriageMovePos>
+            <carriageMovePosLimit file="$data/vehicles/koller/k300/sounds/carriageLimit01.wav" innerRadius="5" outerRadius="30" pitchScale="1" supportsReverb="false">
+                <volume indoor="0.7" outdoor="1.7"/>
+            </carriageMovePosLimit>
+            <carriageMoveNegLimit file="$data/vehicles/koller/k300/sounds/carriageLimit01.wav" innerRadius="5" outerRadius="30" pitchScale="0.8" supportsReverb="false">
+                <volume indoor="0.7" outdoor="1.7"/>
+            </carriageMoveNegLimit>
+            <ropeLinkTree file="$data/vehicles/koller/k300/sounds/attachTree.wav" innerRadius="5" outerRadius="30" pitchScale="0.8" supportsReverb="false">
+                <volume indoor="0.7" outdoor="1.7"/>
+            </ropeLinkTree>
+            <ropeLinkGround file="$data/vehicles/koller/k300/sounds/ropeLinkGround.wav" innerRadius="5" outerRadius="30" pitchScale="1.1" supportsReverb="false">
+                <volume indoor="0.7" outdoor="1.7"/>
+            </ropeLinkGround>
+            <setupCanceled file="$data/vehicles/koller/k300/sounds/setupCanceled.wav" innerRadius="5" outerRadius="30" pitchScale="0.8" supportsReverb="false">
+                <volume indoor="0.7" outdoor="2.7"/>
+            </setupCanceled>
+            <setupStarted file="$data/vehicles/koller/k300/sounds/setupStarted.wav" innerRadius="5" outerRadius="30" pitchScale="1" supportsReverb="false">
+                <volume indoor="0.7" outdoor="2.7"/>
+            </setupStarted>
+            <removeYarder file="$data/vehicles/koller/k300/sounds/removeYarder.wav" innerRadius="5" outerRadius="30" pitchScale="1" supportsReverb="false">
+                <volume indoor="0.7" outdoor="2.7"/>
+            </removeYarder>
+            <motor template="engineLarge" file="$data/vehicles/newHolland/braud9070L/sounds/braud9070L_loop.gls" pitchScale="1.1"/>
+        </sounds>
+
+        <motorEffects>
+            <effectNode effectClass="ExhaustEffect" node="0" linkNode="exhaustParticle" filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.9 0.9 0.9 0.1" maxRpmColor="0.9 0.9 0.9 0.4" minRpmScale="0.1" maxRpmScale="0.5"/>
+        </motorEffects>
+    </yarderTower>
+
+    <foldable>
+        <foldingConfigurations>
+            <foldingConfiguration>
+                <foldingParts>
+                    <foldingPart animationName="folding" speedScale="1" />
+                </foldingParts>
+            </foldingConfiguration>
+        </foldingConfigurations>
+    </foldable>
+
+    <animations>
+        <animation name="folding" soundVolumeFactor="0.9">
+            <part node="supportArm02" startTime="0.0" endTime="1.0" startTrans="0 0.4 0" endTrans="0 0 0"/>
+            <part node="mainArmBolt" startTime="0.0" endTime="1.99" visibility="true" />
+            <part node="mainArmBolt" startTime="2.0" endTime="3.99" visibility="false" />
+            <part node="mainArm01" startTime="0.0" endTime="2.0" startRot="0.0 0.0 0.0" endRot="-90.0 0.0 0.0" />
+            <part node="mainArm01Part" startTime="2.0" endTime="4.0" startRot="0.0 90 0.0" endRot="0.0 0.0 0.0" />
+            <part node="mainArm02" startTime="2.0" endTime="4.0" startRot="0.0 177.8 0.0" endRot="0.0 0.0 0.0" />
+            <part node="mainArmBolt" startTime="3.99" endTime="4.0" visibility="true" />
+            <part node="supportRope02RollJoint" startTime="0.0" endTime="2.0" startRot="89.834 0.0 0.0" endRot="0.0 0.0 0.0" />
+            <part node="supportRope03RollJoint" startTime="0.0" endTime="2.0" startRot="122.512 0.0 0.0" endRot="0.0 0.0 0.0" />
+            <part node="mainArm01AnimationJoint01" startTime="0.0" endTime="2.0" startTrans="0.395 -0.261 3.22" endTrans="0.224 -0.261 3.312" startRot="0.0 179.9 0.0" endRot="0.0 164.568 0.0" />
+            <part node="mainArm01AnimationJoint01" startTime="2.0" endTime="4.0" startTrans="0.224 -0.261 3.312" endTrans="0.395 -0.261 3.22" startRot="0.0 164.568 0.0" endRot="0.0 0.0 0.0" />
+            <part node="mainArm01AnimationJoint02" startTime="0.0" endTime="2.0" startTrans="-0.089 -0.474 -0.005" endTrans="0.0 0.0 0.0" />
+            <part node="mainArm01AnimationJoint03" startTime="0.0" endTime="2.0" startTrans="0.0 -0.203 0.561" endTrans="0.0 0.0 0.0" />
+            <part node="mainArm01AnimationJoint04" startTime="0.0" endTime="4.0" startTrans="0.132 -0.356 0.054" endTrans="0.471 -0.091 0.193" />
+            <part node="mainArm01AnimationJoint05" startTime="0.0" endTime="2.0" startTrans="0.104 0.05 -0.137" endTrans="0.0 0.0 -0.137" />
+            <part node="mainArm01AnimationJoint06" startTime="0.0" endTime="2.0" startTrans="0.178 -0.138 2.875" endTrans="0.24 -0.24 3.24" startRot="0.0 178.557 0.0" endRot="0.0 117.259 0.0" />
+            <part node="mainArm01AnimationJoint06" startTime="2.0" endTime="4.0" startRot="0.0 117.259 0.0" endRot="0.0 0.0 0.0" />
+            <part node="mainArm01AnimationJoint07" startTime="0.0" endTime="2.0" startTrans="-0.146 -0.318 2.305" endTrans="-0.029 -0.348 1.979" />
+            <part node="mainArm02AnimationJoint01" startTime="0.0" endTime="2.0" startTrans="0.0 -0.39 0.0" endTrans="0.0 0.0 0.0" />
+            <part node="mainArm02AnimationJoint02" startTime="0.0" endTime="2.0" startTrans="-0.116 -0.119 0.654" endTrans="0.0 0.0 0.0" />
+            <part node="mainArm02AnimationJoint03" startTime="0.0" endTime="2.0" startTrans="0.097 0.051 -0.0" endTrans="0.0 0.0 -0.0" />
+            <part node="mainArm02AnimationJoint04" startTime="2.0" endTime="4.0" startTrans="-0.051 -0.202 0.506" endTrans="0.0 -0.284 0.0" />
+            <part node="mainRopeDetachedHook" startTime="0.0" endTime="2.0" startTrans="0.148 2.277 -1.445" endTrans="0.148 2.27 -1.437" startRot="-0.143 0.005 -0.022" endRot="-77.639 2.653 -11.927" />
+            <part node="supportRope01DetachedHook" startTime="0.0" endTime="2.0" startTrans="0.079 2.627 -1.474" endTrans="0.079 2.631 -1.454" startRot="-0.158 0.0 0.0" endRot="-85.748 0.0 0.0" />
+            <part node="supportRope02DetachedHook" startTime="0.0" endTime="2.0" startTrans="0.092 2.325 -1.444" endTrans="0.092 2.327 -1.443" startRot="-0.145 0.01 -0.044" endRot="-78.457 5.182 -23.856" />
+
+            <sound template="hydraulicOpen02"       startTime="2.00" endTime="3.99" volumeScale="2"   pitchScale="1.3" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="hydraulicClose01"      startTime="2.00" endTime="3.99" volumeScale="2"   pitchScale="0.7" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="hydraulicClose01"      startTime="0.01" endTime="1.99" volumeScale="3.2" pitchScale="0.6" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="hydraulicOpen05"       startTime="0.01" endTime="1.99" volumeScale="2.2" pitchScale="1.6" fadeIn="0.1" fadeOut="0.1"/>
+            <sound template="clackVar6"             startTime="0.01" direction="-1" volumeScale="3"   pitchScale="0.6" supportsReverb="false"/>
+            <sound template="thudVar2"              startTime="0.01" direction="-1" volumeScale="1"   pitchScale="1.5" supportsReverb="false"/>
+            <sound template="foldStartMed02"        startTime="0.1"  direction="-1" volumeScale="2"   pitchScale="0.5" supportsReverb="false"/>
+            <sound template="metalClose"            startTime="0.01" direction="-1" volumeScale="1.2" pitchScale="2.2" supportsReverb="false"/>
+            <sound template="clackVar4"             startTime="0.01" direction="-1" volumeScale="1.8" pitchScale="1.7" supportsReverb="false"/>
+            <sound template="cylinderPunch"         startTime="0.01" direction="-1" volumeScale="0.5" pitchScale="1.2" supportsReverb="false"/>
+            <sound template="latchSmall"            startTime="0.01" direction="0"  volumeScale="0.3" pitchScale="1.7" supportsReverb="false"/>
+            <sound template="clackVar6"             startTime="1.99" direction="1"  volumeScale="3"   pitchScale="0.7" supportsReverb="false"/>
+            <sound template="sheetImp02"            startTime="1.99" direction="1"  volumeScale="3"   pitchScale="0.7" supportsReverb="false"/>
+            <sound template="clackVar3"             startTime="1.99" direction="1"  volumeScale="2"   pitchScale="0.7" supportsReverb="false"/>
+            <sound template="metalClose"            startTime="1.99" direction="1"  volumeScale="2"   pitchScale="1.7" supportsReverb="false"/>
+            <sound template="metalClose"            startTime="3.99" direction="1"  volumeScale="2"   pitchScale="1.5" supportsReverb="false"/>
+            <sound template="clackVar6"             startTime="3.99" direction="1"  volumeScale="3"   pitchScale="0.7" supportsReverb="false"/>
+            <sound template="clackVar4"             startTime="3.99" direction="1"  volumeScale="2"   pitchScale="1.5" supportsReverb="false"/>
+            <sound template="cylinderPunch"         startTime="3.99" direction="1"  volumeScale="0.4" pitchScale="1.8" supportsReverb="false"/>
+            <sound template="cylinderPunch"         startTime="2.00" direction="-1" volumeScale="0.5" pitchScale="1.6" supportsReverb="false"/>
+            <sound template="clackVar6"             startTime="2.00" direction="-1" volumeScale="3.4" pitchScale="0.7" supportsReverb="false"/>
+            <sound template="sheetImp02"            startTime="2.00" direction="-1" volumeScale="3.4" pitchScale="0.8" supportsReverb="false"/>
+            <sound template="clackVar4"             startTime="2.00" direction="-1" volumeScale="2.4" pitchScale="1.3" supportsReverb="false"/>
+        </animation>
+        <animation name="moveSupport" soundVolumeFactor="2">
+            <!-- ParkBrakeHandle -->
+            <part node="parkBrakeHandle" startTime="0.0" endTime="0.6" startRot="-720 0 0" endRot="0 0 0"/>
+            <!-- Support Arm -->
+            <part node="supportArm" startTime="0.0" endTime="0.2" startTrans="0 0 0.35" endTrans="0 0 0.3"/>
+            <part node="supportHandlePart" startTime="0.0" endTime="0.2" startRot="0 0 0" endRot="0 0 -7"/>
+            <part node="supportHandle" startTime="0.2" endTime="0.3" startRot="0 0 0" endRot="0 0 -53"/>
+            <part node="supportHandlePart" startTime="0.3" endTime="0.9" startRot="0 0 -7" endRot="0 0 -713"/>
+            <part node="supportArm" startTime="0.3" endTime="0.9" startTrans="0 0 0.3" endTrans="0 0 -0.02"/>
+            <part node="supportHandlePart" startTime="0.9" endTime="1.0" startRot="0 0 -713" endRot="0 0 -720"/>
+            <part node="supportHandle" startTime="0.9" endTime="1.0" startRot="0 0 -53" endRot="0 0 0"/>
+
+            <sound template="slideOpen"  startTime="0.01" endTime="0.99" volumeScale="2" pitchScale="1" linkNode="supportArm"/>
+            <sound template="metalClose" startTime="0.1" direction="-1" volumeScale="2" pitchScale="1.8" linkNode="supportArm"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="mainArm01">
+                <dependentPart node="mainArmHydraulic" />
+            </movingTool>
+            <movingTool node="mainArm02">
+                <dependentPart node="mainArmPartHydraulic01" />
+                <dependentPart node="mainArmPartHydraulic02" />
+            </movingTool>
+        </movingTools>
+
+        <movingParts>
+            <movingPart node="mainArmHydraulic" referencePoint="mainArmHydraulicRef" referenceFrame="mainArmHydraulicRefFrame">
+                <translatingPart node="mainArmHydraulicPunch" />
+            </movingPart>
+            <movingPart node="mainArmPartHydraulic01" referencePoint="mainArmPartHydraulic01Ref" referenceFrame="mainArmPartHydraulic01Ref">
+                <translatingPart node="mainArmPartHydraulic01Punch" />
+            </movingPart>
+            <movingPart node="mainArmPartHydraulic02" referencePoint="mainArmPartHydraulic02Ref" referenceFrame="mainArmPartHydraulic02Ref">
+                <translatingPart node="mainArmPartHydraulic02Punch" />
+            </movingPart>
+        </movingParts>
+    </cylindered>
+
+    <ai>
+        <agentAttachment jointNode="attacherJoint" rotCenterWheelIndices="1 2 3 4" width="2.6" length="4.85" lengthOffset="0.75" height="3.8"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode wheelIndices="1 2 3 4" minZ="-2.1" maxZ="0.7" yOffset="0.5"/>
+        <bendingNode minX="-1.2" maxX="1.1" minZ="0.7" maxZ="1.95" yOffset="0.65"/>
+        <bendingNode minX="-0.25" maxX="0.25" minZ="1.95" maxZ="2.9" yOffset="0.75"/>
+    </foliageBending>
+
+	<baseColorConfigurations useDefaultColors="true">
+        <material materialSlotName="KOLLER_RED1_mat"/>
+		<baseColorConfiguration materialTemplateName="KOLLER_RED1"/>
+		<baseColorConfiguration materialTemplateName="KOLLER_YELLOW1"/>
+		<baseColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+		
+    </baseColorConfigurations>
+
+	<designColorConfigurations title="$l10n_configuration_chassisColor" useDefaultColors="true">
+        <material materialSlotName="KOLLER_YELLOW1_mat"/>
+		<designColorConfiguration materialTemplateName="KOLLER_RED1"/>
+		<designColorConfiguration materialTemplateName="KOLLER_YELLOW1" isDefault="true"/>
+		<designColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+		
+    </designColorConfigurations>
+
+	<rimColorConfigurations useDefaultColors="true">
+		<rimColorConfiguration materialTemplateName="KOLLER_RED1"/>
+		<rimColorConfiguration materialTemplateName="KOLLER_YELLOW1"/>
+		<rimColorConfiguration materialTemplateName="RIM_DEFAULT" isDefault="true"/>
+		<rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+		
+    </rimColorConfigurations>
+
+    <wearable wearDuration="270" workMultiplier="2" fieldMultiplier="2"/>
+    <washable dirtDuration="270" washDuration="1" workMultiplier="2" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="k307_main_component1" node="0>" />
+        <i3dMapping id="wheelFrontLeft" node="0>0|0|0" />
+        <i3dMapping id="wheelFrontRight" node="0>0|0|1" />
+        <i3dMapping id="wheelBackLeft" node="0>0|0|2" />
+        <i3dMapping id="wheelBackRight" node="0>0|0|3" />
+        <i3dMapping id="chockSupport01" node="0>0|0|4|0" />
+        <i3dMapping id="chockSupport02" node="0>0|0|4|1" />
+        <i3dMapping id="wheelChock02_01" node="0>0|0|4|2" />
+        <i3dMapping id="wheelChock02_02" node="0>0|0|4|3" />
+        <i3dMapping id="attacherJoint" node="0>0|1|0" />
+        <i3dMapping id="airYellow" node="0>0|1|1|0" />
+        <i3dMapping id="airYellow_detached" node="0>0|1|1|0|0" />
+        <i3dMapping id="airYellow_connectorLinkNode" node="0>0|1|1|0|0|0" />
+        <i3dMapping id="airRed" node="0>0|1|1|1" />
+        <i3dMapping id="airRed_detached" node="0>0|1|1|1|0" />
+        <i3dMapping id="airRed_connectorLinkNode" node="0>0|1|1|1|0|0" />
+        <i3dMapping id="electric" node="0>0|1|1|2" />
+        <i3dMapping id="electric_detached" node="0>0|1|1|2|0" />
+        <i3dMapping id="electric_connectorLinkNode01" node="0>0|1|1|2|0|0" />
+        <i3dMapping id="electric_socketLinkNode" node="0>0|1|1|3" />
+        <i3dMapping id="electric_connectorLinkNode02" node="0>0|1|1|4" />
+        <i3dMapping id="redRectangle_01_01" node="0>0|2|0|0" />
+        <i3dMapping id="redRectangle_01_02" node="0>0|2|0|1" />
+        <i3dMapping id="redTriangle_01_01" node="0>0|2|0|2" />
+        <i3dMapping id="redTriangle_01_02" node="0>0|2|0|3" />
+        <i3dMapping id="sideMarker16Static_left" node="0>0|2|0|4" />
+        <i3dMapping id="sideMarker16Static_right" node="0>0|2|0|5" />
+        <i3dMapping id="sideMarker06White_01" node="0>0|2|0|6" />
+        <i3dMapping id="sideMarker06White_02" node="0>0|2|0|7" />
+        <i3dMapping id="plateNumberLight02_01" node="0>0|2|0|8" />
+        <i3dMapping id="licensePlateLightHigh" node="0>0|2|0|8|0" />
+        <i3dMapping id="plateNumberLight02_02" node="0>0|2|0|9" />
+        <i3dMapping id="backLight_static" node="0>0|2|1|0" />
+        <i3dMapping id="backLightGlass_static" node="0>0|2|1|1" />
+        <i3dMapping id="backLightsHigh" node="0>0|2|2|0" />
+        <i3dMapping id="turnLightLeftBack" node="0>0|2|3|0" />
+        <i3dMapping id="turnLightRightBack" node="0>0|2|3|1" />
+        <i3dMapping id="exhaustParticle" node="0>0|3" />
+        <i3dMapping id="mainArm01" node="0>0|4|0|0" />
+        <i3dMapping id="mainArm02" node="0>0|4|0|0|0|0" />
+        <i3dMapping id="mainRopeArm" node="0>0|4|0|0|0|0|0|0" />
+        <i3dMapping id="mainRopeNode" node="0>0|4|0|0|0|0|0|0|0" />
+        <i3dMapping id="pullRopeArm01" node="0>0|4|0|0|0|0|1" />
+        <i3dMapping id="pullRopeArm02" node="0>0|4|0|0|0|0|1|0|0" />
+        <i3dMapping id="pullRopeNode" node="0>0|4|0|0|0|0|1|0|0|0" />
+        <i3dMapping id="supportRope01AngleRef" node="0>0|4|0|0|0|0|2" />
+        <i3dMapping id="supportRope01Rot" node="0>0|4|0|0|0|0|2|0" />
+        <i3dMapping id="supportRope01" node="0>0|4|0|0|0|0|2|0|0" />
+        <i3dMapping id="supportRope02AngleRef" node="0>0|4|0|0|0|0|3" />
+        <i3dMapping id="supportRope02Rot" node="0>0|4|0|0|0|0|3|0" />
+        <i3dMapping id="supportRope02" node="0>0|4|0|0|0|0|3|0|0" />
+        <i3dMapping id="supportRope03AngleRef" node="0>0|4|0|0|0|0|4" />
+        <i3dMapping id="supportRope03Rot" node="0>0|4|0|0|0|0|4|0" />
+        <i3dMapping id="supportRope03" node="0>0|4|0|0|0|0|4|0|0" />
+        <i3dMapping id="supportRope04AngleRef" node="0>0|4|0|0|0|0|5" />
+        <i3dMapping id="supportRope04Rot" node="0>0|4|0|0|0|0|5|0" />
+        <i3dMapping id="supportRope04" node="0>0|4|0|0|0|0|5|0|0" />
+        <i3dMapping id="mainArmPartHydraulic02" node="0>0|4|0|0|0|0|6" />
+        <i3dMapping id="mainArmPartHydraulic02Punch" node="0>0|4|0|0|0|0|6|0" />
+        <i3dMapping id="mainArm02AnimationJoint01" node="0>0|4|0|0|0|0|11" />
+        <i3dMapping id="mainArm02AnimationJoint02" node="0>0|4|0|0|0|0|12" />
+        <i3dMapping id="mainArm02AnimationJoint03" node="0>0|4|0|0|0|0|13" />
+        <i3dMapping id="mainArm02AnimationJoint04" node="0>0|4|0|0|0|0|14" />
+        <i3dMapping id="mainArm01Part" node="0>0|4|0|0|1" />
+        <i3dMapping id="mainArmPartHydraulic01Ref" node="0>0|4|0|0|1|0" />
+        <i3dMapping id="mainArmPartHydraulic02Ref" node="0>0|4|0|0|1|1" />
+        <i3dMapping id="mainArmBolt" node="0>0|4|0|0|3" />
+        <i3dMapping id="mainArmPartHydraulic01" node="0>0|4|0|0|4" />
+        <i3dMapping id="mainArmPartHydraulic01Punch" node="0>0|4|0|0|4|0" />
+        <i3dMapping id="mainArmHydraulicRef" node="0>0|4|0|0|5" />
+        <i3dMapping id="supportRope03DetachedHook" node="0>0|4|0|0|6" />
+        <i3dMapping id="supportRope04DetachedHook" node="0>0|4|0|0|7" />
+        <i3dMapping id="mainArm01AnimationJoint01" node="0>0|4|0|0|9|1" />
+        <i3dMapping id="mainArm01AnimationJoint02" node="0>0|4|0|0|9|2" />
+        <i3dMapping id="mainArm01AnimationJoint03" node="0>0|4|0|0|9|3" />
+        <i3dMapping id="mainArm01AnimationJoint04" node="0>0|4|0|0|9|4" />
+        <i3dMapping id="mainArm01AnimationJoint05" node="0>0|4|0|0|9|5" />
+        <i3dMapping id="mainArm01AnimationJoint06" node="0>0|4|0|0|9|6" />
+        <i3dMapping id="mainArm01AnimationJoint07" node="0>0|4|0|0|9|7" />
+        <i3dMapping id="mainArmHydraulicRefFrame" node="0>0|4|1" />
+        <i3dMapping id="mainArmHydraulic" node="0>0|4|1|0" />
+        <i3dMapping id="mainArmHydraulicPunch" node="0>0|4|1|0|0" />
+        <i3dMapping id="supportArm02" node="0>0|4|2|0" />
+        <i3dMapping id="supportCol02" node="0>0|4|2|0|0" />
+        <i3dMapping id="supportArm" node="0>0|4|3|0" />
+        <i3dMapping id="supportCol01" node="0>0|4|3|0|0" />
+        <i3dMapping id="supportHandlePart" node="0>0|4|4|0" />
+        <i3dMapping id="supportHandle" node="0>0|4|4|0|0|0" />
+        <i3dMapping id="parkBrakeHandle" node="0>0|4|5" />
+        <i3dMapping id="supportRope01DetachedHook" node="0>0|4|6" />
+        <i3dMapping id="supportRope02DetachedHook" node="0>0|4|7" />
+        <i3dMapping id="mainRopeDetachedHook" node="0>0|4|8" />
+        <i3dMapping id="mainRopeRoll" node="0>0|4|9|0" />
+        <i3dMapping id="pullRopeRollRot" node="0>0|4|9|1" />
+        <i3dMapping id="pullRopeRoll" node="0>0|4|9|1|0" />
+        <i3dMapping id="supportRope01Roll" node="0>0|4|9|2" />
+        <i3dMapping id="supportRope02Roll" node="0>0|4|9|3" />
+        <i3dMapping id="supportRope03Roll" node="0>0|4|9|4" />
+        <i3dMapping id="supportRope04Roll" node="0>0|4|9|5" />
+        <i3dMapping id="controlTrigger" node="0>0|5" />
+        <i3dMapping id="alpha_vis" node="0>0|6|1" />
+        <i3dMapping id="grids_vis" node="0>0|6|2" />
+        <i3dMapping id="engineBelt" node="0>0|6|4|0" />
+        <i3dMapping id="licensePlateBack" node="0>0|6|6" />
+        <i3dMapping id="eckoFlex_detached" node="0>0|6|7" />
+        <i3dMapping id="k307_lod0" node="0>0|6|8|0" />
+        <i3dMapping id="supportRope01RollJoint" node="0>0|7|1" />
+        <i3dMapping id="supportRope02RollJoint" node="0>0|7|2" />
+        <i3dMapping id="supportRope03RollJoint" node="0>0|7|3" />
+        <i3dMapping id="supportRope04RollJoint" node="0>0|7|4" />
+        <i3dMapping id="mainRopeRollJoint" node="0>0|7|5" />
+        <i3dMapping id="pullRopeRollJoint" node="0>0|7|6" />
+        <i3dMapping id="pullRope_attached" node="0>2|6" />
+        <i3dMapping id="mainRopeDetached" node="0>2|11|0" />
+        <i3dMapping id="supportRope01Detached" node="0>2|11|1" />
+        <i3dMapping id="supportRope02Detached" node="0>2|11|2" />
+        <i3dMapping id="supportRope03Detached" node="0>2|11|3" />
+        <i3dMapping id="supportRope04Detached" node="0>2|11|4" />
+    </i3dMappings>
+</vehicle>

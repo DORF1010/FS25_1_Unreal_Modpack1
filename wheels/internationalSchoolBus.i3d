@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="internationalSchoolBus" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="9" filename="$data/shaders/vehicleShader.xml" />
+    <File fileId="38" filename="$data/shared/clearPlastic_diffuse.png" />
+    <File fileId="41" filename="$data/shared/default_normal.png" />
+    <File fileId="11" filename="$data/shared/detailLibrary/flat_normal.png" />
+    <File fileId="16" filename="$data/shared/detailLibrary/metallic/clear_diffuse.png" />
+    <File fileId="17" filename="$data/shared/detailLibrary/metallic/clear_specular.png" />
+    <File fileId="39" filename="$data/shared/detailLibrary/metallic/glass/glassClear03_specular.png" />
+    <File fileId="29" filename="$data/shared/detailLibrary/metallic/silverScratched_diffuse.png" />
+    <File fileId="30" filename="$data/shared/detailLibrary/metallic/silverScratched_specular.png" />
+    <File fileId="18" filename="$data/shared/detailLibrary/metallic/steelTreadPlate_diffuse.png" />
+    <File fileId="19" filename="$data/shared/detailLibrary/metallic/steelTreadPlate_normal.png" />
+    <File fileId="20" filename="$data/shared/detailLibrary/metallic/steelTreadPlate_specular.png" />
+    <File fileId="13" filename="$data/shared/detailLibrary/nonMetallic/fabric/fabric1Bluish_diffuse.png" />
+    <File fileId="14" filename="$data/shared/detailLibrary/nonMetallic/fabric/fabric1_normal.png" />
+    <File fileId="15" filename="$data/shared/detailLibrary/nonMetallic/fabric/fabric1_specular.png" />
+    <File fileId="24" filename="$data/shared/detailLibrary/nonMetallic/fabric/fabric3_diffuse.png" />
+    <File fileId="25" filename="$data/shared/detailLibrary/nonMetallic/fabric/fabric3_normal.png" />
+    <File fileId="26" filename="$data/shared/detailLibrary/nonMetallic/fabric/fabric3_specular.png" />
+    <File fileId="10" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_diffuse.png" />
+    <File fileId="12" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_specular.png" />
+    <File fileId="27" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_diffuse.png" />
+    <File fileId="28" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_specular.png" />
+    <File fileId="36" filename="$data/shared/detailLibrary/nonMetallic/reflector/reflector_diffuse.png" />
+    <File fileId="37" filename="$data/shared/detailLibrary/nonMetallic/reflector/reflector_specular.png" />
+    <File fileId="21" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubberBlack_diffuse.png" />
+    <File fileId="22" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubber_normal.png" />
+    <File fileId="23" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubber_specular.png" />
+    <File fileId="2" filename="$data/shared/ies/backLight.ies" />
+    <File fileId="1" filename="$data/shared/ies/frontLight.ies" />
+    <File fileId="6" filename="$data/shared/white_diffuse.png" />
+    <File fileId="40" filename="$data/shared/window_diffuse.png" />
+    <File fileId="42" filename="$data/shared/window_vmask.png" />
+    <File fileId="3" filename="$data/trafficVehicles/driver_diffuse.png" />
+    <File fileId="4" filename="$data/trafficVehicles/driver_normal.png" />
+    <File fileId="5" filename="$data/trafficVehicles/driver_specular.png" />
+    <File fileId="45" filename="$data/trafficVehicles/internationalSchoolBus/internationalSchoolBusDecals_diffuse.png" />
+    <File fileId="46" filename="$data/trafficVehicles/internationalSchoolBus/internationalSchoolBusDecals_normal.png" />
+    <File fileId="43" filename="$data/trafficVehicles/internationalSchoolBus/internationalSchoolBusGrid_diffuse.png" />
+    <File fileId="44" filename="$data/trafficVehicles/internationalSchoolBus/internationalSchoolBusGrid_normal.png" />
+    <File fileId="35" filename="$data/trafficVehicles/internationalSchoolBus/internationalSchoolBusLights_emissive.png" />
+    <File fileId="33" filename="$data/trafficVehicles/internationalSchoolBus/internationalSchoolBusLights_normal.png" />
+    <File fileId="34" filename="$data/trafficVehicles/internationalSchoolBus/internationalSchoolBusLights_vmask.png" />
+    <File fileId="31" filename="$data/trafficVehicles/internationalSchoolBus/internationalSchoolBusWheels_normal.png" />
+    <File fileId="32" filename="$data/trafficVehicles/internationalSchoolBus/internationalSchoolBusWheels_vmask.png" />
+    <File fileId="7" filename="$data/trafficVehicles/internationalSchoolBus/internationalSchoolBus_normal.png" />
+    <File fileId="8" filename="$data/trafficVehicles/internationalSchoolBus/internationalSchoolBus_vmask.png" />
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="1" diffuseColor="0.5 0.5 0.5 1">
+    </Material>
+    <Material name="driver_mat" materialId="2">
+      <Texture fileId="3"/>
+      <Normalmap fileId="4"/>
+      <Glossmap fileId="5"/>
+    </Material>
+    <Material name="internationalSchoolBus_metalPainted_mat" materialId="4" customShaderId="9">
+      <CustomParameter name="colorScale" value="1 0.398 0.049"/>
+      <Custommap name="detailDiffuse" fileId="10"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="12"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="internationalSchoolBus_metalPainted_mat3" materialId="5" customShaderId="9">
+      <Custommap name="detailDiffuse" fileId="10"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="12"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="internationalSchoolBus_fabric1Bluish_mat" materialId="11" customShaderId="9">
+      <CustomParameter name="porosity" value="1.0"/>
+      <Custommap name="detailDiffuse" fileId="13"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailSpecular" fileId="15"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="internationalSchoolBus_chrome_mat" materialId="7" customShaderId="9">
+      <Custommap name="detailDiffuse" fileId="16"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="17"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="internationalSchoolBus_steelTreadPlate_mat" materialId="13" customShaderId="9">
+      <Custommap name="detailDiffuse" fileId="18"/>
+      <Custommap name="detailNormal" fileId="19"/>
+      <Custommap name="detailSpecular" fileId="20"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="internationalSchoolBus_rubberBlack_mat" materialId="8" customShaderId="9">
+      <CustomParameter name="porosity" value="0.5"/>
+      <Custommap name="detailDiffuse" fileId="21"/>
+      <Custommap name="detailNormal" fileId="22"/>
+      <Custommap name="detailSpecular" fileId="23"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="internationalSchoolBus_metalPainted_mat4" materialId="14" customShaderId="9">
+      <CustomParameter name="colorScale" value="0.418 0.008 0"/>
+      <Custommap name="detailDiffuse" fileId="10"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="12"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="internationalSchoolBus_fabric3_mat" materialId="12" customShaderId="9">
+      <CustomParameter name="colorScale" value="0.141 0.141 0.141"/>
+      <CustomParameter name="porosity" value="1.0"/>
+      <Custommap name="detailDiffuse" fileId="24"/>
+      <Custommap name="detailNormal" fileId="25"/>
+      <Custommap name="detailSpecular" fileId="26"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="internationalSchoolBus_plasticPaintedGray_mat" materialId="10" customShaderId="9">
+      <CustomParameter name="colorScale" value="0.254 0.254 0.254"/>
+      <Custommap name="detailDiffuse" fileId="27"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="28"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="internationalSchoolBus_metalPaintedBlack_mat" materialId="3" customShaderId="9">
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+      <Custommap name="detailDiffuse" fileId="10"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="12"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="internationalSchoolBus_plasticPaintedBlack_mat" materialId="6" customShaderId="9">
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+      <Custommap name="detailDiffuse" fileId="27"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="28"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="internationalSchoolBus_silverScratched_mat" materialId="9" customShaderId="9">
+      <Custommap name="detailDiffuse" fileId="29"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="30"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="7"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="internationalSchoolBusWheels_silverScratched_mat" materialId="29" customShaderId="9">
+      <Custommap name="detailDiffuse" fileId="29"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="30"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="31"/>
+      <Glossmap fileId="32"/>
+    </Material>
+    <Material name="internationalSchoolBusWheels_rubberBlack_mat" materialId="30" customShaderId="9">
+      <CustomParameter name="porosity" value="0.5"/>
+      <Custommap name="detailDiffuse" fileId="21"/>
+      <Custommap name="detailNormal" fileId="22"/>
+      <Custommap name="detailSpecular" fileId="23"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="31"/>
+      <Glossmap fileId="32"/>
+    </Material>
+    <Material name="internationalSchoolBusLights_metalPaintedBlack_mat" materialId="26" customShaderId="9" customShaderVariation="staticLight">
+      <CustomParameter name="blinkMulti" value="2 5 50 0"/>
+      <CustomParameter name="blinkSimple" value="1 0"/>
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+      <CustomParameter name="lightIds0" value="0 0 0 0"/>
+      <CustomParameter name="lightTypeBitMask" value="0"/>
+      <Custommap name="detailDiffuse" fileId="10"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="12"/>
+      <Custommap name="lightsIntensity" fileId="35"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="33"/>
+      <Glossmap fileId="34"/>
+    </Material>
+    <Material name="internationalSchoolBusLights_reflectorOrange_mat" materialId="28" customShaderId="9" customShaderVariation="staticLight">
+      <CustomParameter name="blinkMulti" value="2 5 50 0"/>
+      <CustomParameter name="blinkSimple" value="1 0"/>
+      <CustomParameter name="clearCoatIntensity" value="0.25"/>
+      <CustomParameter name="clearCoatSmoothness" value="1.0"/>
+      <CustomParameter name="colorScale" value="1.1 0.185 0.0"/>
+      <CustomParameter name="lightIds0" value="0 0 0 0"/>
+      <CustomParameter name="lightTypeBitMask" value="0"/>
+      <Custommap name="detailDiffuse" fileId="36"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="37"/>
+      <Custommap name="lightsIntensity" fileId="35"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="33"/>
+      <Glossmap fileId="34"/>
+    </Material>
+    <Material name="internationalSchoolBusLights_chrome_mat" materialId="27" customShaderId="9" customShaderVariation="staticLight">
+      <CustomParameter name="lightIds0" value="1 0 0 0"/>
+      <Custommap name="detailDiffuse" fileId="16"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="17"/>
+      <Custommap name="lightsIntensity" fileId="35"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="33"/>
+      <Glossmap fileId="34"/>
+    </Material>
+    <Material name="internationalSchoolBusLights_glassClear03_mat" materialId="21" customShaderId="9" customShaderVariation="staticLight" alphaBlending="true">
+      <CustomParameter name="alphaBlendingClipThreshold" value="0"/>
+      <CustomParameter name="blinkMulti" value="2 5 50 0"/>
+      <CustomParameter name="blinkSimple" value="1 0"/>
+      <CustomParameter name="colorScale" value="1 0.25 0"/>
+      <CustomParameter name="lightIds0" value="0 0 0 0"/>
+      <CustomParameter name="lightTypeBitMask" value="0"/>
+      <Custommap name="detailDiffuse" fileId="16"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="39"/>
+      <Custommap name="lightsIntensity" fileId="35"/>
+      <Texture fileId="38"/>
+      <Normalmap fileId="33"/>
+      <Glossmap fileId="34"/>
+    </Material>
+    <Material name="internationalSchoolBusLights_glassClear03_mat3" materialId="22" customShaderId="9" customShaderVariation="staticLight" alphaBlending="true">
+      <CustomParameter name="alphaBlendingClipThreshold" value="0"/>
+      <CustomParameter name="blinkMulti" value="2 5 50 0"/>
+      <CustomParameter name="blinkSimple" value="1 0"/>
+      <CustomParameter name="lightIds0" value="0 0 0 0"/>
+      <CustomParameter name="lightTypeBitMask" value="0"/>
+      <Custommap name="detailDiffuse" fileId="16"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="39"/>
+      <Custommap name="lightsIntensity" fileId="35"/>
+      <Texture fileId="38"/>
+      <Normalmap fileId="33"/>
+      <Glossmap fileId="34"/>
+    </Material>
+    <Material name="internationalSchoolBusLights_glassClear03_mat4" materialId="23" customShaderId="9" customShaderVariation="staticLight" alphaBlending="true">
+      <CustomParameter name="alphaBlendingClipThreshold" value="0"/>
+      <CustomParameter name="blinkMulti" value="2 5 50 0"/>
+      <CustomParameter name="blinkSimple" value="1 0"/>
+      <CustomParameter name="colorScale" value="1 0 0"/>
+      <CustomParameter name="lightIds0" value="0 0 0 0"/>
+      <CustomParameter name="lightTypeBitMask" value="0"/>
+      <Custommap name="detailDiffuse" fileId="16"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="39"/>
+      <Custommap name="lightsIntensity" fileId="35"/>
+      <Texture fileId="38"/>
+      <Normalmap fileId="33"/>
+      <Glossmap fileId="34"/>
+    </Material>
+    <Material name="window_glassClear03_mat" materialId="20" customShaderId="9" alphaBlending="true">
+      <CustomParameter name="alphaBlendingClipThreshold" value="0"/>
+      <Custommap name="detailDiffuse" fileId="16"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="39"/>
+      <Texture fileId="40"/>
+      <Normalmap fileId="41"/>
+      <Glossmap fileId="42"/>
+    </Material>
+    <Material name="internationalSchoolBusGrid_metalPaintedBlack_mat" materialId="15" customShaderId="9" customShaderVariation="vmaskUV2">
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+      <Custommap name="detailDiffuse" fileId="10"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="12"/>
+      <Texture fileId="43"/>
+      <Normalmap fileId="44"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="internationalSchoolBusDecals_metalPainted_mat" materialId="17" customShaderId="9" customShaderVariation="vmaskUV2_normalUV3">
+      <CustomParameter name="colorScale" value="1.128 0.398 0.049"/>
+      <Custommap name="detailDiffuse" fileId="10"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="12"/>
+      <Texture fileId="45"/>
+      <Normalmap fileId="46"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="internationalSchoolBusDecals_silverScratched_mat" materialId="18" customShaderId="9" customShaderVariation="vmaskUV2_normalUV3">
+      <Custommap name="detailDiffuse" fileId="29"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="30"/>
+      <Texture fileId="45"/>
+      <Normalmap fileId="46"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="internationalSchoolBusDecals_metalPaintedBlack_mat" materialId="19" customShaderId="9" customShaderVariation="vmaskUV2_normalUV3">
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+      <Custommap name="detailDiffuse" fileId="10"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="12"/>
+      <Texture fileId="45"/>
+      <Normalmap fileId="46"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="internationalSchoolBusDecals_metalPainted_mat1" materialId="16" customShaderId="9" customShaderVariation="vmaskUV2_normalUV3">
+      <Custommap name="detailDiffuse" fileId="10"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="12"/>
+      <Texture fileId="45"/>
+      <Normalmap fileId="46"/>
+      <Glossmap fileId="8"/>
+    </Material>
+    <Material name="internationalSchoolBusLights_metalPainted_mat" materialId="25" customShaderId="9" customShaderVariation="staticLight">
+      <CustomParameter name="blinkMulti" value="2 5 50 0"/>
+      <CustomParameter name="blinkSimple" value="1 0"/>
+      <CustomParameter name="colorScale" value="1 0 0"/>
+      <CustomParameter name="lightIds0" value="0 0 0 0"/>
+      <CustomParameter name="lightTypeBitMask" value="0"/>
+      <Custommap name="detailDiffuse" fileId="10"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="12"/>
+      <Custommap name="lightsIntensity" fileId="35"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="33"/>
+      <Glossmap fileId="34"/>
+    </Material>
+    <Material name="internationalSchoolBusLights_metalPainted_mat1" materialId="24" customShaderId="9" customShaderVariation="staticLight">
+      <CustomParameter name="blinkSimple" value="1 0"/>
+      <CustomParameter name="colorScale" value="1 0.25 0"/>
+      <CustomParameter name="lightIds0" value="1 0 0 0"/>
+      <CustomParameter name="lightTypeBitMask" value="5"/>
+      <Custommap name="detailDiffuse" fileId="10"/>
+      <Custommap name="detailNormal" fileId="11"/>
+      <Custommap name="detailSpecular" fileId="12"/>
+      <Custommap name="lightsIntensity" fileId="35"/>
+      <Texture fileId="6"/>
+      <Normalmap fileId="33"/>
+      <Glossmap fileId="34"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="internationalSchoolBus.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="internationalSchoolBus" lockedgroup="true" shapeId="1" kinematic="true" compound="true" collisionFilterGroup="0x80024" collisionFilterMask="0x370800" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="1" clipDistance="300" nodeId="1">
+      <Shape name="driver" translation="0.632277 1.534658 5.613832" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="2" clipDistance="100" nodeId="2"/>
+      <TransformGroup name="trafficCollisionNode" translation="0 1 7.926182" nodeId="3"/>
+      <TransformGroup name="internationalSchoolBus" nodeId="4">
+        <Shape name="schoolbus" shapeId="3" castsShadows="true" receiveShadows="true" materialIds="3,4,5,6,7,8,9,10,11,12,13,14" nodeId="5"/>
+        <Shape name="grid" shapeId="4" castsShadows="true" receiveShadows="true" materialIds="15" nodeId="6"/>
+        <Shape name="decals" shapeId="5" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="16,17,18,19" clipDistance="80" nodeId="7"/>
+        <Shape name="windows" shapeId="6" castsShadows="true" receiveShadows="true" materialIds="20" nodeId="8"/>
+        <Shape name="glassLights" shapeId="7" castsShadows="true" receiveShadows="true" materialIds="21,22,23" nodeId="9"/>
+        <Shape name="glassClear" shapeId="8" castsShadows="true" receiveShadows="true" materialIds="24,25" nodeId="10"/>
+        <Shape name="lights" shapeId="9" castsShadows="true" receiveShadows="true" materialIds="26,27,28" nodeId="11"/>
+        <Shape name="parent_MG1" translation="0 0.628603 0" shapeId="10" castsShadows="true" receiveShadows="true" materialIds="29,30" skinBindNodeIds="12 29 30 31 32" clipDistance="120" nodeId="12"/>
+      </TransformGroup>
+      <TransformGroup name="licensePlates" nodeId="13">
+        <TransformGroup name="licensePlateFront" translation="0 0.72914 7.955932" nodeId="14"/>
+        <TransformGroup name="licensePlateBack" translation="0.727441 0.802356 -3.63963" rotation="-1.212661 180 0" nodeId="15"/>
+      </TransformGroup>
+      <TransformGroup name="lights" nodeId="16">
+        <TransformGroup name="staticLights" nodeId="17">
+          <Shape name="defaultLights" shapeId="11" castsShadows="true" receiveShadows="true" materialIds="27" clipDistance="150" nodeId="18"/>
+          <Shape name="turnLightLeft" shapeId="12" castsShadows="true" receiveShadows="true" materialIds="24" clipDistance="150" nodeId="19"/>
+          <Shape name="turnLightRight" shapeId="13" castsShadows="true" receiveShadows="true" materialIds="24" clipDistance="150" nodeId="20"/>
+          <Shape name="brakeLights" shapeId="14" castsShadows="true" receiveShadows="true" materialIds="27" clipDistance="150" nodeId="21"/>
+        </TransformGroup>
+        <TransformGroup name="realLights" translation="0 -0.02384 1.955492" rotation="0 180 0" nodeId="22">
+          <Light name="frontLightLow" translation="0 1.021047 -4.43186" rotation="-15 0 0" type="spot" color="0.85 0.85 1" emitDiffuse="true" emitSpecular="true" range="20" coneAngle="80" dropOff="3" clipDistance="75" nodeId="23"/>
+          <Light name="frontLightHigh" translation="0.775906 1.021047 -5.890437" rotation="-15 -8 0" type="spot" color="0.85 0.85 1" emitDiffuse="true" emitSpecular="true" scattering="true" scatteringIntensity="1.25" scatteringConeAngle="60" range="25" coneAngle="70" dropOff="3" iesProfileFileId="1" clipDistance="50" nodeId="24">
+            <Light name="frontLightHigh1" translation="-1.493112 -0.054311 0.202693" rotation="0 16 0" type="spot" color="0.85 0.85 1" emitDiffuse="true" emitSpecular="true" scattering="true" scatteringIntensity="1.25" scatteringConeAngle="60" range="25" coneAngle="70" dropOff="3" iesProfileFileId="1" clipDistance="50" nodeId="25"/>
+            <Light name="backLights" translation="-0.143277 -3.064161 11.260489" rotation="149.859329 -7.725712 -177.916809" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" range="5" coneAngle="110" dropOff="3" iesProfileFileId="2" clipDistance="75" nodeId="26">
+              <Light name="backLights1" translation="-1.980216 0 0" type="spot" color="0.5 0 0" emitDiffuse="true" emitSpecular="true" range="5" coneAngle="110" dropOff="3" iesProfileFileId="2" clipDistance="75" nodeId="27"/>
+            </Light>
+          </Light>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="wheels" nodeId="28">
+        <TransformGroup name="wheelFrontLeft" translation="0.909198 0.472348 6.919113" collision="false" density="0" collisionFilterMask="0xfffffbff" clipDistance="120" nodeId="29"/>
+        <TransformGroup name="wheelFrontRight" translation="-0.909198 0.472348 6.919113" collision="false" density="0" collisionFilterMask="0xfffffbff" clipDistance="120" nodeId="30"/>
+        <TransformGroup name="wheelBackLeft" translation="0.809213 0.472347 0" collision="false" density="0" collisionFilterMask="0xfffffbff" clipDistance="120" nodeId="31"/>
+        <TransformGroup name="wheelBackRight" translation="-0.823066 0.472347 0" collision="false" density="0" collisionFilterMask="0xfffffbff" clipDistance="120" nodeId="32"/>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+  <UserAttributes>
+  </UserAttributes>
+</i3D>

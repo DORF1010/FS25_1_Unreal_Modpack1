@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<sounds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/vehicle_sounds.xsd">
+    <motorized>
+        <sounds>
+            <motor template="engineLarge" file="$data/vehicles/krone/bigM450/sounds/bigM450_loop.gls" volumeScale="1.35"/>
+            <motor template="transmissionModern_04" volumeScale="2" pitchScale="0.8" linkNode="wheelBackLeft"/>
+            <motor template="transmissionModern_04" volumeScale="2" pitchScale="0.6" linkNode="wheelBackRight"/>
+            <motor template="cabinTractor_02" volumeScale="4" pitchScale="1" linkNodeOffset="0 4 1"/>
+            <motor template="indoorCabinRumble" linkNodeOffset="0.5 3.5 1" pitchScale="0.8"/>
+            <motor template="indoorCabinRumble" linkNodeOffset="-0.5 3.5 1" pitchScale="1.0"/>
+
+            <reverseDrive template="reverseBeep01" />
+            <motor template="filterLoop" volumeScale="0.3" pitchScale="0.7" fadeIn="2" fadeOut="2" linkNode="beaconLight01"/>
+        </sounds>
+    </motorized>
+
+    <enterable>
+        <sounds>
+            <rain template="rainInVehicle"  linkNodeOffset="0 4 1">
+                <loopSynthesisRpm>
+                    <modifier type="SPEED" value="0.0" modifiedValue="0.0" />
+                    <modifier type="SPEED" value="42.0" modifiedValue="1" />
+                </loopSynthesisRpm>
+                <volume>
+                    <modifier type="SPEED" value="0" modifiedValue="1" />
+                    <modifier type="SPEED" value="25" modifiedValue="1" />
+                    <modifier type="SPEED" value="42" modifiedValue="1.2" />
+                </volume>
+
+                <pitch>
+                    <modifier type="SPEED" value="0" modifiedValue="1" />
+                    <modifier type="SPEED" value="25" modifiedValue="1" />
+                    <modifier type="SPEED" value="42" modifiedValue="1.0" />
+                </pitch>
+            </rain>
+        </sounds>
+    </enterable>
+
+    <lights>
+        <sounds>
+            <toggleLights template="switch01"  />
+            <turnLight template="switchTurnlight"  />
+        </sounds>
+    </lights>
+
+    <attacherJoints>
+        <sounds>
+            <attach template="headerAttach01" linkNode="trailerAttacherJointBack"/>
+            <hydraulic template="hydraulicOpen02" volumeScale="2" linkNode="trailerAttacherJointBack"/>
+        </sounds>
+    </attacherJoints>
+
+    <drivable>
+        <sounds>
+            <waterSplash template="waterSplash01" />
+        </sounds>
+    </drivable>
+
+    <ai>
+        <automaticSteering>
+            <sounds>
+                <engage template="gpsEngageDefault"/>
+                <disengage template="gpsDisengageDefault"/>
+                <lineEnd template="gpsLineEndDefault"/>
+            </sounds>
+        </automaticSteering>
+    </ai>
+
+    <honk>
+        <sound template="honkKroneBigM" />
+    </honk>
+</sounds>

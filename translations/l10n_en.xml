@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <translationContributors>ChrisS, 82 Studios, Jos Modding</translationContributors>
+    <texts>
+	<!--  Configurations  -->
+        <text name="configuration_frame" 			text="Frame" />
+		<text name="configuration_gridColor" 		text="Grid Color" />
+        <text name="configuration_interiorColor" 	text="Interior Color" />		
+        <text name="configuration_thresher" 		text="Thresher" />
+		<text name="configuration_beltColor" 		text="Belt Color" />		
+		<text name="configuration_pipeColor" 		text="Pipe Color" />		
+		<text name="configuration_cabColor" 		text="Cab Color" />		
+		<text name="configuration_seatColor" 		text="Seat Color" />		
+
+        <text name="info_tipSideInstant" 			text="Instantly Unload" />
+        <text name="configuration_fast" 			text="Fast" />
+		<text name="configuration_emptySpeed" 		text="Discharge Speed"/>		
+        <text name="configuration_reflector" 		text="Reflector Color" />
+        <text name="configuration_reflectors" 		text="Reflectors" />
+		<text name="configuration_triangle" 		text="Triangle"/>
+		<text name="configuration_rearLights" 		text="Rear Light Design"/>
+		<text name="configuration_rearUSLights" 	text="Rear Light Design US"/>
+		<text name="configuration_plow" 			text="Plow"/>
+		<text name="color_disc" 					text="Disc"/>
+		
+        <text name="configuration_windowTint" 		text="Window Tint" />
+        <text name="configuration_med" 				text="Medium" />		
+        <text name="configuration_dark" 			text="Dark" />	
+        <text name="configuration_color_special"	text="Special" />		
+
+		<text name="configuration_workWidth" 		text="Working Width" />
+		<text name="configuration_cropGuides" 		text="Unrealistic Crop Guides" />
+		<text name="configuration_valueRow1" 		text="1 Row Unrealistic (4m)" />		
+		<text name="configuration_valueRow3" 		text="3 Row Unrealistic (10m)" />		
+		<text name="configuration_valueRow5" 		text="5 Row Unrealistic (16m)" />		
+		<text name="configuration_value5M" 			text="5M Unrealistic" />
+		<text name="configuration_value10M" 		text="10M Unrealistic" />
+		<text name="configuration_value20M" 		text="20M Unrealistic" />
+		<text name="configuration_value25M" 		text="25M Unrealistic" />
+		<text name="configuration_value50M" 		text="50M Unrealistic" />		
+	
+		<text name="configuration_capacity" 		text="Capacity" />	
+		<text name="configuration_specialEdition" 	text="Special Edition" />
+		<text name="configuration_special" 			text="Special" />
+		<text name="configuration_blink"			text="Blink" />
+		<text name="configuration_rotate"			text="Rotate" />		
+		<text name="configuration_unreal1"			text="Unrealistic" />		
+		<text name="configuration_decals"			text="Decals" />		
+		<text name="configuration_exhaust"			text="Exhaust" />
+        <text name="configuration_windowBanner" 	text="Windshield Logo" />
+        <text name="configuration_lizardBlack" 		text="Lizard Black" />
+        <text name="configuration_lizardWhite" 		text="Lizard White" />
+        <text name="configuration_colossusBlack" 	text="Colossus Black" />
+        <text name="configuration_colossusWhite" 	text="Colossus White" />		
+		<text name="configuration_rearHitch" 		text="Rear Hitch" />
+		
+		<text name="configuration_drawbarRotation" 	text="Drawbar Rotation" />		
+		<text name="configuration_drawbar40" 		text="Slight Rotation" />		
+		<text name="configuration_drawbar0" 		text="No Rotation" />		
+		<text name="configuration_lights"	 		text="Work Lights" />
+		<text name="configuration_boomColor" 		text="Boom Color" />
+		<text name="configuration_decalColor" 		text="Decal Color" />		
+
+		<text name="configuration_innerRimColor" 	text="Inner Rim Color" />
+		<text name="configuration_outerRimColor" 	text="Outer Rim Color" />
+		<text name="configuration_valueCrawlerWide" text="Crawler Track Wide" />
+		<text name="configuration_valueTwinFront" 	text="Twin Front" />		
+		
+    </texts>
+</l10n>

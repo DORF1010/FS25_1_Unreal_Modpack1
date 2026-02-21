@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <translationContributors>ChrisS, 82 Studios, Jos Modding</translationContributors>
+    <texts>
+	<!--  Configurations  -->
+        <text name="configuration_frame" 			text="Rahmen" />
+		<text name="configuration_gridColor" 		text="Gitterfarbe" />
+        <text name="configuration_interiorColor" 	text="Innenraumfarbe" />
+        <text name="configuration_thresher" 		text="Haspel" />
+		<text name="configuration_beltColor" 		text="Bandfarbe" />
+		<text name="configuration_pipeColor" 		text="Rohrfarbe" />	
+		<text name="configuration_cabColor" 		text="Kabinenfarbe" />
+		<text name="configuration_seatColor" 		text="Sitzfarbe" />		
+
+        <text name="info_tipSideInstant" 			text="Sofortiges Abladen" />
+        <text name="configuration_fast" 			text="Schnell" />
+		<text name="configuration_emptySpeed" 		text="Entladegeschwindigkeit"/>		
+        <text name="configuration_reflector" 		text="Reflektorfarbe" />
+        <text name="configuration_reflectors" 		text="Reflektoren" />
+		<text name="configuration_triangle" 		text="Dreieck"/>
+		<text name="configuration_rearLights" 		text="Heckleuchten-Design"/>
+		<text name="configuration_rearUSLights" 	text="Heckleuchten-Design US"/>		
+		<text name="configuration_plow" 			text="Pflug"/>	
+		<text name="color_disc" 					text="Scheibe"/>		
+		
+        <text name="configuration_windowTint" 		text="Fenstertönung" />
+        <text name="configuration_med" 				text="Mittel" />			
+        <text name="configuration_dark" 			text="Dunkel" />
+        <text name="configuration_color_special"	text="Spezial" />
+
+		<text name="configuration_workWidth" 		text="Arbeitsbreite" />
+		<text name="configuration_cropGuides" 		text="Unrealistische Crop-Guides" />
+		<text name="configuration_valueRow1" 		text="1 Reihen Unrealistisch (4m)" />		
+		<text name="configuration_valueRow3" 		text="3 Reihen Unrealistisch (10m)" />		
+		<text name="configuration_valueRow5" 		text="5 Reihen Unrealistisch (16m)" />			
+		<text name="configuration_value5M"			text="5M Unrealistisch" />
+		<text name="configuration_value10M" 		text="10M Unrealistisch" />
+		<text name="configuration_value20M" 		text="20M Unrealistisch" />
+		<text name="configuration_value25M" 		text="25M Unrealistisch" />
+		<text name="configuration_value50M" 		text="50M Unrealistisch" />
+
+		<text name="configuration_capacity"		 	text="Kapazität" />
+		<text name="configuration_specialEdition" 	text="Sonderedition" />
+		<text name="configuration_special" 			text="Sonderedition" />
+		<text name="configuration_blink"			text="Blinken" />
+		<text name="configuration_rotate"			text="Rotieren" />	
+		<text name="configuration_unreal1"			text="Unrealistisch" />
+		<text name="configuration_decals"			text="Abziehbilder" />
+		<text name="configuration_exhaust"			text="Auspuff" />
+        <text name="configuration_windowBanner" 	text="Windschutzscheiben-Logo" />
+        <text name="configuration_lizardBlack" 		text="Lizard Schwarz" />
+        <text name="configuration_lizardWhite" 		text="Lizard Weiße" />
+        <text name="configuration_colossusBlack" 	text="Colossus Schwarz" />
+        <text name="configuration_colossusWhite" 	text="Colossus Weiße" />
+		<text name="configuration_rearHitch" 		text="Heckkupplung" />
+
+		<text name="configuration_drawbarRotation" 	text="Deichseldrehung" />		
+		<text name="configuration_drawbar40" 		text="Leichte Drehung" />		
+		<text name="configuration_drawbar0" 		text="keine Drehung" />	
+		<text name="configuration_lights"	 		text="Arbeitsscheinwerfer" />
+		<text name="configuration_boomColor" 		text="Boomfarbe" />
+		<text name="configuration_decalColor" 		text="Aufkleberfarbe" />		
+
+		<text name="configuration_innerRimColor" 	text="Innenfelgefarbe" />
+		<text name="configuration_outerRimColor" 	text="Außenfelgefarbe" />		
+		<text name="configuration_valueCrawlerWide" text="Raupenfahrwerk Breit" />
+		<text name="configuration_valueTwinFront" 	text="Zwillings-Vorderseite" />		
+		
+    </texts>
+</l10n>

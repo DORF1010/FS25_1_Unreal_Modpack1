@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<sounds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/vehicle_sounds.xsd">
+    <motorized>
+        <sounds>
+            <motor template="engineLarge" file="$data/vehicles/fendt/vario1000/sounds/vario1000_loop.gls" volumeScale="1.25"/>
+            <motor template="indoorCabinRumble"     volumeScale="10" pitchScale="1.2" linkNodeOffset="-0.7 1 0"/>
+            <motor template="indoorCabinRumble"     volumeScale="10" pitchScale="1.0" linkNodeOffset="0.7 1 0"/>
+            <motor template="transmissionModern_01" pitchScale="0.8" volumeScale="1.8" linkNode="backWheelLeft" />
+            <motor template="transmissionModern_01" pitchScale="1.0" volumeScale="1.8" linkNode="backWheelRight" />
+            <motor template="fanModern_01"          pitchScale="0.9" volumeScale="1.6" linkNodeOffset="0 2 2.5"/>
+            <motor template="cabinTractor_01"       pitchScale="1"   linkNodeOffset="-0.7 3 -0.8" volumeScale="1.2"/>
+            <motor template="cabinTractor_01"       pitchScale="1.1"   linkNodeOffset="0.7 3 -0.8" volumeScale="1.2"/>
+            <compressedAir template="compressedAir"/>
+            <airCompressorRun template="brakeCompressorLarge" volumeScale="0.8"/>
+            <airCompressorStop template="compressedAir"/>
+        </sounds>
+    </motorized>
+
+    <enterable>
+        <sounds>
+            <rain template="rainInVehicle"  linkNodeOffset="0 3 0">
+                <loopSynthesisRpm>
+                    <modifier type="SPEED" value="0.0" modifiedValue="0.0" />
+                    <modifier type="SPEED" value="53.0" modifiedValue="1" />
+                </loopSynthesisRpm>
+                <volume>
+                    <modifier type="SPEED" value="0" modifiedValue="1" />
+                    <modifier type="SPEED" value="35" modifiedValue="1" />
+                    <modifier type="SPEED" value="53" modifiedValue="1.2" />
+                </volume>
+
+                <pitch>
+                    <modifier type="SPEED" value="0" modifiedValue="1" />
+                    <modifier type="SPEED" value="35" modifiedValue="1" />
+                    <modifier type="SPEED" value="53" modifiedValue="1.0" />
+                </pitch>
+            </rain>
+            <hail template="hailInVehicle" linkNodeOffset="0 3 0" volumeScale="1.5">
+                <loopSynthesisRpm>
+                    <modifier type="SPEED" value="0.0" modifiedValue="0.0" />
+                    <modifier type="SPEED" value="60.0" modifiedValue="1" />
+                </loopSynthesisRpm>
+                <volume>
+                    <modifier type="SPEED" value="0" modifiedValue="1" />
+                    <modifier type="SPEED" value="25" modifiedValue="1" />
+                    <modifier type="SPEED" value="60" modifiedValue="1.2" />
+                </volume>
+
+                <pitch>
+                    <modifier type="SPEED" value="0" modifiedValue="1" />
+                    <modifier type="SPEED" value="25" modifiedValue="1" />
+                    <modifier type="SPEED" value="60" modifiedValue="1.0" />
+                </pitch>
+            </hail>
+        </sounds>
+    </enterable>
+
+    <lights>
+        <sounds>
+            <toggleLights template="switch01"  />
+            <turnLight template="switchTurnlight"  />
+        </sounds>
+    </lights>
+
+    <attacherJoints>
+        <sounds>
+            <attach template="attach01" />
+            <hydraulic template="hydraulicOpen01" />
+        </sounds>
+    </attacherJoints>
+
+    <drivable>
+        <sounds>
+            <waterSplash template="waterSplash01" />
+        </sounds>
+    </drivable>
+
+    <ai>
+        <automaticSteering>
+            <sounds>
+                <engage template="gpsEngageFendt"/>
+                <disengage template="gpsDisengageFendt"/>
+                <lineEnd template="gpsLineEndFendt"/>
+            </sounds>
+        </automaticSteering>
+    </ai>
+
+    <honk>
+        <sound template="honkFendt511C" />
+    </honk>
+</sounds>

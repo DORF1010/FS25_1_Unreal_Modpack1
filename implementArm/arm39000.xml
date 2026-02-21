@@ -1,0 +1,678 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="baseAttachable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../bin/shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>Implement Arm 39000</name>
+        <functions>
+            <function>$l10n_function_dolly</function>
+        </functions>
+        <rotation>0</rotation>
+        <image>implementArm/arm39000.dds</image>
+        <price>10000</price>
+        <lifetime>600</lifetime>
+        <brand>DORF</brand>
+        <category>misc</category>
+        <shopTranslationOffset>0 0.2 0</shopTranslationOffset>
+        <vertexBufferMemoryUsage>668416</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>196608</indexBufferMemoryUsage>
+        <textureMemoryUsage>2555904</textureMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_tool</typeDesc>
+        <filename>implementArm/lizard_TandemSeries_D.i3d</filename>
+        <size width="6.35" length="4.35" height="0.954" lengthOffset="0.38" heightOffset="0.37"/>
+        <components>
+            <component centerOfMass="0 0.24 0.2" solverIterationCount="10" mass="200" breakable="false"/>
+            <component centerOfMass="0 -0.2 0" solverIterationCount="10" mass="100" breakable="false"/>
+            <component centerOfMass="0 -0.2 0" solverIterationCount="10" mass="100" breakable="false"/>
+            <component centerOfMass="2 0 0" solverIterationCount="10" mass="30" breakable="false"/>
+            <component centerOfMass="-2 0 0" solverIterationCount="10" mass="30" breakable="false"/>
+            <joint component1="1" component2="2" node="componentJoint_left" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="1" component2="3" node="componentJoint_right" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="1" component2="4" node="componentJoint_leftPart" rotLimit="0 0 0" transLimit="0 0 0"/>
+            <joint component1="1" component2="5" node="componentJoint_rightPart" rotLimit="0 0 0" transLimit="0 0 0"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT" />
+        <mapHotspot type="TOOL" />
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="BKT">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/tires/bkt/TF8181/5_50__16.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelLeft" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/bkt/TF8181/5_50__16.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelRight" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/bkt/TF8181/5_50__16.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelLeft2" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/bkt/TF8181/5_50__16.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelRight2" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="wheelLeft" scaleActive="1.1 1 1" />
+                <objectChange node="wheelRight" scaleActive="1.1 1 1" />
+                <objectChange node="wheelLeft2" scaleActive="1.1 1 1" />
+                <objectChange node="wheelRight2" scaleActive="1.1 1 1" />
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="MITAS">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/tires/mitas/FL02/6_50_R10.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelLeft" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/FL02/6_50_R10.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelRight" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/FL02/6_50_R10.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelLeft2" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/mitas/FL02/6_50_R10.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelRight2" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="wheelLeft" scaleActive="1 1 1" />
+                <objectChange node="wheelRight" scaleActive="1 1 1" />
+                <objectChange node="wheelLeft2" scaleActive="1 1 1" />
+                <objectChange node="wheelRight2" scaleActive="1 1 1" />
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="TRELLEBORG">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/10_80R12.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelLeft" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/10_80R12.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelRight" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/10_80R12.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelLeft2" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/trelleborg/AW305/10_80R12.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelRight2" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="wheelLeft" scaleActive="0.85 1 1" />
+                <objectChange node="wheelRight" scaleActive="0.85 1 1" />
+                <objectChange node="wheelLeft2" scaleActive="0.85 1 1" />
+                <objectChange node="wheelRight2" scaleActive="0.85 1 1" />
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="LIZARD">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/tires/lizard/implement/280_55R16.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelLeft" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/lizard/implement/280_55R16.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelRight" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/lizard/implement/280_55R16.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelLeft2" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/lizard/implement/280_55R16.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelRight2" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="wheelLeft" scaleActive="0.8 1 1" />
+                <objectChange node="wheelRight" scaleActive="0.8 1 1" />
+                <objectChange node="wheelLeft2" scaleActive="0.8 1 1" />
+                <objectChange node="wheelRight2" scaleActive="0.8 1 1" />
+            </wheelConfiguration>
+
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" brand="CONTINENTAL">
+                <wheels>
+                    <wheel filename="$data/shared/wheels/tires/continental/terrainContactHT/225_60R17.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelLeft" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/terrainContactHT/225_60R17.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelRight" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/terrainContactHT/225_60R17.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelLeft2" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                    <wheel filename="$data/shared/wheels/tires/continental/terrainContactHT/225_60R17.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" restLoad="2.3" repr="wheelRight2" forcePointRatio="0.25" mass="0.25" initialCompression="25" suspTravel="0.1" spring="42" damper="30" brakeFactor="0.01" yOffset="0.00"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="wheelLeft" scaleActive="1 1 1" />
+                <objectChange node="wheelRight" scaleActive="1 1 1" />
+                <objectChange node="wheelLeft2" scaleActive="1 1 1" />
+                <objectChange node="wheelRight2" scaleActive="1 1 1" />
+            </wheelConfiguration>
+        </wheelConfigurations>
+    </wheels>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="attacherJoint" jointType="implement" upperRotationOffset="50" lowerTransLimitScale="0 0 0" lowerRotLimitScale="0 0 1" upperRotLimitScale="0 0 0" upperTransLimitScale="0 0 0" allowsLowering="true">
+                <distanceToGround lower="0.5" upper="0.8"/>
+                <bottomArm categories="2 3" ballType="1"/>
+			</inputAttacherJoint>
+        </inputAttacherJoints>
+        <support animationName="moveSupport"/>
+        <brakeForce force="1" maxForce="0.6" maxForceMass="6000"/> 
+
+        <steeringAxleAngleScale minRot="-90" maxRot="90" backwards="true" direction="-1">
+            <folding maxLimit="0.05" minLimit="0.00"/>
+            <targetNode refAngle="15" node="wheelLeftRotation"/>
+        </steeringAxleAngleScale>
+
+        <steeringAngleNodes>
+            <steeringAngleNode scale="0.4" foldMinLimit="0" foldMaxLimit="0.05" node="wheelLeftRotation" />
+            <steeringAngleNode scale="0.4" foldMinLimit="0" foldMaxLimit="0.05" node="wheelRightRotation" />
+        </steeringAngleNodes>
+    </attachable>
+
+    <attacherJoints>
+        <attacherJointConfigurations>
+            <attacherJointConfiguration name="trailerLongONE" price="0" connectionHoseConfigId="1">
+                <attacherJoint node="attacherJoint_AttacherLong" jointType="trailerLow" lowerRotLimit="10 60 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="leftAtacher_joint1" rootNode="3>" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="rightAtacher_joint1" rootNode="4>" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="fix01" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="fix02" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <objectChange node="leftAtacher_1" visibilityActive="true" />
+                <objectChange node="leftAtacher_2" visibilityActive="false" />
+                <objectChange node="rightAtacher_1" visibilityActive="true" />
+                <objectChange node="rightAtacher_2" visibilityActive="false" />
+                <objectChange node="rearAtacherLong" visibilityActive="true" />
+                <objectChange node="rearAtacherShort" visibilityActive="false" />
+            </attacherJointConfiguration>
+
+            <attacherJointConfiguration name="trailerLongDual" price="0" connectionHoseConfigId="1">
+                <attacherJoint node="attacherJoint_AttacherLong" jointType="trailerLow" lowerRotLimit="10 60 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="leftAtacher_joint1" rootNode="3>" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="rightAtacher_joint1" rootNode="4>" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="leftAtacher_joint2" rootNode="3>" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="rightAtacher_joint2" rootNode="4>" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <objectChange node="leftAtacher_1" visibilityActive="true" />
+                <objectChange node="leftAtacher_2" visibilityActive="true" />
+                <objectChange node="rightAtacher_1" visibilityActive="true" />
+                <objectChange node="rightAtacher_2" visibilityActive="true" />
+                <objectChange node="rearAtacherLong" visibilityActive="true" />
+                <objectChange node="rearAtacherShort" visibilityActive="false" />
+            </attacherJointConfiguration>
+
+            <attacherJointConfiguration name="trailerShortONE" price="0" connectionHoseConfigId="2">
+                <attacherJoint node="attacherJoint_AttacherShort" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="leftAtacher_joint1" rootNode="3>" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="rightAtacher_joint1" rootNode="4>" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="fix01" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="fix02" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <objectChange node="leftAtacher_1" visibilityActive="true" />
+                <objectChange node="leftAtacher_2" visibilityActive="false" />
+                <objectChange node="rightAtacher_1" visibilityActive="true" />
+                <objectChange node="rightAtacher_2" visibilityActive="false" />
+                <objectChange node="rearAtacherLong" visibilityActive="false" />
+                <objectChange node="rearAtacherShort" visibilityActive="true" />
+            </attacherJointConfiguration>
+
+            <attacherJointConfiguration name="trailerShortDual" price="0" connectionHoseConfigId="2">
+                <attacherJoint node="attacherJoint_AttacherShort" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="leftAtacher_joint1" rootNode="3>" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="rightAtacher_joint1" rootNode="4>" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="leftAtacher_joint2" rootNode="3>" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="rightAtacher_joint2" rootNode="4>" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <objectChange node="leftAtacher_1" visibilityActive="true" />
+                <objectChange node="leftAtacher_2" visibilityActive="true" />
+                <objectChange node="rightAtacher_1" visibilityActive="true" />
+                <objectChange node="rightAtacher_2" visibilityActive="true" />
+                <objectChange node="rearAtacherLong" visibilityActive="false" />
+                <objectChange node="rearAtacherShort" visibilityActive="true" />
+            </attacherJointConfiguration>
+
+            <attacherJointConfiguration name="3Point" price="0" connectionHoseConfigId="3">
+                <attacherJoint node="attacherJoint_Atacher3Witch" jointType="implement" lowerRotLimitScale="0 0 0" upperRotationOffset="2">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="attacherJoint_Atacher3Witch_left" jointType="implement" lowerRotLimitScale="0 0 0" upperRotationOffset="2">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="attacherJoint_Atacher3Witch_right" jointType="implement" lowerRotLimitScale="0 0 0" upperRotationOffset="2">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="fix01" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="fix02" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <objectChange node="leftAtacher_1" visibilityActive="false" />
+                <objectChange node="leftAtacher_2" visibilityActive="false" />
+                <objectChange node="rightAtacher_1" visibilityActive="false" />
+                <objectChange node="rightAtacher_2" visibilityActive="false" />
+                <objectChange node="rearAtacherLong" visibilityActive="false" />
+                <objectChange node="rearAtacherShort" visibilityActive="false" />
+                <objectChange node="atacher3Witch" visibilityActive="true" />
+                <objectChange node="atacher3Witch_left" visibilityActive="true" />
+                <objectChange node="atacher3Witch_right" visibilityActive="true" />
+            </attacherJointConfiguration>
+
+            <attacherJointConfiguration name="3Point" price="0" connectionHoseConfigId="3">
+                <attacherJoint node="attacherJoint_Atacher3Witch" jointType="implement" lowerRotLimitScale="0 0 0" upperRotationOffset="2">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="attacherJoint_Atacher3Witch_left" jointType="implement" lowerRotLimitScale="0 0 0" upperRotationOffset="2">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="attacherJoint_Atacher3Witch_right" jointType="implement" lowerRotLimitScale="0 0 0" upperRotationOffset="2">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="fix01" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="fix02" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <objectChange node="leftAtacher_1" visibilityActive="false" />
+                <objectChange node="leftAtacher_2" visibilityActive="false" />
+                <objectChange node="rightAtacher_1" visibilityActive="false" />
+                <objectChange node="rightAtacher_2" visibilityActive="false" />
+                <objectChange node="rearAtacherLong" visibilityActive="false" />
+                <objectChange node="rearAtacherShort" visibilityActive="false" />
+                <objectChange node="atacher3Witch" visibilityActive="true" />
+                <objectChange node="atacher3Witch_left" visibilityActive="true" />
+                <objectChange node="atacher3Witch_right" visibilityActive="true" />
+            </attacherJointConfiguration>
+
+            <attacherJointConfiguration name="3PointTrailer" price="0" connectionHoseConfigId="4">
+                <attacherJoint node="attacherJoint_Atacher3Witch" jointType="implement" lowerRotLimitScale="0 0 0" upperRotationOffset="2">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="leftAtacher_joint1" rootNode="3>" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="rightAtacher_joint1" rootNode="4>" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="fix01" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <attacherJoint node="fix02" jointType="trailerLow" lowerRotLimit="10 0 50" upperRotationOffset="0" allowsJointLimitMovement="false"  comboTime="1">
+                    <schema position="1 0" rotation="0" invertX="false" />
+                </attacherJoint>
+                <objectChange node="leftAtacher_1" visibilityActive="true" />
+                <objectChange node="leftAtacher_2" visibilityActive="false" />
+                <objectChange node="rightAtacher_1" visibilityActive="true" />
+                <objectChange node="rightAtacher_2" visibilityActive="false" />
+                <objectChange node="rearAtacherLong" visibilityActive="false" />
+                <objectChange node="rearAtacherShort" visibilityActive="true" />
+                <objectChange node="atacher3Witch" visibilityActive="true" />
+            </attacherJointConfiguration>
+        </attacherJointConfigurations>
+    </attacherJoints>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn" node="connectionHoseLeft" diameter="0.025" length="0.5" straighteningFactor="0.1">
+            <objectChange node="connectionHoseLeft_deatached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="connectionHoseRight" diameter="0.025" length="0.5" straighteningFactor="0.1">
+            <objectChange node="connectionHoseRight_deatached" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicIn" node="connectionHoseLeft_down" diameter="0.025" length="0.5" straighteningFactor="0.1">
+            <objectChange node="connectionHoseLeft_deatached_down" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <hose inputAttacherJointIndices="1" type="hydraulicOut" node="connectionHoseRight_down" diameter="0.025" length="0.5" straighteningFactor="0.1">
+            <objectChange node="connectionHoseRight_deatached_down" visibilityActive="false" visibilityInactive="true"/>
+        </hose>
+        <connectionHoseConfigurations>
+            <connectionHoseConfiguration>
+                <!-- Engates Duplos -->
+                <target attacherJointIndices="1" type="hydraulicIn" node="referencePoint_atacherCenterIn" />
+                <target attacherJointIndices="1" type="hydraulicOut" node="referencePoint_atacherCenterOut" />
+                <target attacherJointIndices="2" type="hydraulicIn" node="referencePoint_atacherLeftIn1" />
+                <target attacherJointIndices="2" type="hydraulicOut" node="referencePoint_atacherLeftOut1" />
+                <target attacherJointIndices="3" type="hydraulicIn" node="referencePoint_atacherRightIn1" />
+                <target attacherJointIndices="3" type="hydraulicOut" node="referencePoint_atacherRightOut1" />
+                <target attacherJointIndices="4" type="hydraulicIn" node="referencePoint_atacherLeftIn2" />
+                <target attacherJointIndices="4" type="hydraulicOut" node="referencePoint_atacherLeftOut2" />
+                <target attacherJointIndices="5" type="hydraulicIn" node="referencePoint_atacherRightIn2" />
+                <target attacherJointIndices="5" type="hydraulicOut" node="referencePoint_atacherRightOut2" />
+            </connectionHoseConfiguration>
+            <connectionHoseConfiguration>
+                <!-- Engates Unicos -->
+                <target attacherJointIndices="1" type="hydraulicIn" node="referencePoint_atacherCenterIn" />
+                <target attacherJointIndices="1" type="hydraulicOut" node="referencePoint_atacherCenterOut" />
+                <target attacherJointIndices="2" type="hydraulicIn" node="referencePoint_atacherLeftIn1" />
+                <target attacherJointIndices="2" type="hydraulicOut" node="referencePoint_atacherLeftOut1" />
+                <target attacherJointIndices="3" type="hydraulicIn" node="referencePoint_atacherRightIn1" />
+                <target attacherJointIndices="3" type="hydraulicOut" node="referencePoint_atacherRightOut1" />
+            </connectionHoseConfiguration>
+            <connectionHoseConfiguration>
+                <target attacherJointIndices="1" type="hydraulicIn" node="referencePoint_atacherCenterIn" />
+                <target attacherJointIndices="1" type="hydraulicOut" node="referencePoint_atacherCenterOut" />
+            </connectionHoseConfiguration>
+            <connectionHoseConfiguration>
+                <!-- Engates Unicos -->
+                <target attacherJointIndices="2" type="hydraulicIn" node="referencePoint_atacherLeftIn1" />
+                <target attacherJointIndices="2" type="hydraulicOut" node="referencePoint_atacherLeftOut1" />
+                <target attacherJointIndices="3" type="hydraulicIn" node="referencePoint_atacherRightIn1" />
+                <target attacherJointIndices="3" type="hydraulicOut" node="referencePoint_atacherRightOut1" />
+            </connectionHoseConfiguration>
+        </connectionHoseConfigurations>
+    </connectionHoses>
+
+    <foldable>
+        <foldingConfigurations>
+            <foldingConfiguration>
+                <foldingParts posDirectionText="Lock Wheels" negDirectionText="Unlock Wheels" startMoveDirection="1" turnOnFoldMaxLimit="0.1" turnOnFoldMinLimit="0" >
+                    <foldingPart animationName="folding" speedScale="1" />
+                </foldingParts>
+            </foldingConfiguration>
+        </foldingConfigurations>
+    </foldable>
+
+    <animations>
+        <animation name="moveSupport">
+            <part node="suportAtacherLevealer" startTime="0.5" endTime="1.2" startRot="0 0 0" endRot="0 1040 0" />
+            <part node="suportDown" startTime="0.7" endTime="1" startTrans="0 0.283 1.682" endTrans="0 0.088 1.682" />
+            <sound file="$data/sounds/animations/clacks/aniClack_02.ogg" startTime="0.05" direction="-1" volumeScale="1.2" pitchScale="1.5" linkNode="attacherJoint"/>
+            <sound template="slideOpen"      startTime="0.01" direction="1"  volumeScale="2.1" pitchScale="0.7" linkNode="attacherJoint"/>
+            <sound template="hingeMedium"    startTime="0.2"  direction="1"  volumeScale="0.8" pitchScale="0.8" linkNode="attacherJoint"/>
+            <sound template="metalClose"     startTime="1"    direction="0"  volumeScale="0.7" pitchScale="1.0" linkNode="attacherJoint"/>
+            <sound template="clackVar6"      startTime="1"    direction="0"  volumeScale="1"   pitchScale="0.7" linkNode="attacherJoint"/>
+            <sound template="sheetImp02"     startTime="1.9"  direction="1"  volumeScale="1.5" pitchScale="1.7" linkNode="attacherJoint"/>
+            <sound template="clackVar6"      startTime="1.9"  direction="1"  volumeScale="1"   pitchScale="0.7" linkNode="attacherJoint"/>
+            <sound template="sheetImp02"     startTime="0.1"  direction="-1" volumeScale="1.5" pitchScale="1.7" linkNode="attacherJoint"/>
+            <sound template="clackVar6"      startTime="0.1"  direction="-1" volumeScale="1"   pitchScale="0.7" linkNode="attacherJoint"/>
+        </animation>
+        <animation name="spacing">
+            <part node="leftAtacher_1" startTime="0" endTime="1" startTrans="5.893 0 0" endTrans="4.61 0 0" />
+            <part node="leftAtacher_1" startTime="1.01" endTime="2" startTrans="4.61 0 0" endTrans="2.23 0 0" />
+            <part node="wheelSuportLeft2" startTime="1" endTime="1.01" startTrans="0.421 0.203 2.695" endTrans="0.421 0.203 3.053" />
+            <part node="componentJoint_leftFIX2" startTime="1" endTime="1.01" startTrans="2.695 0.247 -0.928" endTrans="3.053 0.247 -0.928" />
+            <part node="rightAtacher_1" startTime="0" endTime="1" startTrans="-5.893 0 0" endTrans="-4.61 0 0" />
+            <part node="rightAtacher_1" startTime="1.01" endTime="2" startTrans="-4.61 0 0" endTrans="-2.23 0 0" />
+            <part node="wheelSuportRight2" startTime="1" endTime="1.01" startTrans="-0.421 0.203 2.695" endTrans="-0.421 0.203 3.053" />
+            <part node="componentJoint_rightFIX2" startTime="1" endTime="1.01" startTrans="-2.695 0.247 -0.928" endTrans="-3.053 0.247 -0.928" />
+            <part node="atacher3Witch_left" startTime="0" endTime="1" startTrans="5.841 0.024 -0.008" endTrans="5.051 0.024 -0.008" />
+            <part node="atacher3Witch_left" startTime="1" endTime="1.01" startTrans="5.051 0.024 -0.008" endTrans="4.241 0.024 -0.008" />
+            <part node="atacher3Witch_left" startTime="1.02" endTime="2" startTrans="4.241 0.024 -0.008" endTrans="2.191 0.024 -0.008" />
+            <part node="atacher3Witch_right" startTime="0" endTime="1" startTrans="-5.841 0.024 -0.008" endTrans="-5.051 0.024 -0.008" />
+            <part node="atacher3Witch_right" startTime="1" endTime="1.01" startTrans="-5.051 0.024 -0.008" endTrans="-4.241 0.024 -0.008" />
+            <part node="atacher3Witch_right" startTime="1.02" endTime="2" startTrans="-4.241 0.024 -0.008" endTrans="-2.191 0.024 -0.008" />
+            <sound template="loopLayer5" startTime="0.01" endTime="1.99" pitchScale="0.4" volumeScale="0.3" fadeIn="0.1" linkNode="0>0|1" />
+        </animation>
+        <animation name="spacing2">
+            <part node="leftAtacher_2" startTime="0" endTime="1" startTrans="2.172 0 0" endTrans="4.045 0 0" />
+            <part node="rightAtacher_2" startTime="0" endTime="1" startTrans="-2.172 0 0" endTrans="-4.045 0 0" />
+            <sound template="loopLayer5" startTime="0.01" endTime="0.99" pitchScale="0.4" volumeScale="0.3" fadeIn="0.1" linkNode="0>0|1" />
+        </animation>
+        <animation name="folding">
+            <part node="componentJoint_leftFIX" startTime="0" endTime="1" startRot="0 0 0" endRot="0 0.01 0" />
+            <part node="componentJoint_rightFIX" startTime="0" endTime="1" startRot="0 0 0" endRot="0 0.01 0" />
+			<part componentJointIndex="1" startTime="0" endTime="1" startRotLimit="0 180 0" endRotLimit="0 0 0" />		
+			<part componentJointIndex="2" startTime="0" endTime="1" startRotLimit="0 180 0" endRotLimit="0 0 0" />		
+        </animation>
+        <animation name="foldingParts">
+            <part node="componentJoint_leftPartFIX" startTime="0" endTime="3" startRot="0 0 90" endRot="0 0 0" />
+            <part node="componentJoint_rightPartFIX" startTime="0" endTime="3" startRot="0 0 -90" endRot="0 0 0" />
+			<part componentJointIndex="3" startTime="0.5" endTime="2" startRotLimit="0 0 2" endRotLimit="0 0 30" />		
+			<part componentJointIndex="4" startTime="0.5" endTime="2" startRotLimit="0 0 2" endRotLimit="0 0 30" />	
+            <sound template="hydraulicOpen02" startTime="0.01" endTime="1.99" volumeScale="0.9" pitchScale="1.1" fadeIn="0.1" linkNode="0>0|2"/>
+            <sound template="clackVar6"          startTime="1.99" direction="1" volumeScale="1.5" pitchScale="0.6" linkNode="0>0|2"/>
+            <sound template="sheetImp02"         startTime="1.99" direction="1" volumeScale="1.4" pitchScale="1.4" linkNode="0>0|2"/>
+            <sound template="clackVar5"          startTime="0.01" direction="-1"  volumeScale="3.5" pitchScale="0.6" linkNode="0>0|2"/>
+            <sound template="sheetImp02"         startTime="0.01" direction="-1"  volumeScale="3"   pitchScale="1.4" linkNode="0>0|2"/>
+        </animation>
+    </animations>
+
+    <cylindered>
+        <movingTools>
+            <movingTool node="atacherTrailerLeft">
+                <controls axis="AXIS_CRANE_ARM4" invertAxis="false" mouseSpeedFactor="0.25" iconName="TOOL_OPEN_CLOSE" />
+                <animation animSpeed="0.4" animAcceleration="200" animName="spacing"/>
+                <attacherJoint jointIndices="1 2 3 4 5"/>
+            </movingTool>
+            <movingTool node="movingParts">
+                <controls axis="AXIS_CRANE_ARM3" invertAxis="false" mouseSpeedFactor="0.25" iconName="TOOL_OPEN_CLOSE" />
+                <animation animSpeed="0.4" animAcceleration="200" animName="spacing2"/>
+                <attacherJoint jointIndices="1 2 3 4 5"/>
+            </movingTool>
+            <movingTool node="componentJoint_leftPartFIX" playSound="false">
+                <controls axis="AXIS_FRONTLOADER_TOOL" invertAxis="false" mouseSpeedFactor="0.5" iconName="TOP_DOOR_ROTATE"/>
+                <animation animSpeed="0.2" animAcceleration="200" animName="foldingParts" />
+                <componentJoint index="3" anchorActor="0" />
+                <componentJoint index="4" anchorActor="0" />
+                <attacherJoint jointIndices="1 2 3 4 5"/>
+            </movingTool>
+            <movingTool node="wheelSuportLeft">
+                <componentJoint index="1" anchorActor="0" />
+            </movingTool>
+            <movingTool node="wheelSuportRight">
+                <componentJoint index="2" anchorActor="0" />
+            </movingTool>
+
+            <movingTool node="wheelLeftRotation" wheelIndices="3">
+            </movingTool>
+            <movingTool node="wheelRightRotation" wheelIndices="4">
+            </movingTool>
+
+
+
+        </movingTools>
+
+        <movingParts>
+            <movingPart node="leftPart" referencePoint="leftPart_ref" referenceFrame="leftPart_ref" isActiveDirty="true" maxUpdateDistance="-" />
+            <movingPart node="rightPart" referencePoint="rightPart_ref" referenceFrame="rightPart_ref" isActiveDirty="true" maxUpdateDistance="-" />
+            <movingPart node="pistonLeft" referencePoint="pistonLeft_ref" referenceFrame="pistonLeft_ref" isActiveDirty="true" maxUpdateDistance="-">
+                <translatingPart node="cilinderLeft" />
+            </movingPart>
+            <movingPart node="pistonRight" referencePoint="pistonRight_ref" referenceFrame="pistonRight_ref" isActiveDirty="true" maxUpdateDistance="-">
+                <translatingPart node="cilinderRight" />
+            </movingPart>
+        </movingParts>
+    </cylindered>
+
+    <ai>
+        <sizeMarkers leftNode="sizeMarkerLeft" rightNode="sizeMarkerRight" backNode="sizeMarkerBack"/>
+        <collisionTrigger node="aiCollisionNode" width="4.2" height="3.2"/>
+        <allowTurnBackward value="false"/>
+        <turningRadiusLimitation radius="5"/>
+        <toolReverserDirectionNode node="sizeMarkerBack"/>
+        <agentAttachment width="6.06" height="0.954" length="4.16" heightOffset="0.37" lengthOffset="0.38"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode minX="-1.85" maxX="1.85" minZ="-0.65" maxZ="0.068" yOffset="0.28" node="lizard_tandemSeriesM_main_component1"/>
+        <bendingNode minX="-0.08" maxX="0.08" minZ="0.074" maxZ="2.252" yOffset="0.29" node="lizard_tandemSeriesM_main_component1"/>
+        <bendingNode minX="0.075" maxX="3.15" minZ="-0.35" maxZ="0.34" yOffset="-0.07" node="lizard_tandemSeriesM_main_component4"/>
+        <bendingNode minX="-0.075" maxX="-3.15" minZ="-0.35" maxZ="0.34" yOffset="-0.07" node="lizard_tandemSeriesM_main_component5"/>
+        <bendingNode minX="-1.16" maxX="0" minZ="-0.42" maxZ="0" yOffset="0" node="foliageMainLeft"/>
+        <bendingNode minX="-1.16" maxX="0" minZ="-0.42" maxZ="0" yOffset="0" node="foliageMainRight"/>
+        <bendingNode minX="-1.16" maxX="0" minZ="-0.42" maxZ="0" yOffset="0" node="foliageLeft"/>
+        <bendingNode minX="-1.16" maxX="0" minZ="-0.42" maxZ="0" yOffset="0" node="foliageRight"/>
+    </foliageBending>
+    
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="2" fieldMultiplier="2"/>
+
+	<designConfigurations title="Arms">
+		<designConfiguration name="$l10n_configuration_valueDefault">
+			<objectChange node="decalBaseLeft" visibilityActive="false" visibilityInactive="false"/>
+            <objectChange node="decalBaseRight" visibilityActive="false" visibilityInactive="false"/>
+		</designConfiguration>
+		<designConfiguration name="Right Only">
+			<objectChange node="3>" visibilityActive="false"/>
+			<objectChange node="0>0|3|2" visibilityActive="false"/>
+		</designConfiguration>
+		<designConfiguration name="Left Only">
+			<objectChange node="4>" visibilityActive="false"/>
+			<objectChange node="0>0|3|3" visibilityActive="false"/>
+		</designConfiguration>
+		<designConfiguration name="$l10n_configuration_valueNo">
+			<objectChange node="3>" visibilityActive="false"/>
+			<objectChange node="0>0|3|2" visibilityActive="false"/>
+			<objectChange node="4>" visibilityActive="false"/>
+			<objectChange node="0>0|3|3" visibilityActive="false"/>
+		</designConfiguration>
+	</designConfigurations>
+
+    <!-- Cores -->
+
+
+    <baseColorConfigurations useDefaultColors="true" price="0" defaultColorIndex="12">
+        <material materialSlotName="tandemSeries_RED_BASE_mat"/>
+        <baseColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME" />
+		<baseColorConfiguration materialTemplateName="NEWHOLLAND_GOLD1"/>
+    </baseColorConfigurations>
+
+    <rimColorConfigurations useDefaultColors="true" defaultColorIndex="0">
+        <material materialSlotName="rim_outer_mat" />
+        <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME" />
+		<rimColorConfiguration materialTemplateName="NEWHOLLAND_GOLD1"/>
+    </rimColorConfigurations>
+
+    <i3dMappings>
+        <i3dMapping id="tandemSeries_M" node="0"/>
+        <i3dMapping id="attacherJoints" node="0|1"/>
+        <i3dMapping id="connectionHoseLeft" node="0|1|0|0"/>
+        <i3dMapping id="connectionHoseRight" node="0|1|0|1"/>
+        <i3dMapping id="connectionHoseLeft_deatached" node="0|1|0|2"/>
+        <i3dMapping id="connectionHoseRight_deatached" node="0|1|0|3"/>
+        <i3dMapping id="atacherBar" node="0|1|1"/>
+        <i3dMapping id="attacherJoint" node="0|1|1|0"/>
+        <i3dMapping id="rearAtacherLong" node="0|1|2"/>
+        <i3dMapping id="attacherJoint_AttacherLong" node="0|1|2|0"/>
+        <i3dMapping id="rearAtacherShort" node="0|1|3"/>
+        <i3dMapping id="attacherJoint_AttacherShort" node="0|1|3|0"/>
+        <i3dMapping id="suportDown" node="0|3|0"/>
+        <i3dMapping id="suportAtacherLevealer" node="0|3|1"/>
+        <i3dMapping id="suportAtacherLevealerPoint" node="0|3|1|0"/>
+        <i3dMapping id="drawBarHoses" node="1|1"/>
+        <i3dMapping id="wheelLeft" node="1>0|0|0"/>
+        <i3dMapping id="wheelRight" node="2>0|0|0"/>
+        <i3dMapping id="centralHoses" node="1|0"/>
+        <i3dMapping id="wheelSuportLeft" node="0|0|0"/>
+        <i3dMapping id="componentJoint_leftFIX" node="0|0|0|0"/>
+        <i3dMapping id="componentJoint_left" node="0|0|0|0|0"/>
+        <i3dMapping id="wheelSuportRight" node="0|0|1"/>
+        <i3dMapping id="componentJoint_rightFIX" node="0|0|1|0"/>
+        <i3dMapping id="componentJoint_right" node="0|0|1|0|0"/>
+        <i3dMapping id="referencePoint_atacherCenterIn" node="0|1|0|4"/>
+        <i3dMapping id="referencePoint_atacherCenterOut" node="0|1|0|5"/>
+        <i3dMapping id="sizeMarkerLeft" node="0|5|0"/>
+        <i3dMapping id="sizeMarkerRight" node="0|5|1"/>
+        <i3dMapping id="sizeMarkerBack" node="0|5|2"/>
+        <i3dMapping id="aiCollisionNode" node="0|5|3"/>
+        <i3dMapping id="leftPart" node="0|3|2"/>
+        <i3dMapping id="pistonLeft_ref" node="0|3|2|0"/>
+        <i3dMapping id="decalBaseLeft" node="0|3|2|1"/>
+        <i3dMapping id="wheelSuportLeft2" node="0|3|2|2"/>
+        <i3dMapping id="rightPart" node="0|3|3"/>
+        <i3dMapping id="pistonRight_ref" node="0|3|3|0"/>
+        <i3dMapping id="decalBaseRight" node="0|3|3|1"/>
+        <i3dMapping id="wheelSuportRight2" node="0|3|3|2"/>
+        <i3dMapping id="pistonLeft" node="0|3|4"/>
+        <i3dMapping id="cilinderLeft" node="0|3|4|0"/>
+        <i3dMapping id="pistonRight" node="0|3|5"/>
+        <i3dMapping id="cilinderRight" node="0|3|5|0"/>
+        <i3dMapping id="scaleSuportForWheelRight" node="0|3|6"/>
+        <i3dMapping id="scaleSuportForWheelLeft" node="0|3|7"/>
+        <i3dMapping id="componentJoint_leftPartFIX" node="0|3|8"/>
+        <i3dMapping id="componentJoint_leftPart" node="0|3|8|0"/>
+        <i3dMapping id="componentJoint_rightPartFIX" node="0|3|9"/>
+        <i3dMapping id="componentJoint_rightPart" node="0|3|9|0"/>
+        <i3dMapping id="leftPart_ref" node="3>0"/>
+        <i3dMapping id="componentJoint_leftFIX2" node="3>1"/>
+        <i3dMapping id="rightPart_ref" node="4>0"/>
+        <i3dMapping id="componentJoint_rightFIX2" node="4>1"/>
+        <i3dMapping id="wheelLeftRotation" node="3>1|0"/>
+        <i3dMapping id="wheelLeft2" node="3>1|0|0|0"/>
+        <i3dMapping id="wheelRightRotation" node="4>1|0"/>
+        <i3dMapping id="wheelRight2" node="4>1|0|0|0"/>
+        <i3dMapping id="connectionHoseLeft_down" node="0|1|0|6"/>
+        <i3dMapping id="connectionHoseRight_down" node="0|1|0|7"/>
+        <i3dMapping id="connectionHoseLeft_deatached_down" node="0|1|0|8"/>
+        <i3dMapping id="connectionHoseRight_deatached_down" node="0|1|0|9"/>
+        <i3dMapping id="lizard_tandemSeriesM_main_component1" node="0>"/>
+        <i3dMapping id="lizard_tandemSeriesM_wheel_component2" node="1>"/>
+        <i3dMapping id="lizard_tandemSeriesM_wheel_component3" node="2>"/>
+        <i3dMapping id="lizard_tandemSeriesM_main_component4" node="3>"/>
+        <i3dMapping id="lizard_tandemSeriesM_main_component5" node="4>"/>
+        <i3dMapping id="atacherTrailerLeft" node="3>3"/>
+        <i3dMapping id="leftAtacher_1" node="3>3|0"/>
+        <i3dMapping id="leftAtacher_joint1" node="3>3|0|0"/>
+        <i3dMapping id="referencePoint_atacherLeftIn1" node="3>3|0|1"/>
+        <i3dMapping id="referencePoint_atacherLeftOut1" node="3>3|0|2"/>
+        <i3dMapping id="leftAtacher_2" node="3>3|1"/>
+        <i3dMapping id="leftAtacher_joint2" node="3>3|1|0"/>
+        <i3dMapping id="referencePoint_atacherLeftIn2" node="3>3|1|1"/>
+        <i3dMapping id="referencePoint_atacherLeftOut2" node="3>3|1|2"/>
+        <i3dMapping id="atacherTrailerRight" node="4>3"/>
+        <i3dMapping id="rightAtacher_1" node="4>3|0"/>
+        <i3dMapping id="rightAtacher_joint1" node="4>3|0|0"/>
+        <i3dMapping id="referencePoint_atacherRightIn1" node="4>3|0|1"/>
+        <i3dMapping id="referencePoint_atacherRightOut1" node="4>3|0|2"/>
+        <i3dMapping id="rightAtacher_2" node="4>3|1"/>
+        <i3dMapping id="rightAtacher_joint2" node="4>3|1|0"/>
+        <i3dMapping id="referencePoint_atacherRightIn2" node="4>3|1|1"/>
+        <i3dMapping id="referencePoint_atacherRightOut2" node="4>3|1|2"/>
+        <i3dMapping id="movingParts" node="0|3"/>
+        <i3dMapping id="foliageLeft" node="0>4"/>
+        <i3dMapping id="foliageRight" node="0>5"/>
+        <i3dMapping id="foliageMainLeft" node="3>4"/>
+        <i3dMapping id="foliageMainRight" node="4>4"/>
+        <i3dMapping id="fix01" node="0|5|4"/>
+        <i3dMapping id="fix02" node="0|5|5"/>
+
+        <i3dMapping id="atacher3Witch" node="0>0|1|4"/>
+        <i3dMapping id="attacherJoint_Atacher3Witch" node="0>0|1|4|0"/>
+        
+        <i3dMapping id="lizard_tandemSeriesM_main_component4" node="3>"/>
+        <i3dMapping id="lizard_tandemSeriesM_main_component5" node="4>"/>
+
+        <i3dMapping id="atacher3Witch_left" node="3>3|2"/>
+        <i3dMapping id="attacherJoint_Atacher3Witch_left" node="3>3|2|0"/>
+        <i3dMapping id="atacher3Witch_right" node="4>3|2"/>
+        <i3dMapping id="attacherJoint_Atacher3Witch_right" node="4>3|2|0"/>
+    </i3dMappings>
+</vehicle>

@@ -1,0 +1,483 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="dolly" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <storeData>
+        <name>'Do all' Dolly 10 L</name>
+        <specs>
+            <weight ignore="true"/>
+            <combination filterCategory="trailersSemi"/>
+            <combination xmlFilename="$data/vehicles/pittsTrailers/lt408L/lt408L.xml"/>
+            <combination xmlFilename="$data/vehicles/lizard/moduleX/moduleX.xml"/>
+            <combination xmlFilename="$data/vehicles/kotte/tsa/tsa.xml"/>
+            <combination xmlFilename="$data/vehicles/lizard/mks32/mks32.xml"/>
+            <combination xmlFilename="$data/vehicles/wilsonTrailer/silverstar/silverstar.xml"/>
+        </specs>
+        <functions>
+            <function>$l10n_function_dolly</function>
+        </functions>
+        <image>dolly10L/store_dolly10L.png</image>
+        <price>1000</price>
+        <lifetime>600</lifetime>
+        <rotation>0</rotation>
+        <brand>KRAMPE</brand>
+        <category>misc</category>
+        <shopTranslationOffset>0 -0.119 0</shopTranslationOffset>
+        <shopRotationOffset>0.003 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>477440</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>140800</indexBufferMemoryUsage>
+        <textureMemoryUsage>524288</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_trailer</typeDesc>
+        <filename>dolly10L/dolly10L.i3d</filename>
+        <size width="2.55" length="4.65" height="1.4" lengthOffset="-0.07"/>
+        <components>
+            <component centerOfMass="0 0.6 -0.7" solverIterationCount="10" mass="4500"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT"/>
+        <mapHotspot type="TOOL_TRAILED"/>
+    </base>
+
+    <wheels>
+        <wheelConfigurations>
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" saveId="DEFAULT">
+                <wheels>
+                    <wheel dimensions="500_45R22_5 340_80R20 16_5L_16_1" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="1.9" repr="wheelLeft"  forcePointRatio="0.2" initialCompression="12" suspTravel="0.07" spring="200" damper="90" frictionScale="1.9" yOffset="-0.02"/>
+                        <wheelChock parkingNode="wheelChock01"/>
+                        <wheelChock parkingNode="wheelChock02" isInverted="true"/>
+                    </wheel>
+                    <wheel dimensions="500_45R22_5 340_80R20 16_5L_16_1" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="1.9" repr="wheelRight" forcePointRatio="0.2" initialCompression="12" suspTravel="0.07" spring="200" damper="90" frictionScale="1.9" yOffset="-0.02"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueWheelCommunal" price="0" saveId="COMMUNAL">
+                <wheels>
+                    <wheel dimensions="295_80R22_5 385_65R22_5 315_80R22_5" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="1.9" repr="wheelLeft"  forcePointRatio="0.2" initialCompression="12" suspTravel="0.07" spring="200" damper="90" frictionScale="1.9" yOffset="-0.02"/>
+                        <wheelChock parkingNode="wheelChock01"/>
+                        <wheelChock parkingNode="wheelChock02" isInverted="true"/>
+                    </wheel>
+                    <wheel dimensions="295_80R22_5 385_65R22_5 315_80R22_5" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics restLoad="1.9" repr="wheelRight" forcePointRatio="0.2" initialCompression="12" suspTravel="0.07" spring="200" damper="90" frictionScale="1.9" yOffset="-0.02"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" price="0" saveId="TWIN_ALL">
+                <wheels baseConfig="COMMUNAL">
+                    <wheel>
+						<physics xOffset="-0.2"/>
+                        <additionalWheel configId="dual" offset="0.05">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+						<physics xOffset="-0.2"/>
+                        <additionalWheel configId="dual" offset="0.05">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueWheelBroad" saveId="BROAD">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="600_50R22_5">
+                        <physics xOffset="0" yOffset="-0.11"/>
+                    </wheel>
+                    <wheel dimensions="600_50R22_5">
+                        <physics xOffset="0" yOffset="-0.11"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+            
+        </wheelConfigurations>
+
+        <hubs>
+            <hub linkNode="wheelLeftHub"  filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="true"  scale="0.28 0.335 0.335" offset="0.012"/>
+            <hub linkNode="wheelRightHub" filename="$data/shared/wheels/hubs/hub_n10_5.xml" isLeft="false" scale="0.28 0.335 0.335" offset="0.012"/>
+        </hubs>
+    </wheels>
+
+    <attachable>
+        <inputAttacherJoints>
+            <inputAttacherJoint node="0>0|0|0|0" jointType="semitrailer"/> attacherHeight="0.66"
+            <inputAttacherJoint node="attacherJoint" jointType="trailer" attacherHeight="0.66"/>
+            <inputAttacherJoint node="attacherJoint" jointType="trailerLow" attacherHeight="0.66"/>
+        </inputAttacherJoints>
+        <!--<steeringAxleAngleScale backwards="true" speedDependent="false" forceUsage="true"/>-->
+        <support animationName="moveSupport"/>
+        <brakeForce force="1.3"/>
+    </attachable>
+
+    <connectionHoses>
+        <hose inputAttacherJointIndices="1" type="airDoubleRed" node="airIn" adapterNode="airIn_connector" length="1.7" diameter="0.015" straighteningFactor="1" minDeltaY="-0.410">
+            <objectChange node="airIn_connector" visibilityActive="false" visibilityInactive="true" />
+        </hose>
+        <hose inputAttacherJointIndices="1" type="airDoubleYellow" node="airOut" adapterNode="airOut_connector" length="1.7" diameter="0.015" straighteningFactor="1" minDeltaY="-0.410">
+            <objectChange node="airOut_connector" visibilityActive="false" visibilityInactive="true" />
+        </hose>
+        <hose inputAttacherJointIndices="1" type="electric" node="electric" length="1.75" diameter="0.008" minDeltaY="-0.22"/>
+        <sounds>
+            <connect    type="airDoubleRed" template="hydraulicHosesAttach" volumeScale="0.7" linkNode="attacherJoint"/>
+            <disconnect type="airDoubleRed" template="hydraulicHosesDetach" volumeScale="0.7" linkNode="attacherJoint"/>
+        </sounds>
+    </connectionHoses>
+
+    <dynamicallyLoadedParts>
+        <dynamicallyLoadedPart node="0" linkNode="wheelChockSupport01" filename="$data/shared/assets/wheelChocks/wheelChockSupport01.i3d"/>
+        <dynamicallyLoadedPart node="0" linkNode="wheelChockSupport02" filename="$data/shared/assets/wheelChocks/wheelChockSupport01.i3d"/>
+    </dynamicallyLoadedParts>
+
+    <attacherJoints>
+        <attacherJoint node="trailerAttacherJoint" jointType="semitrailer" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="5 180 5" enableCollision="false" >
+            <schema position="1 0" rotation="0" invertX="false" />
+        </attacherJoint>
+		<attacherJoint node="0>0|0|6|0|0|0|0" upperRotationOffset="-0.7" moveTime="2.5" comboTime="0"> <!--main 3point-->
+                <distanceToGround lower="0.25" upper="0.72" />
+                <rotationNode node="0>0|0|6|0|0" lowerRotation="16 0 0" upperRotation="-25 0 0" />
+                <rotationNode2 node="0>0|0|6|0|0|0" />
+                <bottomArm rotationNode="0>0|0|6|0|1" translationNode="0>0|0|6|0|1|0" referenceNode="0>0|0|6|0|1|0|2" zScale="1" startRotation="-25 0 0" categoryRange="1"/>
+                <topArm baseNode="0>0|0|6|0|3" filename="$data/shared/assets/upperLinks/walterscheidSO_65_460.xml" zScale="1" materialTemplateName="AGCO_GREY3" toggleVisibility="true" />
+                <schema position="1 0" rotation="0" invertX="false" />
+                <objectChange node="0>0|0|6|0|1|0|0|0"  rotationActive="0 0 0" rotationInactive="52 0 0" />
+                <objectChange node="0>0|0|6|0|1|0|1|0" rotationActive="0 0 0" rotationInactive="52 0 0" />
+                <objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>
+        </attacherJoint>
+		<attacherJoint node="attacherJointU2400" jointType="implement" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0 0 0" enableCollision="false" >
+            <schema position="0.5 1" rotation="0" invertX="false" />
+			<objectChange node="transNode" visibilityActive="true" visibilityInactive="true"/>
+			<objectChange node="0>0|3|1" visibilityActive="false" visibilityInactive="false"/>
+			<subType name="u2400" showWarning="false"/>
+        </attacherJoint>
+		<attacherJoint node="attacherJointU535" jointType="implement" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0 0 0" enableCollision="false" >
+            <schema position="0.5 1" rotation="0" invertX="false" />
+			<objectChange node="transNode" visibilityActive="true" visibilityInactive="true"/>
+			<objectChange node="0>0|3|1" visibilityActive="false" visibilityInactive="false"/>
+			<subType name="u535" showWarning="false"/>
+        </attacherJoint>
+		<attacherJoint node="attacherJointRMCBed" jointType="RMCBed" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0 0 0" enableCollision="false" >
+            <schema position="0.5 1" rotation="0" invertX="false" />
+			<objectChange node="transNode" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="fenderChrome" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="fenderPlastic" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="fenderSupport" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="0>0|2|0|2" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="0>0|2|0|3" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="0>0|2|0|4" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="0>0|2|0|5" visibilityActive="false" visibilityInactive="true"/>
+        </attacherJoint>
+		<attacherJoint node="attacherJointRMCBed" jointType="RMCBed2" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0 0 0" enableCollision="false" >
+            <schema position="0.5 1" rotation="0" invertX="false" />
+			<objectChange node="transNode" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="fenderChrome" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="fenderPlastic" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="fenderSupport" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="0>0|2|0|2" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="0>0|2|0|3" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="0>0|2|0|4" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="0>0|2|0|5" visibilityActive="false" visibilityInactive="true"/>
+        </attacherJoint>
+		<attacherJoint node="attacherJointRMCBed" jointType="RMCDump" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0 0 0" enableCollision="false" >
+            <schema position="0.5 1" rotation="0" invertX="false" />
+			<objectChange node="transNode" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="fenderChrome" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="fenderPlastic" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="fenderSupport" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="0>0|2|0|2" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="0>0|2|0|3" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="0>0|2|0|4" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="0>0|2|0|5" visibilityActive="false" visibilityInactive="true"/>
+        </attacherJoint>
+		<attacherJoint node="attacherJointAnnaburger" jointType="implement" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="false">
+            <schema position="0 0.95" rotation="0" invertX="false"/>
+        </attacherJoint>
+        <attacherJoint node="attacherJointAnnaburger" jointType="implement" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="false">
+            <schema position="0 0.95" rotation="0" invertX="false"/>
+            <subType name="annaburgerAW2216" subTypeShowWarning="false"/>
+			<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>
+        </attacherJoint>
+        <attacherJoint node="attacherJointAnnaburger" jointType="implement" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="false">
+            <schema position="0 0.95" rotation="0" invertX="false"/>
+            <subType name="annaburgerAW2227" subTypeShowWarning="false"/>
+			<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>
+        </attacherJoint>
+        <attacherJoint node="attacherJointAnnaburger" jointType="implement" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="false">
+            <schema position="0 0.95" rotation="0" invertX="false"/>
+            <subType name="annaburgerAW2207" subTypeShowWarning="false"/>
+			<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>
+        </attacherJoint>
+        <attacherJoint node="attacherJointWIAx2" jointType="82JointTipperX2" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="false">
+            <schema position="0 0.95" rotation="0" invertX="false"/>
+			<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>-->
+        </attacherJoint>
+        <attacherJoint node="attacherJointWIAx3" jointType="82JointX3" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="false">
+            <schema position="0 0.95" rotation="0" invertX="false"/>
+			<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>-->
+        </attacherJoint>
+        <attacherJoint node="attacherJointHookliftShort" jointType="hookLift" lowerRotLimit="0 0 40" upperRotLimit="0 0 40" allowsLowering="false" enableCollision="true">
+            <schema position="0 0.95" rotation="0" invertX="false"/>
+			<!--<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>-->
+        </attacherJoint>
+        <attacherJoint node="attacherJointHookliftLong" jointType="hookLift" lowerRotLimit="0 0 40" upperRotLimit="0 0 40" allowsLowering="false" enableCollision="true">
+            <schema position="0 0.95" rotation="0" invertX="false"/>
+			<!--<objectChange node="3pointVis" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>-->
+        </attacherJoint>
+        <attacherJoint node="attacherJointU1450" jointType="hookLift" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="false">
+            <schema position="0.5 0.95" rotation="0" invertX="false"/>
+			<objectChange node="transNode" visibilityActive="false" visibilityInactive="true"/>
+			<!--<objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>-->
+        </attacherJoint>
+        <attacherJoint node="attacherJointU1450Crane" jointType="Kranmitte" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="false">
+            <schema position="0.5 0.95" rotation="0" invertX="true"/>
+			<objectChange node="transNode" visibilityActive="false" visibilityInactive="true"/>
+			<!--<objectChange node="trailerAttacherJointLowVis" visibilityActive="false" visibilityInactive="true"/>-->
+        </attacherJoint>
+        
+		
+		<attacherJoint node="trailerAttacherJointLow" jointType="trailer" lowerRotLimit="25 65 50" allowsJointLimitMovement="false" comboTime="0">
+            <schema position="1 0" rotation="0" invertX="false" />
+            <steeringBars leftNode="trailerAttacherJointLowLeft" rightNode="trailerAttacherJointLowRight" />
+        </attacherJoint>
+		<attacherJoint node="trailerAttacherJointLow" jointType="trailerLow" lowerRotLimit="25 65 50" allowsJointLimitMovement="false" comboTime="0">
+            <schema position="1 0" rotation="0" invertX="false" />
+            <steeringBars leftNode="trailerAttacherJointLowLeft" rightNode="trailerAttacherJointLowRight" />
+        </attacherJoint>
+		<attacherJoint node="0>0|0|5" jointType="implement" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0 0 0" enableCollision="false" > <!--extra load/weight 3point-->
+            <schema position="-0.5 1" rotation="0" invertX="false" />
+        </attacherJoint>
+		
+        <sounds>
+            <attach template="attach01" linkNode="0>" />
+        </sounds>
+    </attacherJoints>
+	
+    <lights>
+        <sharedLight linkNode="whiteRectangle01"      filename="$data/shared/assets/reflectors/lizard/whiteRectangle_01.xml" />
+        <sharedLight linkNode="whiteRectangle02"      filename="$data/shared/assets/reflectors/lizard/whiteRectangle_01.xml" />
+        <sharedLight linkNode="yellowRectangle01"     filename="$data/shared/assets/reflectors/lizard/yellowRectangle_01.xml" />
+        <sharedLight linkNode="yellowRectangle02"     filename="$data/shared/assets/reflectors/lizard/yellowRectangle_01.xml" />
+        <sharedLight linkNode="yellowRound01"         filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="yellowRound02"         filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="yellowRound03"         filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="yellowRound04"         filename="$data/shared/assets/reflectors/lizard/yellowRound_03.xml" />
+        <sharedLight linkNode="backlightLeft"         filename="$data/shared/assets/lights/lizard/rearLight31_left.xml" />
+        <sharedLight linkNode="backlightRight"        filename="$data/shared/assets/lights/lizard/rearLight31_right.xml" />
+        <sharedLight linkNode="plateNumberLight02_01" filename="$data/shared/assets/lights/lizard/plateNumberLight02.xml" />
+        <sharedLight linkNode="plateNumberLight02_02" filename="$data/shared/assets/lights/lizard/plateNumberLight02.xml" />
+
+        <realLights>
+            <low>
+				<light node="0>0|2|5|3" lightTypes="1"/> <!--workLight front-->
+				<light node="0>0|2|5|2" lightTypes="2"/> <!--workLight back-->
+            </low>
+            <high>
+                <light node="backLightsHigh1" lightTypes="0" />
+                <light node="licensePlateLightHigh" lightTypes="0" />
+				<light node="0>0|2|5|3" lightTypes="1"/> <!--workLight front-->
+				<light node="0>0|2|5|2" lightTypes="2"/> <!--workLight back-->
+                <turnLightLeft node="turnLightLeftBack" />
+                <turnLightRight node="turnLightRightBack" />
+                <brakeLight node="backLightsHigh1" />
+                <reverseLight node="reverseLightHigh1" />
+            </high>
+        </realLights>
+
+        <staticLightCompounds>
+            <staticLightCompound>
+                <node node="dolly10LLightsStatic_static" intensity="15"/>
+                <node node="dolly10LLightsGlassStatic_static" intensity="1"/>
+            </staticLightCompound>
+        </staticLightCompounds>
+		
+        <beaconLights>
+            <beaconLight node="beaconFront" filename="$data/shared/assets/beaconLights/lizard/beaconLight02.xml"/>
+            <beaconLight node="beaconBack" filename="$data/shared/assets/beaconLights/lizard/beaconLight02.xml"/>
+        </beaconLights>
+
+    </lights>
+
+    <licensePlates>
+        <licensePlate node="licensePlateBack" position="BACK" preferedType="ELONGATED" placementArea="0.08 0.27 0.2 0.27"/>
+    </licensePlates>
+
+    <animations>
+        <animation name="moveSupport">
+            <part node="supportArm"  startTime="0"   endTime="0.25" startRot="90 0 0" endRot="0 0 0" />
+            <part node="supportPart" startTime="0.2" endTime="0.50" startTrans="0 -0.406 0.049" endTrans="0 -0.45 0.049" />
+            <part node="supportCol"  startTime="0"   endTime="0.50" startTrans="0 0.5 0" endTrans="0 0.119 0" />
+
+            <sound template="palletsFillPlastic" startTime="0.49" direction="1"  volumeScale="4"   pitchScale="1.4" linkNode="attacherJoint"/>
+            <sound template="clackVar5"          startTime="0.2"  direction="1"  volumeScale="1"   pitchScale="1.3" linkNode="attacherJoint"/>
+            <sound template="clackVar4"          startTime="0.01" direction="-1" volumeScale="1.6" pitchScale="1.4" linkNode="attacherJoint"/>
+            <sound template="clackVar6"          startTime="0.24" direction="-1" volumeScale="0.7" pitchScale="1.2" linkNode="attacherJoint"/>
+            <sound template="slideOpen"          startTime="0.01" endTime="0.49" direction="0" volumeScale="2" pitchScale="2" linkNode="attacherJoint"/>
+        </animation>
+    </animations>
+
+    <ai>
+        <agentAttachment jointNode="attacherJoint" rotCenterWheelIndices="1 2" width="2.55" height="1.3" length="4.65" lengthOffset="1.47"/>
+    </ai>
+
+    <foliageBending>
+        <bendingNode wheelIndices="1 2" minZ="-2.35" maxZ="-0.75" yOffset="0.55"/>
+        <bendingNode minX="-0.35" maxX="0.35" minZ="-0.75" maxZ="1.85" yOffset="0.55"/>
+    </foliageBending>
+
+    <designConfigurations title="$l10n_configuration_fender" isYesNoOption="true">
+        <designConfiguration name="$l10n_configuration_valueNo">
+            <material materialSlotName="tanksChrome_mat" materialTemplateName="SHARED_BLACK1"/>
+		</designConfiguration>
+        <designConfiguration name="$l10n_configuration_valueYes" isDefault="true">
+            <material materialSlotName="tanksChrome_mat" materialTemplateName="SHARED_BLACK1"/>
+			<objectChange node="fenders" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="0>0|2|0|2" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="0>0|2|0|3" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="0>0|2|0|4" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="0>0|2|0|5" visibilityActive="true" visibilityInactive="false"/>
+        </designConfiguration>
+    </designConfigurations>
+
+    <design2Configurations title="$l10n_configuration_beacon" isYesNoOption="false">
+        <design2Configuration name="$l10n_configuration_valueNo">
+		</design2Configuration>
+        <design2Configuration name="$l10n_info_tipSideFront">
+			<objectChange node="beaconFront" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="beaconBack" visibilityActive="false" visibilityInactive="false"/>
+        </design2Configuration>
+        <design2Configuration name="$l10n_info_tipSideBack">
+			<objectChange node="beaconFront" visibilityActive="false" visibilityInactive="false"/>
+			<objectChange node="beaconBack" visibilityActive="true" visibilityInactive="false"/>
+        </design2Configuration>
+        <design2Configuration name="%s + %s" params="$l10n_info_tipSideFront|$l10n_info_tipSideBack" isDefault="true">
+			<objectChange node="beaconFront" visibilityActive="true" visibilityInactive="false"/>
+			<objectChange node="beaconBack" visibilityActive="true" visibilityInactive="false"/>
+        </design2Configuration>
+    </design2Configurations>
+
+	<baseColorConfigurations useDefaultColors="true" defaultColorIndex="0">
+        <material materialSlotName="frameBlack"/>
+        <baseColorConfiguration materialTemplateName="KRAMPE_BLACK1"/>
+        <baseColorConfiguration materialTemplateName="KRAMPE_GREY1" isDefault="true"/>
+        <baseColorConfiguration materialTemplateName="KRAMPE_WHITE1"/>
+        <baseColorConfiguration materialTemplateName="KRAMPE_GREEN1"/>
+        <baseColorConfiguration materialTemplateName="KRAMPE_RED1"/>
+		<baseColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+		<baseColorConfiguration materialTemplateName="NEWHOLLAND_GOLD1"/>
+    </baseColorConfigurations>
+
+	<designColorConfigurations useDefaultColors="true" defaultColorIndex="0">
+        <material materialSlotName="FrontHydraulic_mat"/>
+        <material materialSlotName="attunten_mat"/>
+        <designColorConfiguration materialTemplateName="KRAMPE_BLACK1"/>
+        <designColorConfiguration materialTemplateName="KRAMPE_GREY1"/>
+        <designColorConfiguration materialTemplateName="KRAMPE_WHITE1"/>
+        <designColorConfiguration materialTemplateName="KRAMPE_GREEN1"/>
+        <designColorConfiguration materialTemplateName="KRAMPE_RED1"/>
+		<designColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+		<designColorConfiguration materialTemplateName="NEWHOLLAND_GOLD1"/>
+    </designColorConfigurations>
+
+    <rimColorConfigurations>
+        <rimColorConfiguration materialTemplateName="RIM_DEFAULT"/>
+        <rimColorConfiguration materialTemplateName="KRAMPE_BLACK1"/>
+        <rimColorConfiguration materialTemplateName="KRAMPE_GREY1"/>
+        <rimColorConfiguration materialTemplateName="KRAMPE_WHITE1"/>
+        <rimColorConfiguration materialTemplateName="KRAMPE_GREEN1"/>
+        <rimColorConfiguration materialTemplateName="KRAMPE_RED1"/>
+		<rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+		<rimColorConfiguration materialTemplateName="NEWHOLLAND_GOLD1"/>
+    </rimColorConfigurations>
+
+    <!--<dynamicallyLoadedParts>
+        <dynamicallyLoadedPart filename="$data/shared/assets/carHitches/lizard/fifthWheel.i3d"   node="0>" linkNode="5thWheel" />
+    </dynamicallyLoadedParts>-->
+
+    <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
+    <washable dirtDuration="90" washDuration="1" workMultiplier="3" fieldMultiplier="2"/>
+
+    <i3dMappings>
+        <i3dMapping id="dolly10L_vis" node="0>0" />
+        <i3dMapping id="attacherJoint" node="0>0|0|0" />
+        <i3dMapping id="supportArm" node="0>0|0|1|0" />
+        <i3dMapping id="supportPart" node="0>0|0|1|0|0" />
+        <i3dMapping id="supportCol" node="0>0|0|1|1" />
+        <i3dMapping id="electric" node="0>0|0|2|0" />
+        <i3dMapping id="airIn" node="0>0|0|2|1" />
+        <i3dMapping id="airIn_connector" node="0>0|0|2|1|0" />
+        <i3dMapping id="airOut" node="0>0|0|2|2" />
+        <i3dMapping id="airOut_connector" node="0>0|0|2|2|0" />
+        <i3dMapping id="wheelChockSupport01" node="0>0|0|3|0" />
+        <i3dMapping id="wheelChock01" node="0>0|0|3|0|0" />
+        <i3dMapping id="wheelChockSupport02" node="0>0|0|3|1" />
+        <i3dMapping id="wheelChock02" node="0>0|0|3|1|0" />
+        <i3dMapping id="wheelLeft" node="0>0|1|0" />
+        <i3dMapping id="wheelLeftHub" node="0>0|1|0|0" />
+        <i3dMapping id="wheelRight" node="0>0|1|1" />
+        <i3dMapping id="wheelRightHub" node="0>0|1|1|0" />
+        <i3dMapping id="backlightLeft" node="0>0|2|0|0" />
+        <i3dMapping id="backlightRight" node="0>0|2|0|1" />
+        <i3dMapping id="yellowRound01" node="0>0|2|0|2" />
+        <i3dMapping id="yellowRound02" node="0>0|2|0|3" />
+        <i3dMapping id="yellowRound03" node="0>0|2|0|4" />
+        <i3dMapping id="yellowRound04" node="0>0|2|0|5" />
+        <i3dMapping id="yellowRectangle01" node="0>0|2|0|6" />
+        <i3dMapping id="yellowRectangle02" node="0>0|2|0|7" />
+        <i3dMapping id="whiteRectangle01" node="0>0|2|0|8" />
+        <i3dMapping id="whiteRectangle02" node="0>0|2|0|9" />
+        <i3dMapping id="plateNumberLight02_01" node="0>0|2|0|10" />
+        <i3dMapping id="plateNumberLight02_02" node="0>0|2|0|11" />
+        <i3dMapping id="dolly10LLightsStatic_static" node="0>0|2|1|0" />
+        <i3dMapping id="dolly10LLightsGlassStatic_static" node="0>0|2|1|1" />
+        <i3dMapping id="backLightsHigh1" node="0>0|2|2|0" />
+        <i3dMapping id="licensePlateLightHigh" node="0>0|2|2|1" />
+        <i3dMapping id="turnLightLeftBack" node="0>0|2|3|0" />
+        <i3dMapping id="turnLightRightBack" node="0>0|2|3|1" />
+        <i3dMapping id="reverseLightHigh1" node="0>0|2|4|0" />
+        <i3dMapping id="transNode" node="0>0|3|0" />
+        <i3dMapping id="trailerAttacherJoint" node="0>0|3|2|0" />
+        <i3dMapping id="licensePlateBack" node="0>0|4" />
+		<i3dMapping id="inputAttacherJointRef" node="0>0|7|0"/>
+		<i3dMapping id="3pointVis" node="0>0|0|6"/>
+		<i3dMapping id="beds" node="0>0|0|4"/>
+		<i3dMapping id="attacherJointU2400" node="0>0|0|4|0"/>
+		<i3dMapping id="attacherJointU535" node="0>0|0|4|1"/>
+		<i3dMapping id="attacherJointRMCBed" node="0>0|0|4|2"/>
+		<i3dMapping id="attacherJointAnnaburger" node="0>0|0|4|3"/>
+		<i3dMapping id="attacherJointWIAx2" node="0>0|0|4|4"/>
+		<i3dMapping id="attacherJointWIAx3" node="0>0|0|4|5"/>
+		<i3dMapping id="attacherJointHookliftShort" node="0>0|0|4|6"/>
+		<i3dMapping id="attacherJointHookliftLong" node="0>0|0|4|7"/>
+		<i3dMapping id="attacherJointU1450" node="0>0|0|4|8"/>
+		<i3dMapping id="attacherJointU1450Crane" node="0>0|0|4|9"/>
+		<i3dMapping id="trailerAttacherJointLowVis" node="0>0|0|7"/>
+		<i3dMapping id="trailerAttacherJointLow" node="0>0|0|7|0"/>
+		<i3dMapping id="trailerAttacherJointLowLeft" node="0>0|0|7|1"/>
+		<i3dMapping id="trailerAttacherJointLowRight" node="0>0|0|7|2"/>
+		<i3dMapping id="fenders" node="0>0|8|0"/>
+		<i3dMapping id="fenderSupport" node="0>0|8|0|0"/>
+		<i3dMapping id="fenderPlastic" node="0>0|8|0|1"/>
+		<i3dMapping id="fenderChrome" node="0>0|8|0|2"/>
+		<i3dMapping id="beaconLights" node="0>0|8|1"/>
+		<i3dMapping id="beaconFront" node="0>0|8|1|0"/>
+		<i3dMapping id="beaconBack" node="0>0|8|1|1"/>
+    </i3dMappings>
+</vehicle>

@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<sounds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/vehicle_sounds.xsd">
+    <motorized>
+        <sounds>
+            <motor template="transmissionTruck_01" volumeScale="1" pitchScale="0.6" linkNode="wheelBack01Left" isLocalSound="true"/>
+            <motor template="transmissionTruck_01" volumeScale="1" pitchScale="0.8" linkNode="wheelBack01Right"/>
+
+            <motor template="fanModern_01" pitchScale="0.75" linkNodeOffset="0 1.5 4.5">
+                <volume indoor="0.8" outdoor="1.5" />
+            </motor>
+            <motor template="cabinTruck_01" linkNodeOffset="0.7 3 3.2" />
+            <motor template="indoorCabinRumble" volumeScale="8" pitchScale="1.1" linkNodeOffset="0.8 3 3.2"/>
+            <motor template="indoorCabinRumble" volumeScale="6" pitchScale="0.9" linkNodeOffset="-0.7 3 3.2"/>
+            <compressedAir template="compressedAir" volumeScale="1.9"/>
+            <airCompressorRun template="brakeCompressorMedium" linkNodeOffset="0 1.7 1.7" volumeScale="3"/>
+            <airCompressorStop template="compressedAir" volumeScale="1.9"/>
+            <airRelease template="truckBrakeRegulatorValve" />
+            <reverseDrive template="reverseBeep02" volumeScale="1.0"/>
+        </sounds>
+    </motorized>
+
+    <lights>
+        <sounds>
+            <toggleLights template="switch01"  />
+            <turnLight template="switchTurnlight" volumeScale="2" />
+        </sounds>
+    </lights>
+
+    <attacherJoints>
+        <attacherJointConfigurations>
+            <attacherJointConfiguration>
+                <attacherJoint>
+                    <attachSound template="truckAttach" linkNode="0>" />
+                    <detachSound template="truckDetach" linkNode="0>" />
+                </attacherJoint>
+            </attacherJointConfiguration>
+        </attacherJointConfigurations>
+        <sounds>
+            <attach template="attach01" />
+            <hydraulic template="hydraulicClose02" />
+        </sounds>
+    </attacherJoints>
+
+    <enterable>
+        <sounds>
+            <rain template="rainInVehicle" linkNodeOffset="0.7 3 3.2">
+                <loopSynthesisRpm>
+                    <modifier type="SPEED" value="0.0" modifiedValue="0.0" />
+                    <modifier type="SPEED" value="42.0" modifiedValue="1" />
+                </loopSynthesisRpm>
+                <volume>
+                    <modifier type="SPEED" value="0" modifiedValue="1" />
+                    <modifier type="SPEED" value="25" modifiedValue="1" />
+                    <modifier type="SPEED" value="42" modifiedValue="1.2" />
+                </volume>
+
+                <pitch>
+                    <modifier type="SPEED" value="0" modifiedValue="1" />
+                    <modifier type="SPEED" value="25" modifiedValue="1" />
+                    <modifier type="SPEED" value="42" modifiedValue="1.0" />
+                </pitch>
+            </rain>
+            <hail template="hailInVehicle" linkNodeOffset="0.7 3 3.2" volumeScale="1.5">
+                <loopSynthesisRpm>
+                    <modifier type="SPEED" value="0.0" modifiedValue="0.0" />
+                    <modifier type="SPEED" value="60.0" modifiedValue="1" />
+                </loopSynthesisRpm>
+                <volume>
+                    <modifier type="SPEED" value="0" modifiedValue="1" />
+                    <modifier type="SPEED" value="25" modifiedValue="1" />
+                    <modifier type="SPEED" value="60" modifiedValue="1.2" />
+                </volume>
+
+                <pitch>
+                    <modifier type="SPEED" value="0" modifiedValue="1" />
+                    <modifier type="SPEED" value="25" modifiedValue="1" />
+                    <modifier type="SPEED" value="60" modifiedValue="1.0" />
+                </pitch>
+            </hail>
+        </sounds>
+    </enterable>
+
+    <drivable>
+        <sounds>
+            <waterSplash template="waterSplash01" />
+        </sounds>
+    </drivable>
+
+    <honk>
+        <sound template="hornVolvoTruck" volumeScale="1.4" linkNodeOffset="0.7 1.8 3.5"/>
+    </honk>
+</sounds>

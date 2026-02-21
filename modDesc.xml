@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="105">
+    <author>DORF1010</author>
+    <version>0.26.02.20</version>
+    <title>
+        <en>1 Unreal modpack</en>
+    </title>
+    <description>
+        <en><![CDATA[1 Unreal Modpack.
+This is a bunch of base game vehicles (plus some mods from GIANTS) with various options added. More color configurations, unreal capacities, high-speed motors and transmissions, faster working speeds, wider working widths, color configurations, and more. Please read changelog (included, Discord server also) for all compatibilities and features. Not all vehicles and configurations are real.
+I hope you enjoy.
+
+Any questions, comments, concerns, suggestions, please contact me via Discord
+https://discord.gg/XVErHTQgms
+(My Discord server)
+
+GIANTS unlimited color configuration mod is highly suggested, so it is linked as a dependency.]]>
+		</en>
+	</description>
+	<iconFilename>icon.png</iconFilename>
+	<storeItems>
+		<storeItem xmlFilename="vario1000/vario1000.xml"/>
+		<storeItem xmlFilename="cr11/cr11colorfull.xml"/>
+		<storeItem xmlFilename="vario100/mt655.xml"/>
+		<storeItem xmlFilename="puma/puma.xml"/>
+		<storeItem xmlFilename="series200/series200.xml"/>
+		<storeItem xmlFilename="cvSeries/cvSeries.xml"/>
+		<storeItem xmlFilename="fh16/fh16.xml"/>
+		<storeItem xmlFilename="quadtrac715/quadtrac715.xml"/>
+		<storeItem xmlFilename="bitrac715/bitrac715.xml"/>
+		<storeItem xmlFilename="gta380/gta380.xml"/>
+		<storeItem xmlFilename="gta380Frontloader/gta380Frontloader.xml"/>
+		<storeItem xmlFilename="sks30_150/sks30_150.xml"/>
+		<storeItem xmlFilename="suw5000/suw5000.xml"/>
+		<storeItem xmlFilename="bigPack1290HDPVC/bigPack1290HDPVC.xml"/>
+		<storeItem xmlFilename="raniPlast/multiPurchasePallet_raniWrapPallet.xml"/>
+		<storeItem xmlFilename="raniPlast/raniWrapPallet.xml"/>
+		<storeItem xmlFilename="dpw1800/dpw1800.xml"/>
+		<storeItem xmlFilename="dolly10L/dolly10L.xml"/>
+		<storeItem xmlFilename="terraFlex3020/terraFlex3020.xml"/>
+		<storeItem xmlFilename="xml/fd250.xml"/>
+		<storeItem xmlFilename="n40bx/n40bx.xml"/>
+		<storeItem xmlFilename="w1800/w1800.xml"/>
+		<storeItem xmlFilename="tga560/tga560.xml"/>
+		<storeItem xmlFilename="ns3030/ns3030.xml"/>
+		<storeItem xmlFilename="bigM450/bigM450.xml"/>
+		<storeItem xmlFilename="ms261/ms261.xml"/>
+		<storeItem xmlFilename="k307/k307.xml"/>
+		<storeItem xmlFilename="xml/eckoFlex.xml"/>
+		<storeItem xmlFilename="q6M/q6M.xml"/>
+		<storeItem xmlFilename="frontloaderShovel/frontloaderShovel.xml"/>
+		<storeItem xmlFilename="frontloaderPalletFork/frontloaderPalletFork.xml"/>
+		<storeItem xmlFilename="tornado251/tornado251.xml"/>
+		<storeItem xmlFilename="f155A/f155A.xml"/>
+		<storeItem xmlFilename="xml/trailer12000L.xml"/>
+		<storeItem xmlFilename="rrXL9/rrXL9.xml"/>
+		<storeItem xmlFilename="bossAlpin251/bossAlpin251.xml"/>
+		<storeItem xmlFilename="xml/hts22b79.xml"/>
+		<storeItem xmlFilename="lt408L/lt408L.xml"/>
+		<storeItem xmlFilename="level02/electricityGenerator02.xml"/>
+		<storeItem xmlFilename="pickup/pickup2017.xml"/>
+		<storeItem xmlFilename="skh60/skh60.xml"/>
+		<storeItem xmlFilename="z2840/z2840.xml"/>
+		<storeItem xmlFilename="storeShed/boardStack02.xml"/>
+		<storeItem xmlFilename="extraContent/cr11GoldEdition.xml"/>
+		<storeItem xmlFilename="extraContent/fd250GoldEdition.xml"/>
+		<storeItem xmlFilename="extraContent/worldsFastest.xml"/>
+		<storeItem xmlFilename="extraContent/quadtrac715BlackEdition.xml"/>-->
+	</storeItems>
+	
+	<multiplayer supported="true"/>
+    
+    <dependencies>
+        <dependency>FS25_unlimitedColorConfigurations</dependency>
+    </dependencies>-->
+	
+	<materialTemplates>
+		<template name="CASEIH_GREEN_CUSTOM" title="Steiger Green" parentTemplate="calibratedMetallicPaint" colorScale="0.2 0.7 0.0"/>
+		<template name="DORF_BLACKHOLE" title="Black Hole" parentTemplate="calibratedMatPaint" colorScale="0 0 0"/>
+		<template name="DORF_BLACKHOLE_CHROME" title="Black Hole" parentTemplate="chrome" colorScale="100 100 100"/>
+		<template name="DORF_WHITEHOLE" title="White Hole" parentTemplate="calibratedMatPaint" colorScale="5 5 5"/>
+	</materialTemplates>
+	
+	<brands>
+		<brand name="DORF" title="DORF Industries" image="brandDorfIndustries.dds"/>
+		<brand name="FARMINGPLUS" title="FS 25 Plus +" image="brandFarmingSimulatorPlus.png"/>
+		<brand name="AGCOWHITE" title="White" image="$data/store/brands/brand_agcoWhite.dds"/>
+		<brand name="CNH" title="CNH" image="brandCNH.dds"/>
+		<brand name="CRAWLER" title="Tracks" image="brandCrawler.dds"/>
+		<brand name="LIZARDMOTORS" title="Lizard motors" image="$data/store/brands/brand_lizardMotors.dds"/>
+	</brands>
+
+	<l10n filenamePrefix="translations/l10n"/>
+
+	<consumables>
+		<consumable xmlFilename="raniPlast/raniPlast.xml"/>
+	</consumables>
+</modDesc>

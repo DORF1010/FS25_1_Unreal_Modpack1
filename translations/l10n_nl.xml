@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+	<translationContributors>ChrisS, 82 Studios, Jos Modding</translationContributors>
+	<texts>
+	<!--  Configurations  -->
+		<text name="configuration_frame" 			text="Frame"/>
+		<text name="configuration_gridColor" 		text="Rasterkleur"/>
+		<text name="configuration_interiorColor" 	text="Interieurkleur"/>
+		<text name="configuration_thresher" 		text="Dorsmachine"/>
+		<text name="configuration_beltColor" 		text="Bandkleur"/>
+		<text name="configuration_pipeColor" 		text="Pijpkleur"/>
+		<text name="configuration_cabColor" 		text="Cabinekleur"/>
+		<text name="configuration_seatColor" 		text="Stoelkleur"/>
+		
+		<text name="info_tipSideInstant" 			text="Onmiddellijk lossen"/>
+		<text name="configuration_fast" 			text="Snel"/>
+		<text name="configuration_emptySpeed" 		text="Leegsnelheid"/>
+		<text name="configuration_reflector" 		text="Reflectorkleur"/>
+		<text name="configuration_reflectors" 		text="Reflectoren"/>
+		<text name="configuration_triangle" 		text="Driehoek"/>
+		<text name="configuration_rearLights" 		text="Achterlichtontwerp"/>
+		<text name="configuration_rearUSLights" 	text="Achterlichtontwerp US"/>
+		<text name="configuration_plow" 			text="Ploeg"/>	
+		<text name="color_disc" 					text="Schijf"/>		
+		
+		<text name="configuration_windowTint" 		text="Raamtint"/>
+		<text name="configuration_med" 				text="Medium"/>
+		<text name="configuration_dark" 			text="Donker"/>
+		<text name="configuration_color_special" 	text="Speciaal"/>
+		
+		<text name="configuration_workWidth" 		text="Werkbreedte"/>
+		<text name="configuration_cropGuides" 		text="Onrealistische gewasgeleiders"/>
+		<text name="configuration_valueRow1" 		text="1 Rij Onrealistisch (4m)"/>
+		<text name="configuration_valueRow3" 		text="3 Rijen Onrealistisch (10m)"/>
+		<text name="configuration_valueRow5" 		text="5 Rijen Onrealistisch (16m)"/>
+		<text name="configuration_value5M" 			text="5M Onrealistisch"/>
+		<text name="configuration_value10M" 		text="10M Onrealistisch"/>
+		<text name="configuration_value20M" 		text="20M Onrealistisch"/>
+		<text name="configuration_value25M" 		text="25M Onrealistisch"/>
+		<text name="configuration_value50M" 		text="50M Onrealistisch"/>
+		
+		<text name="configuration_capacity" 		text="Capaciteit"/>
+		<text name="configuration_specialEdition" 	text="Speciale Editie"/>
+		<text name="configuration_special" 			text="Speciale"/>
+		<text name="configuration_blink" 			text="Knipperen"/>
+		<text name="configuration_rotate" 			text="Draaien"/>
+		<text name="configuration_unreal1" 			text="Onrealistisch"/>
+		<text name="configuration_decals" 			text="Stickers"/>
+		<text name="configuration_exhaust" 			text="Uitlaat"/>
+		<text name="configuration_windowBanner" 	text="Voorruitlogo"/>
+		<text name="configuration_lizardBlack" 		text="Lizard Zwart"/>
+		<text name="configuration_lizardWhite" 		text="Lizard Wit"/>
+		<text name="configuration_colossusBlack" 	text="Colossus Zwart"/>
+		<text name="configuration_colossusWhite" 	text="Colossus Wit"/>
+		<text name="configuration_rearHitch" 		text="Achterkoppeling" />
+
+		<text name="configuration_drawbarRotation" 	text="Disselrotatie" />		
+		<text name="configuration_drawbar40" 		text="Lichte rotatie" />		
+		<text name="configuration_drawbar0" 		text="Geen rotatie" />	
+		<text name="configuration_lights"	 		text="Werklampen" />	
+		<text name="configuration_boomColor" 		text="Boomkleur" />
+		<text name="configuration_decalColor" 		text="Stickerkleur" />		
+		
+		<text name="configuration_innerRimColor" 	text="Binnenvelgkleur"/>
+		<text name="configuration_outerRimColor" 	text="Buitenvelgkleur"/>
+		<text name="configuration_valueCrawlerWide" text="Rupsband Breed"/>
+		<text name="configuration_valueTwinFront" 	text="Dubbele Voorzijde"/>
+	</texts>
+</l10n>

@@ -1,0 +1,71 @@
+
+	<rimColorConfigurations useDefaultColors="true">
+		<material materialSlotName="rim_inner_mat"/>
+		<material materialSlotName="rim_outer_mat"/>
+		<material materialSlotName="crawler_lowerWheels_mat"/>
+		<material materialSlotName="crawler_upperWheel_mat"/>
+		<rimColorConfiguration color="RIM_CONFIGURATION_BLACK"/>
+	</rimColorConfigurations>
+	<designColorConfigurations title="Chassis Color" useDefaultColors="true">
+		<material materialSlotName="cr11_chassis_mat"/>
+		<material materialSlotName="cr11_coloredScrewDecal_mat"/>
+		<material materialSlotName="cr11_coloredAlphaParts_mat"/>
+		<designColorConfiguration color="NEWHOLLAND_GOLD1"/>
+	</designColorConfigurations>
+	<design2ColorConfigurations title="Pipe Color" useDefaultColors="true">
+		<material materialSlotName="cr11_pipe_mat"/>
+		<design2ColorConfiguration color="metalPaintedBlack"/>
+	</design2ColorConfigurations>
+	<design3ColorConfigurations title="Side Panels" useDefaultColors="true">
+		<material materialSlotName="cr11_outsideShielding_mat"/>
+		<material materialSlotName="af11_shieldings_mat"/>
+		<design3ColorConfiguration color="metalPaintedBlack"/>
+	</design3ColorConfigurations>
+	<design4ColorConfigurations title="Design Stripe" useDefaultColors="true">
+		<material materialSlotName="cr11_stripe_mat"/>
+		<design4ColorConfiguration color="NEWHOLLAND_DARKBLUE1"/>
+	</design4ColorConfigurations>
+	
+	
+	<design2Configurations title="Design Line" isYesNoOption="true">
+		<design2Configuration name="Yes">
+            <objectChange node="configurationCR11Default" visibilityActive="true" visibilityInactive="false"/>
+		</design2Configuration>
+		<design2Configuration name="No">
+		</design2Configuration>
+	</design2Configurations>
+
+	<design3Configurations title="New Holland Logo" isYesNoOption="true">
+		<design3Configuration name="Yes">
+			<objectChange node="configurationCR11Dev" visibilityActive="true" visibilityInactive="false"/>
+		</design3Configuration>
+		<design3Configuration name="No">
+		</design3Configuration>
+	</design3Configurations>
+	
+	
+	
+	<design4Configurations isYesNoOption="true">
+		<design4Configuration name="US">
+		</design4Configuration>
+		<design4Configuration name="EU">
+			<objectChange node="pipeShortWarningStripes01" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="pipeShortWarningStripes02" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="pipeLongWarningStripes01" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="pipeLongWarningStripes02" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="configurationEU" visibilityActive="true" visibilityInactive="false"/>
+            <objectChange node="configurationUS" visibilityActive="false" visibilityInactive="true"/>
+            <objectChange node="colPartStrawChopperEU" compoundChildActive="true" compoundChildInactive="false"/>
+            <objectChange node="colPartStrawChopperUS" compoundChildActive="false" compoundChildInactive="true"/>
+            
+		</design4Configuration>
+	</design4Configurations>
+	
+	<design5Configurations title="SMV Emblem (US Only)" isYesNoOption="true">
+		<design5Configuration name="$l10n_configuration_valueYes">
+			<objectChange node="bigTriangleAF11" visibilityActive="true" visibilityInactive="false"/>
+		</design5Configuration>
+		<design5Configuration name="$l10n_configuration_valueNo">
+		</design5Configuration>
+	</design5Configurations>
+	
