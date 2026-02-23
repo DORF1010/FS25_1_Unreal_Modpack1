@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<crawler xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/crawler.xsd">
+    <file name="wheels/series8RXCrawler_EU_back.i3d" leftNode="0|0" rightNode="0|1"/>
+    <scrollerNodes>
+        <scrollerNode node="0" scrollSpeed="-0.155" scrollLength="1" shaderParameterName="scrollPos" shaderParameterComponent="1"/>
+    </scrollerNodes>
+
+    <rotatingParts>
+        <rotatingPart node="1" radius="0.5"/>
+        <rotatingPart node="2" radius="0.288"/>
+        <rotatingPart node="3" radius="0.288"/>
+        <rotatingPart node="4" radius="0.163"/>
+        <rotatingPart node="5" radius="0.163"/>
+        <rotatingPart node="6" radius="0.163"/>
+        <rotatingPart node="7" radius="0.102"/>
+        <rotatingPart node="8" radius="0.102"/>
+    </rotatingParts>
+</crawler>

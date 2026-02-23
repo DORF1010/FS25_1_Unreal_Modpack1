@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="driver.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="1" filename="$data/trafficVehicles/driver_diffuse.png"/>
+    <File fileId="2" filename="$data/trafficVehicles/driver_normal.png"/>
+    <File fileId="3" filename="$data/trafficVehicles/driver_specular.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="driver_mat" materialId="5">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="driver.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="driver" translation="0.632277 1.53466 5.61383" shapeId="1" clipDistance="100" nodeId="53" castsShadows="true" receiveShadows="true" materialIds="5">
+      <TransformGroup name="leftHand" translation="0.164871 0.0720407 -0.00293737" nodeId="54"/>
+      <TransformGroup name="rightHand" translation="-0.207236 0.0485108 -0.0357089" nodeId="55"/>
+      <TransformGroup name="leftFoot" translation="0.147709 -0.465628 0.39245" nodeId="56"/>
+      <TransformGroup name="rightFoot" translation="-0.168389 -0.490077 0.456163" nodeId="57"/>
+      <Camera name="indoorCamera" translation="3.77313 1.65275 0.15385" rotation="153.945 89.6078 180" nodeId="58" fov="60" nearClip="0.1" farClip="1000" orthographicHeight="1"/>
+    </Shape>
+  </Scene>
+
+</i3D>

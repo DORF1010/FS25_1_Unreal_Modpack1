@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="trailerAttachers.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.11"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="2" filename="$data/shared/assets/rearHitch_normal.dds"/>
+    <File fileId="3" filename="$data/shared/assets/rearHitch_vmask.dds"/>
+    <File fileId="6" filename="$data/shared/detailLibrary/flat_normal.dds"/>
+    <File fileId="13" filename="$data/shared/detailLibrary/metallic/scratched_diffuse.png"/>
+    <File fileId="12" filename="$data/shared/detailLibrary/metallic/scratched_specular.png"/>
+    <File fileId="7" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_diffuse.png"/>
+    <File fileId="5" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_specular.png"/>
+    <File fileId="1" filename="$data/shared/white_diffuse.dds"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="attuntenMat" materialId="5" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="5"/>
+      <Custommap name="detailNormal" fileId="6"/>
+      <Custommap name="detailDiffuse" fileId="7"/>
+      <CustomParameter name="colorScale" value="0.044 0.044 0.044"/>
+      <CustomParameter name="smoothnessScale" value="0.55"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="chromeSchraubenMat" materialId="6" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="12"/>
+      <Custommap name="detailNormal" fileId="6"/>
+      <Custommap name="detailDiffuse" fileId="13"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="trailerAttachers.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="ha" shapeId="1" nodeId="9" castsShadows="true" receiveShadows="true" materialIds="5,6">
+      <TransformGroup name="trailerAttacherJointBackLow" translation="-1.63133e-08 0.0598535 -0.0500651" rotation="0 90 0" nodeId="10"/>
+      <TransformGroup name="trailerSteeringRightRef" translation="-0.254015 0.0517332 -0.0565057" nodeId="11"/>
+      <TransformGroup name="trailerSteeringLeftRef" translation="0.241205 0.0665157 -0.0584258" nodeId="12"/>
+    </Shape>
+  </Scene>
+
+</i3D>

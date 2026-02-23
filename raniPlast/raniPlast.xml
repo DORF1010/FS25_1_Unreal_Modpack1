@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<consumable xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/consumable.xsd">
+    <!--<consumableVariation type="BALE_WRAP" name="RANI_PLAST_WHITE" title="$l10n_consumable_raniPlastWhite" price="100" capacity="1500" unitText="$l10n_unit_mShort">
+        <object filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|0"/>
+        <consumingObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|4"/>
+        <tensionBeltObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|5"/>
+        <shaderParameter name="colorScale" materialSlotName="wrapRoll_mat" value="0.9301 0.9301 0.9301 1"/>
+        <metaData>
+            <value name="color" value="0.9301 0.9301 0.9301"/>
+        </metaData>
+    </consumableVariation>
+    <consumableVariation type="BALE_WRAP" name="RANI_PLAST_BLACK" title="$l10n_consumable_raniPlastBlack" price="100" capacity="1500" unitText="$l10n_unit_mShort">
+        <object filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|1"/>
+        <consumingObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|4"/>
+        <tensionBeltObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|5"/>
+        <shaderParameter name="colorScale" materialSlotName="wrapRoll_mat" value="0.0500 0.0500 0.0500 1"/>
+        <metaData>
+            <value name="color" value="0.0500 0.0500 0.0500"/>
+        </metaData>
+    </consumableVariation>
+    <consumableVariation type="BALE_WRAP" name="RANI_PLAST_GREEN" title="$l10n_consumable_raniPlastGreen" price="100" capacity="1500" unitText="$l10n_unit_mShort">
+        <object filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|2"/>
+        <consumingObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|4"/>
+        <tensionBeltObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|5"/>
+        <shaderParameter name="colorScale" materialSlotName="wrapRoll_mat" value="0.0931 0.3613 0.3231 1"/>
+        <metaData>
+            <value name="color" value="0.0931 0.3613 0.3231"/>
+        </metaData>
+    </consumableVariation>
+    <consumableVariation type="BALE_WRAP" name="RANI_PLAST_NATURE_GREEN" title="$l10n_consumable_raniPlastNatureGreen" price="100" capacity="1500" unitText="$l10n_unit_mShort">
+        <object filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|3"/>
+        <consumingObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|4"/>
+        <tensionBeltObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|5"/>
+        <shaderParameter name="colorScale" materialSlotName="wrapRoll_mat" value="0.0296 0.1529 0.1470 1"/>
+        <metaData>
+            <value name="color" value="0.0296 0.1529 0.1470"/>
+        </metaData>
+    </consumableVariation>-->
+    <consumableVariation type="BALE_WRAP" name="DORF_BALEWRAP" title="$l10n_configuration_specialEdition" price="100" capacity="1500" unitText="$l10n_unit_mShort">
+        <object filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|0"/>
+        <consumingObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|4"/>
+        <tensionBeltObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|5"/>
+        <!--<shaderParameter name="colorScale" materialSlotName="wrapRoll_mat" value="0.0296 0.1529 0.1470 1"/>-->
+        <!--<metaData>
+            <value name="color" value="0.0296 0.1529 0.1470"/>
+        </metaData>-->
+    </consumableVariation>
+    <consumableVariation type="BALE_WRAP" name="DORF_BALEWRAP_BLACK" title="%s %s" params="$l10n_consumable_raniPlastBlack|$l10n_configuration_specialEdition" price="100" capacity="1500" unitText="$l10n_unit_mShort">
+        <object filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|1"/>
+        <consumingObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|4"/>
+        <tensionBeltObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|5"/>
+        <shaderParameter name="colorScale" materialSlotName="wrapRoll_mat" value="0 0 0 1"/>-->
+        <metaData>
+            <value name="color" value="0 0 0"/>
+        </metaData>
+    </consumableVariation>
+	<consumableVariation type="BALE_WRAP" name="DORF_BALEWRAP_WHITE" title="%s %s" params="$l10n_consumable_raniPlastWhite|$l10n_configuration_specialEdition" price="100" capacity="1500" unitText="$l10n_unit_mShort">
+        <object filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|0"/>
+        <consumingObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|4"/>
+        <tensionBeltObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|5"/>
+        <shaderParameter name="colorScale" materialSlotName="wrapRoll_mat" value="5 5 5 1"/>-->
+        <metaData>
+            <value name="color" value="5 5 5"/>
+        </metaData>
+    </consumableVariation>
+	<consumableVariation type="BALE_WRAP" name="DORF_BALEWRAP_FENDT" title="FENDT Green" price="100" capacity="1500" unitText="$l10n_unit_mShort">
+        <object filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|3"/>
+        <consumingObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|4"/>
+        <tensionBeltObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|5"/>
+        <shaderParameter name="colorScale" materialSlotName="wrapRoll_mat" value="0.0534 0.2020 0.0138 1"/>-->
+        <metaData>
+            <value name="color" value="0.0534 0.2020 0.0138"/>
+        </metaData>
+    </consumableVariation>
+	<consumableVariation type="BALE_WRAP" name="DORF_BALEWRAP_NEONGREEN" title="Neon Green" price="100" capacity="1500" unitText="$l10n_unit_mShort">
+        <object filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|2"/>
+        <consumingObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|4"/>
+        <tensionBeltObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|5"/>
+        <shaderParameter name="colorScale" materialSlotName="wrapRoll_mat" value="0 1.5 0 1"/>-->
+        <metaData>
+            <value name="color" value="0 1.5 0"/>
+        </metaData>
+    </consumableVariation>
+	<consumableVariation type="BALE_WRAP" name="DORF_BALEWRAP_GREEN" title="Green" price="100" capacity="1500" unitText="$l10n_unit_mShort">
+        <object filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|2"/>
+        <consumingObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|4"/>
+        <tensionBeltObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|5"/>
+        <shaderParameter name="colorScale" materialSlotName="wrapRoll_mat" value="0 1 0.1 2"/>-->
+        <metaData>
+            <value name="color" value="0 1.5 0"/>
+        </metaData>
+    </consumableVariation>
+	<consumableVariation type="BALE_WRAP" name="DORF_BALEWRAP_BLUE" title="Harvest Moon Blue" price="100" capacity="1500" unitText="$l10n_unit_mShort">
+        <object filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|1"/>
+        <consumingObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|4"/>
+        <tensionBeltObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|5"/>
+        <shaderParameter name="colorScale" materialSlotName="wrapRoll_mat" value="0 0 0.034 1"/>-->
+        <metaData>
+            <value name="color" value="0 0 0.034"/>
+        </metaData>
+    </consumableVariation>
+	<consumableVariation type="BALE_WRAP" name="DORF_BALEWRAP_CAMO" title="$l10n_configuration_valueCamouflage" price="100" capacity="1500" unitText="$l10n_unit_mShort">
+        <object filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|3"/>
+        <consumingObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|4"/>
+        <tensionBeltObject filename="$data/objects/consumables/baleWrap/raniPlast/raniPlast.i3d" node="0|5"/>
+        <shaderParameter name="detailDiffuse" materialSlotName="wrapRoll_mat" value="$data/vehicles/newHolland/cr11/cr11Pattern_diffuse.png"/>-->
+        <!--<metaData>
+            <value name="color" value="0.3158 0.4259 0.7227"/>
+        </metaData>-->
+    </consumableVariation>
+
+    <baseColorConfigurations useDefaultColors="true">
+        <material materialSlotName="wrapRoll_mat" useColorOnly="true" ignoreWarning="true"/>
+        <baseColorConfiguration materialTemplateName="SHARED_WRAP_WHITE"/>
+        <baseColorConfiguration materialTemplateName="SHARED_WRAP_BLACK"/>
+        <baseColorConfiguration materialTemplateName="SHARED_WRAP_BLUE"/>
+        <baseColorConfiguration materialTemplateName="SHARED_WRAP_GREEN"/>
+        <baseColorConfiguration materialTemplateName="SHARED_WRAP_PINK"/>
+        <baseColorConfiguration materialTemplateName="CASEIH_GREY" name="$l10n_ui_colorSilver"/>
+        <baseColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+    </baseColorConfigurations>
+
+</consumable>

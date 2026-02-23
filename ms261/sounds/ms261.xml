@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<sounds xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../shared/xml/schema/handtool_sounds.xsd">
+    <motorized>
+        <sounds>
+            <idle template="engineSmall" file="ms261/sounds/ms261.gls" volumeScale="0.9"/>
+            <start template="indoorCabinRumble" />
+            <stop template="indoorCabinRumble" />
+        </sounds>
+    </motorized>
+
+    <chainsaw>
+        <sounds>
+            <cut file="$data/handTools/husqvarna/xp550/sounds/treeDelimbLoop1.wav" volumeScale="1.4"/>
+        </sounds>
+    </chainsaw>
+</sounds>

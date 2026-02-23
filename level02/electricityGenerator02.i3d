@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="electricityGenerator02" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+
+  <Files>
+    <File fileId="4" filename="$data/placeables/brandless/electricityGenerators/level02/electricityGenerator02_diffuse.png" />
+    <File fileId="5" filename="$data/placeables/brandless/electricityGenerators/level02/electricityGenerator02_normal.png" />
+    <File fileId="6" filename="$data/placeables/brandless/electricityGenerators/level02/electricityGenerator02_specular.png" />
+    <File fileId="1" filename="$data/placeables/brandless/electricityGenerators/shared/electricityGeneratorsDecals_diffuse.png" />
+    <File fileId="7" filename="$data/shaders/placeableShader.xml" />
+    <File fileId="2" filename="$data/shared/default_normal.png" />
+    <File fileId="3" filename="$data/shared/default_specular.png" />
+  </Files>
+
+  <Materials>
+    <Material name="lambert1" materialId="3" diffuseColor="0.5 0.5 0.5 1">
+    </Material>
+    <Material name="electricityGeneratorsDecals_mat" materialId="2" alphaBlending="true">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+    </Material>
+    <Material name="electricityGenerator02_mat" materialId="1" customShaderId="7">
+      <Texture fileId="4"/>
+      <Normalmap fileId="5"/>
+      <Glossmap fileId="6"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="electricityGenerator02.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="electricityGenerator2" nodeId="1">
+      <TransformGroup name="clearAreas" nodeId="2">
+        <TransformGroup name="clearAreaStart01" translation="-1 0 -1" nodeId="3">
+          <TransformGroup name="clearAreaWidth01" translation="0 0 2" nodeId="4"/>
+          <TransformGroup name="clearAreaHeight01" translation="2 0 0" nodeId="5"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="levelAreas" nodeId="6">
+        <TransformGroup name="levelAreaStart01" translation="-1.5 0 -1.5" nodeId="7">
+          <TransformGroup name="levelAreaWidth01" translation="0 0 3" nodeId="8"/>
+          <TransformGroup name="levelAreaHeight01" translation="3 0 0" nodeId="9"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="testAreas" nodeId="10">
+        <TransformGroup name="testAreaStart01" translation="-1 0 -1" nodeId="11">
+          <TransformGroup name="testAreaEnd01" translation="2 4 2" nodeId="12"/>
+        </TransformGroup>
+        <TransformGroup name="testAreaStart02" translation="-3.5 0.5 -3.5" nodeId="13">
+          <TransformGroup name="testAreaEnd02" translation="7 3.5 5.5" nodeId="14"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="tipOcclusionUpdateAreas" nodeId="15">
+        <TransformGroup name="tipOcclusionUpdateAreaStart01" translation="-1 0 -1" nodeId="16">
+          <TransformGroup name="tipOcclusionUpdateAreaEnd01" translation="2 0 2" nodeId="17"/>
+        </TransformGroup>
+      </TransformGroup>
+      <TransformGroup name="visuals" nodeId="18">
+        <Shape name="electricityGenerator02Vis" shapeId="1" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="210" nodeId="19">
+          <Shape name="rotationNode" shapeId="2" castsShadows="true" receiveShadows="true" materialIds="1" clipDistance="210" nodeId="20">
+            <Shape name="decals" translation="0.033461 1.439906 -0.05689" shapeId="3" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="2" clipDistance="30" nodeId="21"/>
+            <Shape name="collision" translation="0 2.200765 -0.498185" shapeId="4" kinematic="true" density="0" collisionFilterGroup="0x1034" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="3" nodeId="22"/>
+          </Shape>
+        </Shape>
+      </TransformGroup>
+      <TransformGroup name="collisions" nodeId="23">
+        <Shape name="collision" translation="0 -0.210205 0" shapeId="5" static="true" density="0" collisionFilterGroup="0x3e" collisionFilterMask="0xfffffbff" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="3" nodeId="24"/>
+        <Shape name="tipCollision" shapeId="6" static="true" collisionFilterGroup="0x8" collisionFilterMask="0x1" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="3" nodeId="25"/>
+        <Shape name="aiBlockingCol" shapeId="7" static="true" collisionFilterGroup="0x20" collisionFilterMask="0x1" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="3" nodeId="26"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+  </UserAttributes>
+</i3D>

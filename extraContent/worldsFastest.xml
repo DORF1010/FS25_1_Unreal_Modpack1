@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="tractor" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+
+    <parentFile xmlFilename="$dataS/vehicles/jcb/wft/wft.xml">
+        <attributes>
+			<!--store data-->
+            <set path="vehicle.storeData.name" value="World's Fastest Tractor Custom"/>
+            <!--<set path="vehicle.storeData.image" value="extraContent/store_wft.png"/>-->
+            <set path="vehicle.rimColorConfigurations#useDefaultColors"  value="true"/>
+            <set path="vehicle.rimColorConfigurations#defaultColorIndex"  value="9"/>
+            <set path="vehicle.base.sounds#volumeFactor"  value="0.6"/>
+			
+			<!--wheel configs-->
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(0)#brand"  value="JCB"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(0)#name"  value="WFT"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(0)#isSelectable"  value="false"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(0)#isDefault"  value="false"/>-->
+			
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(1)#name"  value="$l10n_configuration_valueWheelCommunal"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(1)#saveId"  value="COMMUNAL"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(1).wheels#baseConfig"  value="DEFAULT"/>-->
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(1).wheels.wheel(0)#dimensions"  value="400_80R28"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(1).wheels.wheel(1)#dimensions"  value="400_80R28"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(1).wheels.wheel(2)#dimensions"  value="400_80R28"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(1).wheels.wheel(3)#dimensions"  value="400_80R28"/>
+			
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(2)#name"  value="$l10n_configuration_valueDefault"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(2)#isDefault"  value="true"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(2)#saveId"  value="STANDARD"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(2).wheels#baseConfig"  value="COMMUNAL"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(2).wheels.wheel(0)#dimensions"  value="420_70R28"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(2).wheels.wheel(1)#dimensions"  value="420_70R28"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(2).wheels.wheel(2)#dimensions"  value="420_70R28"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(2).wheels.wheel(3)#dimensions"  value="420_70R28"/>
+			
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(3)#name"  value="%s %s"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(3)#params"  value="$l10n_configuration_valueDefault|$l10n_configuration_valueWheelBroad"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(3)#saveId"  value="STANDARD_BROAD"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(3).wheels#baseConfig"  value="STANDARD"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(3).wheels.wheel(0)#dimensions"  value="480_65R28"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(3).wheels.wheel(1)#dimensions"  value="480_65R28"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(3).wheels.wheel(2)#dimensions"  value="480_65R28"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(3).wheels.wheel(3)#dimensions"  value="480_65R28"/>
+			
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(4)#name"  value="$l10n_configuration_valueWheelMedium"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(4)#saveId"  value="MEDIUM"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(4).wheels#baseConfig"  value="STANDARD"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(4).wheels.wheel(0)#dimensions"  value="495_70R24 500_70R24 12_00R24"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(4).wheels.wheel(1)#dimensions"  value="495_70R24 500_70R24 12_00R24"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(4).wheels.wheel(2)#dimensions"  value="495_70R24 500_70R24 12_00R24"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(4).wheels.wheel(3)#dimensions"  value="495_70R24 500_70R24 12_00R24"/>
+			
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(5)#name"  value="$l10n_configuration_valueWheelBroad"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(5)#saveId"  value="BROAD"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(5).wheels#baseConfig"  value="STANDARD"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(5).wheels.wheel(0)#dimensions"  value="620_55R26 620_55R26_5 600_55R26_5"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(5).wheels.wheel(1)#dimensions"  value="620_55R26 620_55R26_5 600_55R26_5"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(5).wheels.wheel(2)#dimensions"  value="620_55R26 620_55R26_5 600_55R26_5"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(5).wheels.wheel(3)#dimensions"  value="620_55R26 620_55R26_5 600_55R26_5"/>
+			
+            <!--<set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(6)#name"  value="$l10n_ui_colorSpecial"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(6)#saveId"  value="SPECIAL"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(6).wheels#baseConfig"  value="STANDARD"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(6).wheels.wheel(0)#dimensions"  value="spikes"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(6).wheels.wheel(1)#dimensions"  value="spikes"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(6).wheels.wheel(2)#dimensions"  value="spikes"/>
+            <set path="vehicle.wheels.wheelConfigurations.wheelConfiguration(6).wheels.wheel(3)#dimensions"  value="spikes"/>-->
+			
+			<!--5000 series motor config-->
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1)#name"  value="WFT 5000 Flat Map Edition"/>
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1)#hp"  value="5000"/>
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1).motor#torqueScale"  value="20"/>
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1).motor#minRpm"  value="650"/>
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1).motor#maxRpm"  value="1700"/>
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1).motor#accelerationLimit"  value="10"/>
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1).motor#maxForwardSpeed"  value="250"/>
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1).motor#maxBackwardSpeed"  value="70"/>
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1).motor#brakeForce"  value="50"/>
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1).motor#lowBrakeForceScale"  value="0.1"/>
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1).motor#lowBrakeForceSpeedLimit"  value="1"/>
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1).motor#ptoMotorRpmRatio"  value="3"/>
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1).motor#dampingRateScale"  value="10"/>
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1).transmission#minForwardGearRatio"  value="0.01"/>
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1).transmission#maxForwardGearRatio"  value="100"/>
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1).transmission#minBackwardGearRatio"  value="0.01"/>
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1).transmission#maxBackwardGearRatio"  value="100"/>
+            <set path="vehicle.motorized.motorConfigurations.motorConfiguration(1).transmission#name"  value="$l10n_info_transmission_cvt"/>
+         </attributes>
+		 
+		 <!--<wheelConfiguration name="$l10n_configuration_valueWheelBroad" saveId="BROAD"><wheels baseConfig="DEFAULT"><wheel dimensions="600_50R22_5"/><wheel dimensions="600_50R22_5"/></wheels></wheelConfiguration>-->
+    </parentFile>
+
+    <!-- ONLY FOR ICON GENERATION -->
+    <storeData>
+        <name>World's Fastest Tractor Custom</name>
+        <image>$dataS/vehicles/jcb/wft/store_wft.png</image>
+        <brand>JCB</brand>
+        <category>miscDrivables</category>
+        <vertexBufferMemoryUsage>0</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>0</indexBufferMemoryUsage>
+        <textureMemoryUsage>0</textureMemoryUsage>
+        <audioMemoryUsage>0</audioMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+    </storeData>
+</vehicle>

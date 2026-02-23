@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<vehicle type="car" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../shared/xml/schema/trafficSystemVehicle.xsd">
+    <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
+	
+    <storeData>
+        <name>International School Bus</name>
+        <specs>
+            <power>350</power>
+            <maxSpeed>90</maxSpeed>
+        </specs>
+        <functions>
+            <function>$l10n_function_car</function>
+        </functions>
+        <image>internationalSchoolBus/schoolBusIcon.dds</image>
+        <price>150000</price>
+        <lifetime>6000</lifetime>
+        <rotation>0</rotation>
+        <brand>DORF</brand>
+        <category>trucks</category>
+        <shopTranslationOffset>0 0.5 0</shopTranslationOffset>
+        <shopRotationOffset>0.461 0 0</shopRotationOffset>
+        <vertexBufferMemoryUsage>5098240</vertexBufferMemoryUsage>
+        <indexBufferMemoryUsage>2453504</indexBufferMemoryUsage>
+        <textureMemoryUsage>1048576</textureMemoryUsage>
+        <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
+        <instanceIndexBufferMemoryUsage>0</instanceIndexBufferMemoryUsage>
+        <audioMemoryUsage>1419600</audioMemoryUsage>
+    </storeData>
+
+    <base>
+        <typeDesc>$l10n_typeDesc_car</typeDesc>
+        <filename>internationalSchoolBus/internationalSchoolBus.i3d</filename>
+        <sounds filename="$data/vehicles/international/cvSeries/sounds/cvSeries.xml" volumeFactor="1.0"/>
+        <size width="2.27" length="7.8" height="2.7" lengthOffset="-0.73"/>
+        <components>
+            <component centerOfMass="0 -0.5 -0.1" solverIterationCount="10" mass="6500"/>
+        </components>
+        <schemaOverlay attacherJointPosition="0 0" name="CAR"/>
+        <mapHotspot type="TRUCK"/>
+    </base>
+
+    <licensePlates defaultPlacement="BOTH">
+        <licensePlate node="3|0" position="FRONT" preferedType="SQUARISH" placementArea="0.06 0.27 0.1 0.27"/>
+        <licensePlate node="3|1" position="BACK" preferedType="SQUARISH" placementArea="0.06 0.15 0.15 0.4"/>
+    </licensePlates>
+
+    <lights>
+        <states>
+            <state lightTypes="0"/>
+        </states>
+
+        <realLights>
+            <low>
+                <light node="4|1|0"/>
+            </low>
+            <high>
+                <light node="4|1|1"/>
+                <brakeLight node="4|0|3"/>
+                <turnLightLeft node="4|0|1"/>
+                <turnLightRight node="4|0|2"/>
+            </high>
+        </realLights>
+    </lights>
+
+	<wheels>
+		<wheelConfigurations>
+			<wheelConfiguration name="$l10n_configuration_valueDefault" saveId="DEFAULT">
+				<wheels autoRotateBackSpeed="3">
+					<wheel hasParticles="true" hasTireTracks="true">
+						<physics tipOcclusionAreaGroupId="1" rotSpeed="1" restLoad="0.6" repr="0>5|0" radius="0.470" width="0.1" forcePointRatio="0.5" initialCompression="0.09" suspTravel="0.23" spring="1" damper="1" frictionScale="1"/>
+					</wheel>
+					<wheel hasParticles="true" hasTireTracks="true">
+						<physics tipOcclusionAreaGroupId="1" rotSpeed="1" restLoad="0.6" repr="0>5|1" radius="0.470" width="0.1" forcePointRatio="0.5" initialCompression="0.09" suspTravel="0.23" spring="1" damper="1" frictionScale="1"/>
+					</wheel>
+					<wheel hasParticles="true" hasTireTracks="true">
+						<physics tipOcclusionAreaGroupId="1" rotSpeed="0" restLoad="0.6" repr="0>5|2" radius="0.470" width="0.1" forcePointRatio="0.5" initialCompression="0.09" suspTravel="0.23" spring="1" damper="1" frictionScale="1"/>
+					</wheel>
+					<wheel hasParticles="true" hasTireTracks="true">
+						<physics tipOcclusionAreaGroupId="1" rotSpeed="0" restLoad="0.6" repr="0>5|3" radius="0.470" width="0.1" forcePointRatio="0.5" initialCompression="0.09" suspTravel="0.23" spring="1" damper="1" frictionScale="1"/>
+					</wheel>
+				</wheels>
+            </wheelConfiguration>
+			
+        </wheelConfigurations>
+	</wheels>
+
+    <enterable>
+        <enterReferenceNode node="0>"/>
+        <exitPoint node="0>6"/>
+
+        <cameras>
+            <camera node="1>" rotatable="true" rotateNode="0>" limit="true" useWorldXZRotation="true" rotMinX="-1.4" rotMaxX="1" transMin="5" transMax="40" translation="0 0 6.85" rotation="-18 180 0">
+                <!--<raycastNode node="cameraRaycastNode1"/>
+                <raycastNode node="cameraRaycastNode2"/>
+                <raycastNode node="cameraRaycastNode3"/>/-->
+            </camera>
+            <camera node="0>0|4" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" positionSmoothingParameter="0.4" shadowFocusBox="shadowFocusBox"/>
+        </cameras>
+
+        <characterNode node="0>0" cameraMinDistance="0.5">
+            <target ikChain="leftArm" targetNode="0>0|0" poseId="narrowFingers"/>
+            <target ikChain="rightArm" targetNode="0>0|1" poseId="narrowFingers"/>
+            <target ikChain="leftFoot" targetNode="0>0|2"/>
+            <target ikChain="rightFoot" targetNode="0>0|3"/>
+        </characterNode>
+
+    </enterable>
+
+
+</vehicle>

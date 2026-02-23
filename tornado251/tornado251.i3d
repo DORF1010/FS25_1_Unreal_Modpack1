@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="tornado251.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.11"/>
+  </Asset>
+
+  <Files>
+    <File fileId="5" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="15" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_diffuse.png"/>
+    <File fileId="14" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_normal.png"/>
+    <File fileId="13" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_specular.png"/>
+    <File fileId="7" filename="$data/shared/detailLibrary/flat_normal.png"/>
+    <File fileId="24" filename="$data/shared/detailLibrary/metallic/clear_diffuse.png"/>
+    <File fileId="23" filename="$data/shared/detailLibrary/metallic/clear_specular.png"/>
+    <File fileId="8" filename="$data/shared/detailLibrary/metallic/silverScratched_diffuse.png"/>
+    <File fileId="6" filename="$data/shared/detailLibrary/metallic/silverScratched_specular.png"/>
+    <File fileId="17" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_diffuse.png"/>
+    <File fileId="16" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_specular.png"/>
+    <File fileId="22" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_diffuse.png"/>
+    <File fileId="21" filename="$data/shared/detailLibrary/nonMetallic/plastic/plasticPainted_specular.png"/>
+    <File fileId="20" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubberBlack_diffuse.png"/>
+    <File fileId="19" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubber_normal.png"/>
+    <File fileId="18" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubber_specular.png"/>
+    <File fileId="2" filename="$data/shared/white_diffuse.png"/>
+    <File fileId="27" filename="$data/vehicles/samasz/tornado251/tornado251Decals_diffuse.png"/>
+    <File fileId="28" filename="$data/vehicles/samasz/tornado251/tornado251Decals_normal.png"/>
+    <File fileId="25" filename="$data/vehicles/samasz/tornado251/tornado251Hoses_normal.png"/>
+    <File fileId="26" filename="$data/vehicles/samasz/tornado251/tornado251Hoses_vmask.png"/>
+    <File fileId="3" filename="$data/vehicles/samasz/tornado251/tornado251_normal.png"/>
+    <File fileId="4" filename="$data/vehicles/samasz/tornado251/tornado251_vmask.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="lambert1" materialId="5" diffuseColor="0.501961 0.501961 0.501961 1">
+    </Material>
+    <Material name="tornado251_chrome_mat" materialId="11" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="23"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="24"/>
+    </Material>
+    <Material name="tornado251_metalPaintedBlack_mat" materialId="8" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="16"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="17"/>
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+    </Material>
+    <Material name="tornado251_plasticPaintedBlack_mat" materialId="10" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="21"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="22"/>
+      <CustomParameter name="colorScale" value="0.012 0.012 0.012"/>
+    </Material>
+    <Material name="tornado251_rubberBlack_mat" materialId="9" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="18"/>
+      <Custommap name="detailNormal" fileId="19"/>
+      <Custommap name="detailDiffuse" fileId="20"/>
+      <CustomParameter name="porosity" value="0.5"/>
+    </Material>
+    <Material name="tornado251_SAMASZ_ORANGE_mat" materialId="6" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="13"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+      <CustomParameter name="colorScale" value="0.855 0.1119 0.013"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="tornado251_silverScratched_mat" materialId="7" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+    </Material>
+    <Material name="tornado251Decals_metalPainted_mat" materialId="12" alphaBlending="true" customShaderId="5" customShaderVariation="vmaskUV2_normalUV3">
+      <Texture fileId="27"/>
+      <Normalmap fileId="28"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="16"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="17"/>
+    </Material>
+    <Material name="tornado251Hoses_rubberBlackHoses_mat" materialId="13" customShaderId="5" customShaderVariation="vmaskUV2">
+      <Texture fileId="2"/>
+      <Normalmap fileId="25"/>
+      <Glossmap fileId="26"/>
+      <Custommap name="detailSpecular" fileId="18"/>
+      <Custommap name="detailNormal" fileId="19"/>
+      <Custommap name="detailDiffuse" fileId="20"/>
+      <CustomParameter name="colorScale" value="0.01 0.01 0.01"/>
+      <CustomParameter name="porosity" value="0.5"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="tornado251.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="tornado251_main_component1" shapeId="1" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="37" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5">
+      <Shape name="tornado251_vis" shapeId="2" clipDistance="300" nodeId="38" castsShadows="true" receiveShadows="true" skinBindNodeIds="38 61 62 64 65 73 74 84 85" materialIds="7,6,8,9,10,11">
+        <TransformGroup name="attachable" nodeId="39">
+          <TransformGroup name="attacherJoint" translation="0 0.35212 -0.898065" rotation="0 -90 0" nodeId="40"/>
+          <TransformGroup name="topReferenceNode" translation="0 0.961945 -0.898755" rotation="0 -90 0" nodeId="41"/>
+          <TransformGroup name="ptoInputNode" translation="0.00112 0.579784 -0.753236" nodeId="42"/>
+          <TransformGroup name="connectionHoses" nodeId="43">
+            <TransformGroup name="hydraulicIn01" translation="0.009132 0.783507 -0.597766" rotation="0 180 0" nodeId="44">
+              <Shape name="hydraulicIn01_detached" shapeId="3" clipDistance="300" nodeId="45" castsShadows="true" receiveShadows="true" materialIds="13">
+                <TransformGroup name="hydraulicIn01_connector" translation="-0.511675 -0.081145 -0.247306" rotation="90 -17.7146 180" nodeId="46"/>
+              </Shape>
+            </TransformGroup>
+            <TransformGroup name="hydraulicOut01" translation="0.015382 0.781056 -0.596601" rotation="0 180 0" nodeId="47">
+              <Shape name="hydraulicOut01_detached" shapeId="4" clipDistance="300" nodeId="48" castsShadows="true" receiveShadows="true" materialIds="13">
+                <TransformGroup name="hydraulicOut01_connector" translation="-0.50777 -0.080228 -0.287793" rotation="90 81.0976 180" nodeId="49"/>
+              </Shape>
+            </TransformGroup>
+            <TransformGroup name="hydraulicIn02" translation="-0.010151 0.784306 -0.598745" rotation="0 180 0" nodeId="50">
+              <Shape name="hydraulicIn02_detached" shapeId="5" clipDistance="300" nodeId="51" castsShadows="true" receiveShadows="true" materialIds="13">
+                <TransformGroup name="hydraulicIn02_connector" translation="-0.530881 -0.081131 -0.332882" rotation="90 132.632 180" nodeId="52"/>
+              </Shape>
+            </TransformGroup>
+            <TransformGroup name="hydraulicOut02" translation="-0.016121 0.77835 -0.598397" rotation="0 180 0" nodeId="53">
+              <Shape name="hydraulicOut02_detached" shapeId="6" clipDistance="300" nodeId="54" castsShadows="true" receiveShadows="true" materialIds="13">
+                <TransformGroup name="hydraulicOut02_connector" translation="-0.536206 -0.075747 -0.376193" rotation="90 169.393 180" nodeId="55"/>
+              </Shape>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="support" nodeId="56">
+            <Shape name="supportCol01" translation="0 0.033321 0.019303" shapeId="7" compoundChild="true" collisionFilterGroup="0x10000" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="57" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+            <Shape name="supportCol02" translation="-0.785397 0.033321 0.019303" shapeId="8" compoundChild="true" collisionFilterGroup="0x10000" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="58" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+            <Shape name="supportCol03" translation="0.785 0.033321 0.019303" shapeId="8" compoundChild="true" collisionFilterGroup="0x10000" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="59" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="movingParts" nodeId="60">
+          <TransformGroup name="tower" translation="0.179834 0.901468 -0.255507" clipDistance="300" nodeId="61">
+            <TransformGroup name="towerPart01" translation="-0.037498 1.66978 0.288014" rotation="0 -7.49307 0" clipDistance="300" nodeId="62">
+              <TransformGroup name="towerPart02RefFrame" translation="-0.000454 0.041164 0.177103" nodeId="63">
+                <TransformGroup name="towerPart02" rotation="90.5898 -1.82571 180" clipDistance="300" nodeId="64">
+                  <TransformGroup name="towerPart02Hydraulic" translation="0 0 0.04792" rotation="132.085 -0.018861 -1.83256" clipDistance="300" nodeId="65"/>
+                  <Shape name="towerPart02_decals" translation="7.8e-05 -0.000784 8e-06" shapeId="9" clipDistance="30" nodeId="66" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="12"/>
+                  <TransformGroup name="dischargeNode" translation="0 0.269647 -0.033108" rotation="89.9243 39.6671 -84.3812" nodeId="67"/>
+                  <TransformGroup name="pipeEffect04" translation="0.032943 3.60317 -3.23455" rotation="146.147 0 179.744" nodeId="68"/>
+                </TransformGroup>
+              </TransformGroup>
+              <TransformGroup name="towerPart01HydraulicRef" translation="-0.000276 0.188148 -0.131833" rotation="-58.6844 -0.006827 0" nodeId="69"/>
+              <Shape name="towerColPart03" translation="0.003432 0.093273 0.175814" rotation="0 0.493069 0" shapeId="10" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="70" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+              <Shape name="towerPart01_decals" translation="-0.000535 0 -0.000804" rotation="0 7.49307 0" shapeId="11" clipDistance="30" nodeId="71" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="12"/>
+              <TransformGroup name="pipeEffect03" translation="-0.002998 0.004606 0.182965" rotation="0 0.205166 -180" nodeId="72"/>
+            </TransformGroup>
+            <TransformGroup name="towerPart01Hydraulic" translation="0.012255 1.44444 -0.092138" rotation="-58.6844 -7.4999 0" clipDistance="300" nodeId="73">
+              <TransformGroup name="towerPart01HydraulicPunch" translation="0 0 0.484" clipDistance="300" nodeId="74"/>
+              <TransformGroup name="towerPart01HydraulicJoint" nodeId="75"/>
+            </TransformGroup>
+            <TransformGroup name="towerPart02HydraulicRef" translation="-0.03989 1.60979 0.302744" rotation="42.674 172.5 0" nodeId="76"/>
+            <Shape name="towerColPart01" translation="0 0.463575 0" rotation="0 -7 0" shapeId="12" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="77" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+            <Shape name="towerColPart02" translation="0 0.91595 0" rotation="0 -7 0" shapeId="13" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="78" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+            <Shape name="logo_decals" translation="0.14546 1.14965 -0.026548" shapeId="14" clipDistance="50" nodeId="79" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="12"/>
+            <Shape name="screws_decals" translation="-0.022126 1.08632 0.170823" shapeId="15" clipDistance="30" nodeId="80" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="12"/>
+            <TransformGroup name="towerJoint" nodeId="81"/>
+            <TransformGroup name="pipeEffect01" translation="-0.001696 0.391998 0.005663" rotation="90 7.69824 -180" nodeId="82"/>
+            <TransformGroup name="pipeEffect02" translation="-0.016428 1.27953 0.114654" rotation="75 7.69824 -180" nodeId="83"/>
+          </TransformGroup>
+          <TransformGroup name="rotor" translation="0 0.344 0.153086" clipDistance="300" nodeId="84"/>
+          <TransformGroup name="propeller" translation="-1.3e-05 0.426203 -0.286341" clipDistance="300" nodeId="85"/>
+        </TransformGroup>
+        <TransformGroup name="shovelNode" translation="0 0 0.158339" nodeId="86"/>
+        <TransformGroup name="tipOccluderArea" nodeId="87">
+          <TransformGroup name="tipOccluderAreaStart" translation="2 0 1.4" nodeId="88"/>
+          <TransformGroup name="tipOccluderAreaWidth" translation="-2 0 1.4" nodeId="89"/>
+          <TransformGroup name="tipOccluderAreaHeight" translation="2 0 -0.5" nodeId="90"/>
+        </TransformGroup>
+        <TransformGroup name="effects" nodeId="91">
+          <TransformGroup name="snowCenterEffect" nodeId="92"/>
+          <Shape name="pipeEffect3" translation="0.098688 2.53149 0.497674" rotation="90 55.2806 90" shapeId="16" clipDistance="300" nodeId="93" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        </TransformGroup>
+        <TransformGroup name="visuals" nodeId="94">
+          <Shape name="screws_decals" translation="0.036671 0.443688 -0.206769" shapeId="17" clipDistance="30" nodeId="95" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="12"/>
+          <Shape name="logo_decals" translation="0.038373 0.552239 -0.034435" shapeId="18" clipDistance="50" nodeId="96" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="12"/>
+        </TransformGroup>
+        <TransformGroup name="rootJoint" nodeId="97"/>
+      </Shape>
+      <TransformGroup name="collisions" nodeId="98">
+        <Shape name="colPart01" translation="0 0.598459 -0.339267" shapeId="19" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="99" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+        <Shape name="colPart02" translation="0.86853 0.424393 -0.340788" shapeId="20" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="100" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="5"/>
+      </TransformGroup>
+      <TransformGroup name="skinnedMeshes" translation="0 0.03344 0" nodeId="101">
+        <Shape name="hoses" shapeId="21" clipDistance="300" nodeId="102" castsShadows="true" receiveShadows="true" skinBindNodeIds="81 75 97" materialIds="13"/>
+      </TransformGroup>
+    </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="75">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="81">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+    <UserAttribute nodeId="97">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

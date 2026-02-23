@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="3PointHydraulic.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.11"/>
+  </Asset>
+
+  <Files>
+    <File fileId="4" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="7" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_diffuse.dds"/>
+    <File fileId="6" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_normal.dds"/>
+    <File fileId="5" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_specular.dds"/>
+    <File fileId="13" filename="$data/shared/detailLibrary/flat_normal.dds"/>
+    <File fileId="19" filename="$data/shared/detailLibrary/metallic/clear_diffuse.dds"/>
+    <File fileId="18" filename="$data/shared/detailLibrary/metallic/clear_specular.dds"/>
+    <File fileId="14" filename="$data/shared/detailLibrary/metallic/silverScratched_diffuse.dds"/>
+    <File fileId="12" filename="$data/shared/detailLibrary/metallic/silverScratched_specular.dds"/>
+    <File fileId="21" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_diffuse.png"/>
+    <File fileId="20" filename="$data/shared/detailLibrary/nonMetallic/metal/metalPainted_specular.png"/>
+    <File fileId="1" filename="$data/shared/white_diffuse.dds"/>
+    <File fileId="15" filename="$data/vehicles/landini/seriesREX4/seriesREX4Decal_diffuse.png"/>
+    <File fileId="16" filename="$data/vehicles/landini/seriesREX4/seriesREX4Decal_normal.png"/>
+    <File fileId="2" filename="$data/vehicles/landini/seriesREX4/seriesREX4FrontHydraulic_normal.png"/>
+    <File fileId="3" filename="$data/vehicles/landini/seriesREX4/seriesREX4FrontHydraulic_vmask.dds"/>
+    <File fileId="17" filename="$data/vehicles/landini/seriesREX4/seriesREX4_vmask.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="FrontHydraulic_mat" materialId="5" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="5"/>
+      <Custommap name="detailNormal" fileId="6"/>
+      <Custommap name="detailDiffuse" fileId="7"/>
+      <CustomParameter name="colorScale" value="0.044 0.044 0.044"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="seriesREX4Decal_mat" materialId="6" customShaderId="4" customShaderVariation="vmaskUV2_normalUV3">
+      <Texture fileId="15"/>
+      <Normalmap fileId="16"/>
+      <Glossmap fileId="17"/>
+      <Custommap name="detailSpecular" fileId="20"/>
+      <Custommap name="detailNormal" fileId="13"/>
+      <Custommap name="detailDiffuse" fileId="21"/>
+    </Material>
+    <Material name="seriesREX4Decal_silverScratched_mat" materialId="7" customShaderId="4" customShaderVariation="vmaskUV2_normalUV3">
+      <Texture fileId="15"/>
+      <Normalmap fileId="16"/>
+      <Glossmap fileId="17"/>
+      <Custommap name="detailSpecular" fileId="12"/>
+      <Custommap name="detailNormal" fileId="13"/>
+      <Custommap name="detailDiffuse" fileId="14"/>
+    </Material>
+    <Material name="seriesREX4FrontHydraulic_chrome_mat" materialId="8" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="18"/>
+      <Custommap name="detailNormal" fileId="13"/>
+      <Custommap name="detailDiffuse" fileId="19"/>
+    </Material>
+    <Material name="seriesREX4FrontHydraulic_LANDINI_GREY1_mat" materialId="9" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="5"/>
+      <Custommap name="detailNormal" fileId="6"/>
+      <Custommap name="detailDiffuse" fileId="7"/>
+      <CustomParameter name="colorScale" value="0.0437 0.0437 0.0437"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="seriesREX4FrontHydraulic_LANDINI_GREY1_mat" materialId="10" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="5"/>
+      <Custommap name="detailNormal" fileId="6"/>
+      <Custommap name="detailDiffuse" fileId="7"/>
+      <CustomParameter name="colorScale" value="0.044 0.0437 0.0437"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="seriesREX4FrontHydraulic_silverScratched_mat" materialId="11" customShaderId="4">
+      <Texture fileId="1"/>
+      <Normalmap fileId="2"/>
+      <Glossmap fileId="3"/>
+      <Custommap name="detailSpecular" fileId="12"/>
+      <Custommap name="detailNormal" fileId="13"/>
+      <Custommap name="detailDiffuse" fileId="14"/>
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="3PointHydraulic.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <TransformGroup name="hydraulicFront" nodeId="27">
+      <TransformGroup name="hydraulicFront" nodeId="28">
+        <TransformGroup name="attacherJointFrontRot" translation="0.000219914 -0.250337 0.291566" rotation="-29.2826 0 0" nodeId="29">
+          <TransformGroup name="attacherJointFrontRot2" translation="5.68746e-16 1.40687e-14 0.671589" rotation="29.283 0 0" nodeId="30">
+            <TransformGroup name="attacherJointFront" translation="0 7.10543e-17 -0" rotation="0 -90 0" nodeId="31"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="attacherJointFrontArmBottom" translation="0.000219914 -0.250337 0.291566" rotation="-29.2826 0 0" nodeId="32">
+          <Shape name="attacherJointFrontArmBottomTrans" shapeId="1" clipDistance="300" nodeId="33" castsShadows="true" receiveShadows="true" materialIds="9,11">
+            <TransformGroup name="lowerLinkFrontLeftRot" translation="0.253653 -0.065272 0.389641" rotation="11.825 212.149 8.91588" nodeId="34">
+              <Shape name="lowerLinkFrontLeft" shapeId="2" clipDistance="300" nodeId="35" castsShadows="true" receiveShadows="true" materialIds="9,11">
+                <Shape name="frontHydraulic_decals" translation="0.093132 0.323247 0.190351" rotation="48.1479 151.133 17.2313" shapeId="3" clipDistance="50" nodeId="36" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="7"/>
+                <Shape name="lowerLinkFrontLeft_lod" shapeId="4" clipDistance="300" nodeId="37" castsShadows="true" receiveShadows="true" materialIds="11,10"/>
+              </Shape>
+            </TransformGroup>
+            <TransformGroup name="lowerLinkFrontRightRot" translation="-0.253653 -0.065272 0.389641" rotation="-168.303 32.1913 170.843" nodeId="38">
+              <Shape name="lowerLinkFrontRight" shapeId="5" clipDistance="300" nodeId="39" castsShadows="true" receiveShadows="true" materialIds="9,11">
+                <Shape name="frontHydraulic_decals" translation="-0.091955 0.323584 0.190351" rotation="-131.852 -28.8667 162.56" shapeId="6" clipDistance="50" nodeId="40" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="7"/>
+                <Shape name="lowerLinkFrontRight_lod" shapeId="7" clipDistance="300" nodeId="41" castsShadows="true" receiveShadows="true" materialIds="9,11"/>
+              </Shape>
+            </TransformGroup>
+            <TransformGroup name="referencePointFrontBottom" translation="0 0 0.671589" nodeId="42"/>
+            <TransformGroup name="attacherJointFrontHydraulicRef" translation="0 -0.067059 0.202251" rotation="116.938 0 0" nodeId="43"/>
+            <Shape name="attacherJointFrontArmBottomTrans_lod" rotation="2.99664 0 0" shapeId="8" clipDistance="300" nodeId="44" castsShadows="true" receiveShadows="true" materialIds="9"/>
+          </Shape>
+        </TransformGroup>
+        <Shape name="attacherJointFrontHydraulic" translation="0.000219914 0.134663 0.486666" rotation="87.6556 0 0" shapeId="9" clipDistance="300" nodeId="45" castsShadows="true" receiveShadows="true" materialIds="10,11">
+          <Shape name="attacherJointFrontHydraulicPunch" translation="0 0 0.344854" shapeId="10" clipDistance="140" nodeId="46" castsShadows="true" receiveShadows="true" materialIds="8,9">
+            <Shape name="attacherJointFrontHydraulicPunch_lod" shapeId="11" clipDistance="300" nodeId="47" castsShadows="true" receiveShadows="true" materialIds="8,9"/>
+          </Shape>
+          <TransformGroup name="attacherJointFrontHydraulicJoint" nodeId="48"/>
+          <Shape name="attacherJointFrontHydraulic_lod" shapeId="12" clipDistance="300" nodeId="49" castsShadows="true" receiveShadows="true" materialIds="11,9"/>
+        </Shape>
+        <TransformGroup name="attacherJointFrontArmTop" translation="0.000219914 0.239692 0.565936" rotation="-76.5975 0 0" nodeId="50"/>
+        <TransformGroup name="trailerAttacherJointFrontHigh" translation="-0.145191 0.120628 0.618662" rotation="0 -90 0" nodeId="51"/>
+        <TransformGroup name="ptoOutputFront" translation="0.000301919 -0.0778791 0.411035" nodeId="52"/>
+        <TransformGroup name="electricFront" translation="0.161109 0.0873634 0.556702" rotation="0 180 0" nodeId="53"/>
+        <TransformGroup name="hydraulicIn05" translation="-0.0996348 0.0456414 0.503195" rotation="0 180 -90" nodeId="54"/>
+        <TransformGroup name="hydraulicOut05" translation="-0.0388307 0.069495 0.503195" rotation="0 180 90" nodeId="55"/>
+        <TransformGroup name="hydraulicIn06" translation="0.0408866 0.069495 0.503195" rotation="0 180 90" nodeId="56"/>
+        <TransformGroup name="hydraulicOut06" translation="0.0838447 0.110894 0.503195" rotation="0 180 90" nodeId="57"/>
+        <TransformGroup name="hydraulicIn07" translation="0.101678 0.0456414 0.503195" rotation="0 180 -90" nodeId="58"/>
+        <Shape name="hydraulicFront_decals" translation="0.000219914 0.0131498 0.402197" shapeId="13" clipDistance="50" nodeId="59" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="7,6"/>
+        <Shape name="FrontHydraulic" translation="-0.056 -0.114 -0.143" rotation="-180 0 -180" shapeId="14" nodeId="60" castsShadows="true" receiveShadows="true" materialIds="5,11"/>
+      </TransformGroup>
+    </TransformGroup>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="48">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>

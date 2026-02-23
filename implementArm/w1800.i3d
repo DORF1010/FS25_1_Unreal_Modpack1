@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="w1800.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.4"/>
+  </Asset>
+
+  <Files>
+    <File fileId="6" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="16" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_diffuse.png"/>
+    <File fileId="15" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_normal.png"/>
+    <File fileId="14" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_specular.png"/>
+    <File fileId="8" filename="$data/shared/detailLibrary/flat_normal.png"/>
+    <File fileId="9" filename="$data/shared/detailLibrary/metallic/silverScratched_diffuse.png"/>
+    <File fileId="7" filename="$data/shared/detailLibrary/metallic/silverScratched_specular.png"/>
+    <File fileId="3" filename="$data/shared/white_diffuse.png"/>
+    <File fileId="17" filename="$data/vehicles/claas/claasWeightsDecals_diffuse.png"/>
+    <File fileId="18" filename="$data/vehicles/claas/claasWeightsDecals_normal.png"/>
+    <File fileId="4" filename="$data/vehicles/claas/claasWeights_normal.png"/>
+    <File fileId="5" filename="$data/vehicles/claas/claasWeights_vmask.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="claasWeights_base_mat" materialId="5" customShaderId="6">
+      <Texture fileId="3"/>
+      <Normalmap fileId="4"/>
+      <Glossmap fileId="5"/>
+      <Custommap name="detailSpecular" fileId="14"/>
+      <Custommap name="detailNormal" fileId="15"/>
+      <Custommap name="detailDiffuse" fileId="16"/>
+      <CustomParameter name="colorScale" value="0.068 0.068 0.068"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="claasWeights_silverScratched_mat" materialId="6" customShaderId="6">
+      <Texture fileId="3"/>
+      <Normalmap fileId="4"/>
+      <Glossmap fileId="5"/>
+      <Custommap name="detailSpecular" fileId="7"/>
+      <Custommap name="detailNormal" fileId="8"/>
+      <Custommap name="detailDiffuse" fileId="9"/>
+    </Material>
+    <Material name="claasWeightsDecals_CLAAS_RED1_mat" materialId="7" alphaBlending="true" customShaderId="6" customShaderVariation="vmaskUV2">
+      <Texture fileId="17"/>
+      <Normalmap fileId="18"/>
+      <Glossmap fileId="5"/>
+      <Custommap name="detailSpecular" fileId="14"/>
+      <Custommap name="detailNormal" fileId="15"/>
+      <Custommap name="detailDiffuse" fileId="16"/>
+      <CustomParameter name="colorScale" value="0.8374 0.0371 0.0028"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="lambert1" materialId="8" diffuseColor="0.501961 0.501961 0.501961 1">
+    </Material>
+    <Material name="UnnamedMaterial" materialId="9" diffuseColor="1 1 1 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="w1800.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="w1800_main_component1" shapeId="1" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="3.69" clipDistance="300" nodeId="25" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8">
+      <TransformGroup name="attacherJoint" translation="0 0.332794 -0.150398" rotation="0 -90 0" nodeId="26"/>
+      <TransformGroup name="topReferenceNode" translation="0 0.807415 -0.178114" nodeId="27"/>
+      <TransformGroup name="trailerAttacherJoint" translation="-0.007668 0.322228 0.346711" rotation="-3.99499e-05 -90 3.99475e-05" nodeId="28">
+        <TransformGroup name="attacherJointBackLeftRep" rotation="180 -90 -180" nodeId="29">
+          <Shape name="sphere" rotation="-3.46582e-15 -90 0" scale="0.5 2.5 0.5" shapeId="2" nodeId="30" castsShadows="false" receiveShadows="false" distanceBlending="false" materialIds="9">
+            <TransformGroup name="attacherJointBackLeft" rotation="-180 0 -180" nodeId="31"/>
+          </Shape>
+        </TransformGroup>
+        <TransformGroup name="attacherJointBackRightRep" rotation="180 -90 180" nodeId="32">
+          <Shape name="sphere" rotation="-1.21944e-10 -90 1.36594e-05" scale="0.5 0.5 2.5" shapeId="2" nodeId="33" castsShadows="false" receiveShadows="false" distanceBlending="false" materialIds="9">
+            <TransformGroup name="attacherJointBackRight" rotation="-180 0 -180" nodeId="34"/>
+          </Shape>
+        </TransformGroup>
+      </TransformGroup>
+      <Shape name="w1800_vis" shapeId="3" clipDistance="300" nodeId="35" castsShadows="true" receiveShadows="true" materialIds="6,5">
+        <Shape name="attachment_400kg" translation="0 0.479111 0.0896" shapeId="4" clipDistance="150" nodeId="36" castsShadows="true" receiveShadows="true" materialIds="5">
+          <Shape name="attachment_400kgCol" translation="0 0.054565 -0.024336" shapeId="5" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="37" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8"/>
+          <Shape name="tensionBeltMesh02" translation="0.000106 0 -0.027222" shapeId="6" clipDistance="300" nodeId="38" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8"/>
+        </Shape>
+        <Shape name="attachment_800kg" translation="0 0.605111 0.0896" shapeId="4" clipDistance="150" nodeId="39" castsShadows="true" receiveShadows="true" materialIds="5">
+          <Shape name="attachment_800kgCol" translation="0 -0.005096 -0.024336" shapeId="7" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="40" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8"/>
+        </Shape>
+        <Shape name="attachment_1200kg" translation="0 0.731111 0.0896" shapeId="8" clipDistance="150" nodeId="41" castsShadows="true" receiveShadows="true" materialIds="5">
+          <Shape name="attachment_1200kgCol" translation="0 -0.067492 -0.024336" shapeId="9" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="42" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8"/>
+        </Shape>
+        <Shape name="attachment_1600kg" translation="0 0.8712 0.0896" shapeId="10" clipDistance="150" nodeId="43" castsShadows="true" receiveShadows="true" materialIds="5">
+          <Shape name="attachment_1600kgCol" translation="0 -0.145582 -0.024336" shapeId="11" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="44" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8"/>
+        </Shape>
+        <Shape name="w1800_decal" translation="-0.007581 0.161456 0.307498" shapeId="12" clipDistance="30" nodeId="45" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="7"/>
+      </Shape>
+      <TransformGroup name="collisions" nodeId="46">
+        <Shape name="colPart" translation="0 0.654551 -0.170097" shapeId="13" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="47" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8"/>
+        <Shape name="tensionBeltMesh01" shapeId="14" clipDistance="300" nodeId="48" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="8"/>
+      </TransformGroup>
+      <TransformGroup name="semiAttacherJoint" translation="8.53266e-08 0.685365 1.52398" rotation="0 -90 0" nodeId="49"/>
+      <TransformGroup name="moving" translation="-0.007668 0.322228 0.346711" rotation="0 -90 0" nodeId="50"/>
+    </Shape>
+  </Scene>
+
+</i3D>

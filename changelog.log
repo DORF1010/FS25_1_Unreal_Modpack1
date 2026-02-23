@@ -1,0 +1,220 @@
+Changelog
+DORF1010
+
+Dec 24, 2025
+Added Allbut adapter for putting frontloader/wheelloader/telehandler tools on frontloader/wheelloader/telehandler
+Added 5000 series motor config to mt655 and puma/absolut/t7 tractors
+Regenerated some of the store icons to remove warnings in console
+Removed/Fixed some store combinations to remove warnings in the console
+Added rear hitch to sks30 150 semitrailer
+Added more wheel configs to dolly10L
+Minor other fixes
+
+Dec 25, 2025
+Added Samasz tornado 252 Snowblower
+Added skidsteer compatibility to Albutt adapter
+Added combinations to Allbut adapter
+Significantly reduced excessive bouncing/shaking on adapter while using additional tools
+Added CNH (Case New Holland) brand for Case Puma/New Holland T7/Steyr Absolut to be more accurate to real parent company (similar to Agco owning Fendt/Challenger/White)
+Added color and decal config to frontloader bucket
+Added Changelog file to zip folder
+
+Dec 28, 2025
+Added CLAAS Lexion tracks configs to CR11 combine
+Other minor translation/naming adjustments to CR11
+Fixed errors that prevented snowblower from being purchasable
+Minor work area adjustments to tornado 252
+Fixed errors that disabled decal config for frontloader bucket
+NOTE: z2840 windrower may throw some errors when you use it with other crops/fill types outside of grass/straw etc (it works with other crops, but be warned.) I don't think its anything game breaking, but if you don't have easy dev controls mod or development controls enabled to reload the vehicle, it may require a restart of your savegame.
+
+Dec 29, 2025
+Multiple adjustments/fixes/additions to caseIH steiger series wheel configurations
+Added more tracks configs including CLAAS John Deere and AGRIFAC
+Removed static orange lights on top of cabin (from previous beacon lights)
+Added 785 motor config, removed 715 plus motor config
+Fixed motor config decals
+Adjusted warning sign configs
+Added color config for bumper/trim to series200 pickup (default material is chrome, can be changed)
+
+Dec 30, 2025
+Adjusted position of some support wheels for crawler configs
+
+Dec 31, 2025
+Added "No" configuration set for international cv series
+
+Jan 3, 2026
+Added work area config to z2840 windrower
+Added treffler tga560 cultivator
+
+Jan 4, 2026
+Added work width config to tga560
+Increased working speed limit to 50km/h on tga560
+Removed debug width markers on z2840 windrower
+Added more work area configs to z2840
+Fixed work areas on z2840
+Added color configs to bossAlpin251 loading wagon
+Added multiple wheel configs to bossAlpin251
+Added GIANTS unlimited color configurator as a dependency to allow more color configurations on all vehicles
+Added/adjusted configuration sets for puma/absolut/t7 to add presets for each brand, as well as fully customizable version
+Added/adjusted wheel configs for puma/absolut/t7
+Added color and wheel configs to dpw1800 trailer
+Spelling and grammar issues fixed in changelog.log
+Implemented new version numbering system:
+    0.9.yearShort.monthNumber.dayNumber
+Example: This is update 0.9.26.1.4
+
+Jan 11, 2026
+Added LSW wheel configs to vario1000
+Adjusted wheels sizes for communal config on vario1000
+
+Jan 14, 2026
+Added LSW wheel config to quadtrac715
+
+Jan 17, 2026
+Added more wheel sizes to forestry standard and narrow/narrow 1.5m wheel configs for vario1000
+
+Jan 18, 2026
+Added progrip versions to communal and standard wheel configs on vario1000
+Added color config to progrip wheel configs ('Special' color config)
+Added white Michelin wheels (based on TV ad) (color configuration is misbehaving, uses material of 'Special' color config)
+Removed .9 prefix from version number
+
+Jan 20, 2026
+Added extra content vehicles
+	cr11 gold
+	fd250 gold
+	jcb world's fastest tractor
+	caseIH quadtrac715 black
+quadtrac715 black doesn't load, any suggestions let me know. In the meantime, use other version in mod (custom colors)
+
+Jan 20, 2026
+Added wheel sizes to fh16
+Adjusted naming for wheel configs on fh16
+
+Jan 21, 2026
+Increased modDesc version to 105 (requires game to be version 1.15+)
+
+Jan 22, 2026
+Added front bumper attacher on fh16 for tlx bumper pack (FS25_TLX_Series_FrontBumpers.zip)
+
+Jan 24, 2026
+Added more wheel sizes to skh60
+Adjusted 5000 series motor config on skh60
+
+Jan 24, 2026
+Added 'special edition' wheels config to series200, designed for offroad racing
+Adjusted 'maxDeformation' for monster truck wheels on series200 pickup
+
+Jan 25, 2026
+Added more wheel sizes to 'special edition' racing wheels on series200
+Minor naming change to frontweight config for quadtrac715
+Added wheel sizes to pickup2017/RC car
+
+Jan 26, 2026
+Overhauled 3point attacher for dolly10L
+Adjusted positions of rear trailer attachers for dolly10L
+
+Jan 26, 2026
+Added extra 3point attacher for extra weight/load near front of dolly10L
+Added wheel configs to jcb wft (yes, it IS possible to edit extra content, but only as a separate vehicle)
+	communal (original tires + a few more)
+	standard
+	medium
+	wide
+Lowered volume of wft slightly
+
+Jan 27, 2026
+Added wheel sizes to wft
+Added/adjusted additional attachers for dolly10L, it will now attach the following:
+	Unimog bedpack (and anything else for MB trucks unimogs) by Bb mods
+	Custom beds pack + any bed from pickup trucks by Roughneck Modding Crew
+	Basegame Annaburger tools (using multiple dollies is suggested for more length)
+	Bulk truck X2 and X3 beds (ditto) by Bcbuhler
+	Anything hooklift/IT runner
+	Unimog U1250/U1450/U1650 beds + crane by AlexL353_modding
+Added invisible semitruck attacher at front for better linking of multiple dollies (back up further to use regular hitch)
+Added Unimog U1250/U1450/U1650 crane attacher to fh16
+
+Jan 28, 2026
+Added fender config to dolly10L
+	features auto-hide when attaching certain beds to prevent clipping
+Added more color options to dolly10L
+Added beacon light config to dolly10L
+Adjusted maxDeformation for wide tires and special edition tires on series200
+Added more color options to albutt adapter and bucket
+Added Michelin progrip wheel config to vario1000
+Separated wheel and tire chains color configs on vario1000
+Added RaniWrap with multiple color options, custom colors do not work
+
+Jan 29, 2026
+Added more colors for RaniWrap
+Added more wheel sizes to fh16
+Reordered/renamed mirror configs on fh16
+Added communal wheel config to fh16
+
+Jan 29, 2026
+Removed extra design configs on dolly10L
+
+Feb 1, 2026
+Added work width config to fd250
+
+Feb 2, 2026
+Adjusted work width config on fd250
+
+Feb 2, 2026
+Adjusted work width config on fd250
+
+Feb 2, 2026
+Adjusted work width config on fd250
+
+Feb 3, 2026
+Removed unnecessary RaniWrap store item to remove some errors
+Fixed work width config 50m on fd250
+
+Feb 5, 2026
+Added color config to bigPack
+
+Feb 7, 2026
+Adjusted folding configuration on series200
+Added additional tension belt to series200
+
+Feb 8, 2026
+Added k307 yarder winch
+	color config
+	wheel configs
+	unreal length + weight capacity
+
+Feb 9, 2026
+Reworked mt655 designs
+	config for decals
+	main color config
+	rim color config
+Added wheel options to mt655
+
+Feb 11, 2026
+Adjusted wide tires height on dolly10L
+
+Feb 15, 2026
+Added tire size to fd250
+Added fictious, experimental caseIH bitrac
+
+Feb 17, 2026
+Minor changes to color configs to bigPack
+
+Feb 18, 2026
+Added AgroTruck (Heizomat Heizotruck V2 from MB DLC) attacher config to fh16
+Made some changes to attachers of adapter
+
+Feb 19, 2026
+Made some more changes to attachers of adapter
+Removed AgroTruck attacher config, attacher is now always there for fh16
+Added wheel options to z2840
+
+Feb 20, 2026
+Moved mod to Github
+
+Feb 21, 2026
+Some Github stuff changed.
+
+Feb 23, 2026
+More Github stuff changed.

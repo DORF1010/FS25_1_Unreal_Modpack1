@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+
+<i3D name="f155A.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+  <Asset>
+    <Export program="GIANTS Editor 64bit" version="10.0.3"/>
+  </Asset>
+
+  <Files>
+    <File fileId="5" filename="$data/shaders/vehicleShader.xml"/>
+    <File fileId="18" filename="$data/shared/default_normal.png"/>
+    <File fileId="8" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_diffuse.png"/>
+    <File fileId="7" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_normal.png"/>
+    <File fileId="6" filename="$data/shared/detailLibrary/calibrated/calibratedPaint_specular.png"/>
+    <File fileId="25" filename="$data/shared/detailLibrary/calibrated/grainSmall_specular.png"/>
+    <File fileId="14" filename="$data/shared/detailLibrary/flat_normal.png"/>
+    <File fileId="17" filename="$data/shared/detailLibrary/metallic/clear_diffuse.png"/>
+    <File fileId="16" filename="$data/shared/detailLibrary/metallic/clear_specular.png"/>
+    <File fileId="15" filename="$data/shared/detailLibrary/metallic/silverScratched_diffuse.png"/>
+    <File fileId="13" filename="$data/shared/detailLibrary/metallic/silverScratched_specular.png"/>
+    <File fileId="22" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubberBlack_diffuse.png"/>
+    <File fileId="21" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubber_normal.png"/>
+    <File fileId="20" filename="$data/shared/detailLibrary/nonMetallic/rubber/rubber_specular.png"/>
+    <File fileId="2" filename="$data/shared/white_diffuse.png"/>
+    <File fileId="23" filename="$data/vehicles/albutt/f155A/f155ADecals_diffuse.png"/>
+    <File fileId="24" filename="$data/vehicles/albutt/f155A/f155ADecals_normal.png"/>
+    <File fileId="19" filename="$data/vehicles/albutt/f155A/f155AHoses_vmask.png"/>
+    <File fileId="3" filename="$data/vehicles/albutt/f155A/f155A_normal.png"/>
+    <File fileId="4" filename="$data/vehicles/albutt/f155A/f155A_vmask.png"/>
+  </Files>
+
+
+  <Materials>
+    <Material name="f155A_ALBUTT_BLUE1_mat" materialId="5" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+      <CustomParameter name="colorScale" value="0 0.15 0.44"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="f155A_calibratedPaint_mat" materialId="6" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="6"/>
+      <Custommap name="detailNormal" fileId="7"/>
+      <Custommap name="detailDiffuse" fileId="8"/>
+      <CustomParameter name="colorScale" value="0.6 0.25 0"/>
+      <CustomParameter name="smoothnessScale" value="0.85"/>
+      <CustomParameter name="clearCoatIntensity" value="0.1"/>
+      <CustomParameter name="clearCoatSmoothness" value="0.2"/>
+    </Material>
+    <Material name="f155A_chrome_mat" materialId="7" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="16"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="17"/>
+    </Material>
+    <Material name="f155A_silverScratched_mat" materialId="8" customShaderId="5">
+      <Texture fileId="2"/>
+      <Normalmap fileId="3"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="13"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+    </Material>
+    <Material name="f155ADecals_decal_alphaBlending_mat" materialId="9" alphaBlending="true" customShaderId="5" customShaderVariation="vmaskUV2_normalUV3">
+      <Texture fileId="23"/>
+      <Normalmap fileId="24"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="25"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="17"/>
+    </Material>
+    <Material name="f155ADecals_decal_opaque_mat" materialId="10" customShaderId="5" customShaderVariation="vmaskUV2_normalUV3">
+      <Texture fileId="23"/>
+      <Normalmap fileId="24"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="25"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="17"/>
+    </Material>
+    <Material name="f155ADecals_silverScratched_mat" materialId="11" customShaderId="5" customShaderVariation="vmaskUV2_normalUV3">
+      <Texture fileId="23"/>
+      <Normalmap fileId="24"/>
+      <Glossmap fileId="4"/>
+      <Custommap name="detailSpecular" fileId="13"/>
+      <Custommap name="detailNormal" fileId="14"/>
+      <Custommap name="detailDiffuse" fileId="15"/>
+    </Material>
+    <Material name="f155AHoses_rubberBlackHoses_mat" materialId="12" customShaderId="5" customShaderVariation="vmaskUV2">
+      <Texture fileId="2"/>
+      <Normalmap fileId="18"/>
+      <Glossmap fileId="19"/>
+      <Custommap name="detailSpecular" fileId="20"/>
+      <Custommap name="detailNormal" fileId="21"/>
+      <Custommap name="detailDiffuse" fileId="22"/>
+      <CustomParameter name="colorScale" value="0.01 0.01 0.01"/>
+      <CustomParameter name="porosity" value="0.5"/>
+    </Material>
+    <Material name="standardSurface1" materialId="13" diffuseColor="0.4 0.4 0.4 1">
+    </Material>
+  </Materials>
+
+
+  <Shapes externalShapesFile="f155A.i3d.shapes">
+  </Shapes>
+
+  <Scene>
+    <Shape name="f155A_main_component1" shapeId="1" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="31" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13">
+      <Shape name="f155A_vis" shapeId="2" clipDistance="300" nodeId="32" castsShadows="true" receiveShadows="true" skinBindNodeIds="32 35 38 41 45 48 59 60 63 64 65 66 67 71" materialIds="5,8,6,7">
+        <TransformGroup name="attachable" nodeId="33">
+          <TransformGroup name="attacher" nodeId="34">
+            <TransformGroup name="frontloaderFrame" visibility="false" clipDistance="300" nodeId="35">
+              <TransformGroup name="attacherJoint_frontloader" translation="0 0.382176 1.26159" rotation="-90 85.1427 -90" nodeId="36"/>
+              <Shape name="frontloader_colPart" translation="0 0.184072 1.20133" shapeId="3" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="37" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13"/>
+            </TransformGroup>
+            <TransformGroup name="telehandlerFrame" clipDistance="300" nodeId="38">
+              <TransformGroup name="attacherJoint_telehandler" translation="-0.00033 0.019865 1.2843" rotation="-90 91.7547 -90" nodeId="39"/>
+              <Shape name="telehandler_colPart" translation="0 0.216874 1.27106" shapeId="4" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="40" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13"/>
+            </TransformGroup>
+            <TransformGroup name="wheelLoaderFrame" visibility="false" clipDistance="300" nodeId="41">
+              <TransformGroup name="attacherJoint_wheelLoader" translation="-0.00033 -0.091372 1.32888" rotation="-90 96.3194 -90" nodeId="42"/>
+              <Shape name="wheelLoader_colPart" translation="0 0.24993 1.28242" shapeId="5" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="43" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="support" nodeId="44">
+            <TransformGroup name="supportArm" translation="0 0.231 -1.49165" clipDistance="300" nodeId="45">
+              <Shape name="supportCol" translation="0 0.000543 9.4e-05" shapeId="6" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="46" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13"/>
+            </TransformGroup>
+            <TransformGroup name="supportArmBoltRot" translation="0.006047 0.421022 -1.4918" nodeId="47">
+              <TransformGroup name="supportArmBolt" clipDistance="300" nodeId="48"/>
+            </TransformGroup>
+            <TransformGroup name="supportArmBoltPartRot" translation="0.044256 0.414648 -1.49979" rotation="-25.465 0 0" nodeId="49">
+              <TransformGroup name="supportArmBoltPart" clipDistance="300" nodeId="50"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="connectionHoses" nodeId="51">
+            <TransformGroup name="hydraulicIn01" translation="0.064835 0.664255 1.13635" nodeId="52">
+              <Shape name="hydraulicIn01_detached" shapeId="7" clipDistance="300" nodeId="53" castsShadows="true" receiveShadows="true" materialIds="12">
+                <TransformGroup name="hydraulicIn01_connector" translation="-0.313922 0.058017 -0.082683" rotation="95.9256 0 -2.23324" nodeId="54"/>
+              </Shape>
+            </TransformGroup>
+            <TransformGroup name="hydraulicOut01" translation="0.064835 0.700255 1.13635" nodeId="55">
+              <Shape name="hydraulicOut01_detached" shapeId="8" clipDistance="300" nodeId="56" castsShadows="true" receiveShadows="true" materialIds="12">
+                <TransformGroup name="hydraulicOut01_connector" translation="-0.243334 -0.009196 -0.088917" rotation="92.429 -0.377554 -0.128129" nodeId="57"/>
+              </Shape>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="movingParts" nodeId="58">
+          <TransformGroup name="hook01" translation="0 0.49613 0.77349" clipDistance="300" nodeId="59">
+            <TransformGroup name="hookAlignArm" translation="0 0.067735 -0.172234" clipDistance="300" nodeId="60">
+              <TransformGroup name="hookAlignArmHydraulicRef" translation="0 0.000132 -0.325018" rotation="2.69748 180 0" nodeId="61"/>
+              <TransformGroup name="hookAlignArm_decals" translation="0 -7.9e-05 -0.324992" clipDistance="300" nodeId="62"/>
+            </TransformGroup>
+          </TransformGroup>
+          <TransformGroup name="hook02" translation="0 0.49613 0.20349" clipDistance="300" nodeId="63"/>
+          <TransformGroup name="hook03" translation="0 0.49613 -0.406509" clipDistance="300" nodeId="64"/>
+          <TransformGroup name="hook04" translation="0 0.49613 -1.05651" clipDistance="300" nodeId="65"/>
+          <TransformGroup name="hookAlignArmHydraulic" translation="0 0.601085 1.06342" rotation="2.69748 180 0" clipDistance="300" nodeId="66">
+            <TransformGroup name="hookAlignArmHydraulicPunch" translation="0 0 0.788052" clipDistance="300" nodeId="67"/>
+            <TransformGroup name="hookAlignArmHydraulic_joint" nodeId="68"/>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="configurations" nodeId="69">
+          <TransformGroup name="sideBarRot" translation="0 0.2935 -0.1617" nodeId="70">
+            <TransformGroup name="sideBar" clipDistance="300" nodeId="71">
+              <Shape name="sideBar_colPart1" translation="1.49828 0.001132 0.000761" shapeId="9" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="72" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13"/>
+              <Shape name="sideBar_colPart2" translation="1.14561 0.213351 -0.000365" shapeId="10" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="73" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13"/>
+            </TransformGroup>
+          </TransformGroup>
+        </TransformGroup>
+        <TransformGroup name="visuals" nodeId="74">
+          <Shape name="logoDecals01" shapeId="11" clipDistance="300" nodeId="75" castsShadows="false" receiveShadows="true" decalLayer="1" skinBindNodeIds="75 50 62 77" materialIds="10,11"/>
+          <Shape name="logoDecals02" translation="0 0.418762 -0.711087" shapeId="12" clipDistance="300" nodeId="76" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="9"/>
+          <TransformGroup name="screwDecals" clipDistance="300" nodeId="77"/>
+        </TransformGroup>
+        <Shape name="dynamicMountTrigger" translation="0 0.232936 -0.136029" shapeId="13" kinematic="true" compound="true" trigger="true" collisionFilterGroup="0x20000000" collisionFilterMask="0x40000" nodeId="78" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13"/>
+      </Shape>
+      <TransformGroup name="skinnedMeshes" nodeId="79">
+        <Shape name="hoses" shapeId="14" clipDistance="300" nodeId="80" castsShadows="true" receiveShadows="true" skinBindNodeIds="84 68" materialIds="12"/>
+      </TransformGroup>
+      <TransformGroup name="collisions" nodeId="81">
+        <Shape name="colPart" translation="0 0.421382 1.16237" shapeId="15" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="82" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13"/>
+      </TransformGroup>
+      <Shape name="tensionBeltNode" translation="0 0.221656 1.16226" shapeId="16" nodeId="83" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="13"/>
+      <TransformGroup name="root_joint" nodeId="84"/>
+    </Shape>
+  </Scene>
+
+  <UserAttributes>
+    <UserAttribute nodeId="68">
+      <Attribute name="liw" type="boolean" value="true"/>
+    </UserAttribute>
+    <UserAttribute nodeId="84">
+      <Attribute name="liw" type="boolean" value="false"/>
+    </UserAttribute>
+  </UserAttributes>
+
+</i3D>
