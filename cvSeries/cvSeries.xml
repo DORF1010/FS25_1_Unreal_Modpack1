@@ -12,7 +12,7 @@
             <function>$l10n_function_car</function>
         </functions>
         <image>cvSeries/store_cvSeries.png</image>
-        <price>1000</price>
+        <price>45000</price>
         <lifetime>6000</lifetime>
         <rotation>0</rotation>
         <brand>INTERNATIONAL</brand>
@@ -28,7 +28,7 @@
     </storeData>
 
     <base>
-        <typeDesc>$l10n_typeDesc_car</typeDesc>
+        <typeDesc>$l10n_typeDesc_truck</typeDesc>
         <filename>cvSeries/cvSeries.i3d</filename>
         <sounds filename="$data/vehicles/international/cvSeries/sounds/cvSeries.xml" volumeFactor="1.0"/>
         <size width="2.5" length="7.8" height="2.35" lengthOffset="-0.73"/>
@@ -41,105 +41,177 @@
 
     <wheels>
         <wheelConfigurations>
-            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsBack" brand="CONTINENTAL" saveId="CONTINENTAL_DEFAULT">
+            <wheelConfiguration name="%s %s" params="$l10n_configuration_valueNo|$l10n_configuration_valueTwinWheelsAll" saveId="DEFAULT_SINGLE">
                 <wheels autoRotateBackSpeed="2.5">
-                    <wheel filename="$data/shared/wheels/tires/continental/contiHybridHT3/285_70R19_5.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.2" repr="wheelFrontLeftRepr"  driveNode="wheelFrontLeft"  mass="0.5" forcePointRatio="0.3" initialCompression="20" suspTravel="0.1" spring="35" damper="30" frictionScale="1.7"/>
-                        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="6|0" widthAndDiam="20 21" offset="0.07"/>
-                    </wheel>
-                    <wheel filename="$data/shared/wheels/tires/continental/contiHybridHT3/285_70R19_5.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.2" repr="wheelFrontRightRepr" driveNode="wheelFrontRight" mass="0.5" forcePointRatio="0.3" initialCompression="20" suspTravel="0.1" spring="35" damper="30" frictionScale="1.7"/>
-                        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="6|1" widthAndDiam="20 21" offset="0.07"/>
-                    </wheel>
-                    <wheel filename="$data/shared/wheels/tires/continental/contiHybridHT3/265_70R19_5.xml" configId="dual" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics tipOcclusionAreaGroupId="1" rotSpeed="0" restLoad="1.5" repr="wheelBackLeft"  mass="0.5" forcePointRatio="0.3" initialCompression="17" suspTravel="0.1" spring="53" damper="30" frictionScale="3"/>
-                        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|0" widthAndDiam="19 18.8" offset="0.049"/>
-                        <additionalWheel filename="$data/shared/wheels/tires/continental/contiHybridHT3/265_70R19_5.xml" offset="-0.555">
-                            <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|1" widthAndDiam="19 18.8" offset="-0.049"/>
-                        </additionalWheel>
-                    </wheel>
-                    <wheel filename="$data/shared/wheels/tires/continental/contiHybridHT3/265_70R19_5.xml" configId="dual" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics tipOcclusionAreaGroupId="1" rotSpeed="0" restLoad="1.5" repr="wheelBackRight" mass="0.5" forcePointRatio="0.3" initialCompression="17" suspTravel="0.1" spring="53" damper="30" frictionScale="3"/>
-                        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|1" widthAndDiam="19 18.8" offset="0.049"/>
-                        <additionalWheel filename="$data/shared/wheels/tires/continental/contiHybridHT3/265_70R19_5.xml" offset="-0.555">
-                            <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|0" widthAndDiam="19 18.8" offset="-0.049"/>
-                        </additionalWheel>
-                    </wheel>
-                </wheels>
-            </wheelConfiguration>
-			
-            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsBack" brand="INTERNATIONAL" saveId="INTERNATIONAL_DEFAULT">
-                <wheels autoRotateBackSpeed="2.5">
-                    <wheel filename="wheels/busWheelsFront.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.2" repr="wheelFrontLeftRepr"  driveNode="wheelFrontLeft"  mass="0.5" forcePointRatio="0.3" initialCompression="20" suspTravel="0.1" spring="35" damper="30" frictionScale="1.7"/>
-                        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="6|0" widthAndDiam="20 21" offset="0.07"/>
-                    </wheel>
-                    <wheel filename="wheels/busWheelsFront.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics rotSpeed="1" restLoad="1.2" repr="wheelFrontRightRepr" driveNode="wheelFrontRight" mass="0.5" forcePointRatio="0.3" initialCompression="20" suspTravel="0.1" spring="35" damper="30" frictionScale="1.7"/>
-                        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="6|1" widthAndDiam="20 21" offset="0.07"/>
-                    </wheel>
-                    <wheel filename="wheels/busWheelsBack.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
-                        <physics tipOcclusionAreaGroupId="1" rotSpeed="0" restLoad="1.5" repr="wheelBackLeft"  mass="0.5" forcePointRatio="0.3" initialCompression="17" suspTravel="0.1" spring="53" damper="30" frictionScale="3"/>
-                        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|0" widthAndDiam="19 18.8" offset="0.049"/><!--
-                        <additionalWheel filename="$data/shared/wheels/tires/continental/contiHybridHT3/265_70R19_5.xml" offset="-0.555">
-                            <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|1" widthAndDiam="19 18.8" offset="-0.049"/>
-                        </additionalWheel>-->
-                    </wheel>
-                    <wheel filename="wheels/busWheelsBack.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
-                        <physics tipOcclusionAreaGroupId="1" rotSpeed="0" restLoad="1.5" repr="wheelBackRight" mass="0.5" forcePointRatio="0.3" initialCompression="17" suspTravel="0.1" spring="53" damper="30" frictionScale="3"/>
-                        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|1" widthAndDiam="19 18.8" offset="0.049"/><!--
-                        <additionalWheel filename="$data/shared/wheels/tires/continental/contiHybridHT3/265_70R19_5.xml" offset="-0.555">
-                            <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|0" widthAndDiam="19 18.8" offset="-0.049"/>
-                        </additionalWheel>-->
-                    </wheel>
-                </wheels>
-            </wheelConfiguration>
-			
-			<wheelConfiguration name="$l10n_configuration_valueWheelBroad" saveId="BROAD">
-                <wheels autoRotateBackSpeed="2.5">
-                    <wheel dimensions="500_50R17 285_70R19_5 385_65R19_5 480_45R17" isLeft="true" hasTireTracks="true" hasParticles="true">
+                    <wheel dimensions="285_70R19_5 285_60R20 295_75R22_5" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics rotSpeed="1" restLoad="1.2" repr="wheelFrontLeftRepr"  driveNode="wheelFrontLeft"  mass="0.5" forcePointRatio="0.3" initialCompression="20" suspTravel="0.1" spring="35" damper="30" frictionScale="3"/>
                         <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="6|0" widthAndDiam="20 21" offset="0.07"/>
                     </wheel>
-                    <wheel dimensions="500_50R17 285_70R19_5 385_65R19_5 480_45R17" isLeft="false" hasTireTracks="true" hasParticles="true">
+                    <wheel dimensions="285_70R19_5 285_60R20 295_75R22_5" isLeft="false" hasTireTracks="true" hasParticles="true">
                         <physics rotSpeed="1" restLoad="1.2" repr="wheelFrontRightRepr" driveNode="wheelFrontRight" mass="0.5" forcePointRatio="0.3" initialCompression="20" suspTravel="0.1" spring="35" damper="30" frictionScale="3"/>
                         <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="6|1" widthAndDiam="20 21" offset="0.07"/>
                     </wheel>
-                    <wheel dimensions="500_50R17 285_70R19_5 385_65R19_5 480_45R17" isLeft="true" hasTireTracks="true" hasParticles="true">
+                    <wheel dimensions="265_70R19_5 285_60R20 295_75R22_5" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics tipOcclusionAreaGroupId="1" rotSpeed="0" restLoad="1.5" repr="wheelBackLeft"  mass="0.5" forcePointRatio="0.3" initialCompression="17" suspTravel="0.1" spring="53" damper="30" frictionScale="3" xOffset="0.2"/>
-                        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|0" widthAndDiam="19 18.8" offset="0.049"/>
+                        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="6|0" widthAndDiam="19 18.8" offset="0.049"/>
                     </wheel>
-                    <wheel dimensions="500_50R17 285_70R19_5 385_65R19_5 480_45R17" isLeft="false" hasTireTracks="true" hasParticles="true">
+                    <wheel dimensions="265_70R19_5 285_60R20 295_75R22_5" isLeft="false" hasTireTracks="true" hasParticles="true">
                         <physics tipOcclusionAreaGroupId="1" rotSpeed="0" restLoad="1.5" repr="wheelBackRight" mass="0.5" forcePointRatio="0.3" initialCompression="17" suspTravel="0.1" spring="53" damper="30" frictionScale="3" xOffset="0.2"/>
-                        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|1" widthAndDiam="19 18.8" offset="0.049"/>
+                        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="6|1" widthAndDiam="19 18.8" offset="0.049"/>
                     </wheel>
                 </wheels>
             </wheelConfiguration>
-			
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsBack" isDefault="true" saveId="DEFAULT_TWIN">
+                <wheels autoRotateBackSpeed="2.5" baseConfig="DEFAULT_SINGLE">
+                    <wheel/>
+                    <wheel/>
+                    <wheel configId="dual">
+                        <physics xOffset="0.1"/>
+                        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|0" widthAndDiam="19 18.8" offset="0.049"/>
+                        <additionalWheel offset="-0.555">
+                            <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|1" widthAndDiam="19 18.8" offset="-0.049"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel configId="dual">
+                        <physics xOffset="0.1"/>
+                        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|1" widthAndDiam="19 18.8" offset="0.049"/>
+                        <additionalWheel offset="-0.555">
+                            <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|0" widthAndDiam="19 18.8" offset="-0.049"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+				
+				<objectChange node="0>0|6|2|0|0|0|0" visibilityActive="true" visibilityInactive="false"/>
+				<objectChange node="0>0|6|2|0|0|1|0" visibilityActive="true" visibilityInactive="false"/>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelMedium" saveId="MEDIUM">
+                <wheels baseConfig="DEFAULT_SINGLE">
+                    <wheel dimensions="14_5R20_J152 340_80R18">
+                        <physics yOffset="-0.1"/>
+                    </wheel>
+                    <wheel dimensions="14_5R20_J152 340_80R18">
+                        <physics yOffset="-0.1"/>
+                    </wheel>
+                    <wheel dimensions="14_5R20_J152 340_80R18">
+                        <physics yOffset="-0.1"/>
+                    </wheel>
+                    <wheel dimensions="14_5R20_J152 340_80R18">
+                        <physics yOffset="-0.1"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" saveId="BROAD">
+                <wheels baseConfig="DEFAULT_SINGLE">
+                    <wheel dimensions="500_45R22_5 445_65R22_5 600_50R22_5">
+                        <physics yOffset="-0.25"/>
+                    </wheel>
+                    <wheel dimensions="500_45R22_5 445_65R22_5 600_50R22_5">
+                        <physics yOffset="-0.25"/>
+                    </wheel>
+                    <wheel dimensions="500_45R22_5 445_65R22_5 600_50R22_5">
+                        <physics yOffset="-0.25"/>
+                    </wheel>
+                    <wheel dimensions="500_45R22_5 445_65R22_5 600_50R22_5">
+                        <physics yOffset="-0.25"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
             <wheelConfiguration name="$l10n_configuration_valueWheelNarrow" saveId="NARROW">
-                <wheels baseConfig="BROAD">
-                    <wheel dimensions="280_70R16 280_70R16_VO"/>
-                    <wheel dimensions="280_70R16 280_70R16_VO"/>
-                    <wheel dimensions="280_70R16 280_70R16_VO"/>
-                    <wheel dimensions="280_70R16 280_70R16_VO"/>
+                <wheels baseConfig="DEFAULT_SINGLE" isCareWheelConfiguration="true">
+                    <wheel dimensions="9_5__24 9_5R24">
+                        <physics yOffset="-0.3"/>
+                    </wheel>
+                    <wheel dimensions="9_5__24 9_5R24">
+                        <physics yOffset="-0.3"/>
+                    </wheel>
+                    <wheel dimensions="9_5__24 9_5R24">
+                        <physics yOffset="-0.3"/>
+                    </wheel>
+                    <wheel dimensions="9_5__24 9_5R24">
+                        <physics yOffset="-0.3"/>
+                    </wheel>
                 </wheels>
             </wheelConfiguration>
-
-            <wheelConfiguration name="Tall" saveId="TALL">
-                <wheels baseConfig="BROAD">
-                    <wheel dimensions="385_65R22_5"/>
-                    <wheel dimensions="385_65R22_5"/>
-                    <wheel dimensions="385_65R22_5"/>
-                    <wheel dimensions="385_65R22_5"/>
+            <wheelConfiguration name="$l10n_configuration_valueWheelCommunal" saveId="COMMUNAL">
+                <wheels baseConfig="DEFAULT_SINGLE">
+                    <wheel dimensions="295_75R22_5 16_5L__16_1 285_70R19_5 285_60R20">
+                        <physics yOffset="0.2"/>
+						<innerRim filename="$data/shared/wheels/rims/johnDeere/x9_14.i3d" nodeLeft="0|0" nodeRight="0|1" widthAndDiam="20 60"/>
+                    </wheel>
+                    <wheel dimensions="295_75R22_5 16_5L__16_1 285_70R19_5 285_60R20">
+                        <physics yOffset="0.2"/>
+						<innerRim filename="$data/shared/wheels/rims/johnDeere/x9_14.i3d" nodeLeft="0|0" nodeRight="0|1" widthAndDiam="20 60"/>
+                    </wheel>
+                    <wheel dimensions="295_75R22_5 16_5L__16_1 285_70R19_5 285_60R20">
+                        <physics yOffset="0.2"/>
+						<innerRim filename="$data/shared/wheels/rims/johnDeere/x9_14.i3d" nodeLeft="0|0" nodeRight="0|1" widthAndDiam="20 60"/>
+                    </wheel>
+                    <wheel dimensions="295_75R22_5 16_5L__16_1 285_70R19_5 285_60R20">
+                        <physics yOffset="0.2"/>
+						<innerRim filename="$data/shared/wheels/rims/johnDeere/x9_14.i3d" nodeLeft="0|0" nodeRight="0|1" widthAndDiam="20 60"/>
+                    </wheel>
+                    
                 </wheels>
             </wheelConfiguration>
-
+            <wheelConfiguration name="%s %s" params="$l10n_configuration_valueNo|$l10n_configuration_valueTwinWheelsAll" brand="INTERNATIONAL" saveId="INTERNATIONAL_DEFAULT">
+                <wheels autoRotateBackSpeed="2.5">
+                    <wheel filename="wheels/busWheelFront.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.2" repr="wheelFrontLeftRepr"  driveNode="wheelFrontLeft"  mass="0.5" forcePointRatio="0.3" initialCompression="20" suspTravel="0.1" spring="35" damper="30" frictionScale="1.7"/>
+                        <innerRim filename="-"/>
+                    </wheel>
+                    <wheel filename="wheels/busWheelFront.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics rotSpeed="1" restLoad="1.2" repr="wheelFrontRightRepr" driveNode="wheelFrontRight" mass="0.5" forcePointRatio="0.3" initialCompression="20" suspTravel="0.1" spring="35" damper="30" frictionScale="1.7"/>
+                        <innerRim filename="-"/>
+                    </wheel>
+                    <wheel filename="wheels/busWheelFront.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="0" restLoad="1.5" repr="wheelBackLeft"  mass="0.5" forcePointRatio="0.3" initialCompression="17" suspTravel="0.1" spring="53" damper="30" frictionScale="3" xOffset="0.2"/>
+                        <innerRim filename="-"/>
+                    </wheel>
+                    <wheel filename="wheels/busWheelFront.xml" isLeft="false" hasTireTracks="true" hasParticles="true">
+                        <physics tipOcclusionAreaGroupId="1" rotSpeed="0" restLoad="1.5" repr="wheelBackRight" mass="0.5" forcePointRatio="0.3" initialCompression="17" suspTravel="0.1" spring="53" damper="30" frictionScale="3" xOffset="0.2"/>
+                        <innerRim filename="-"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+			<wheelConfiguration name="$l10n_configuration_valueTwinWheelsBack" brand="INTERNATIONAL" saveId="INTERNATIONAL_TWIN">
+                <wheels baseConfig="INTERNATIONAL_DEFAULT">
+                    <wheel/>
+                    <wheel/>
+                    <wheel filename="wheels/busWheelBack.xml">
+                        <physics xOffset="0.05"/>
+                    </wheel>
+                    <wheel filename="wheels/busWheelBack.xml">
+                        <physics xOffset="0.05"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelCommunal" brand="INTERNATIONAL" saveId="INTERNATIONAL_COMMUNAL">
+                <wheels baseConfig="INTERNATIONAL_DEFAULT">
+                    <wheel>
+                        <physics yOffset="0.2"/>
+						<innerRim filename="$data/shared/wheels/rims/johnDeere/x9_14.i3d" nodeLeft="0|0" nodeRight="0|1" widthAndDiam="20 60"/>
+                    </wheel>
+					<wheel>
+                        <physics yOffset="0.2"/>
+						<innerRim filename="$data/shared/wheels/rims/johnDeere/x9_14.i3d" nodeLeft="0|0" nodeRight="0|1" widthAndDiam="20 60"/>
+                    </wheel>
+					<wheel>
+                        <physics yOffset="0.2"/>
+						<innerRim filename="$data/shared/wheels/rims/johnDeere/x9_14.i3d" nodeLeft="0|0" nodeRight="0|1" widthAndDiam="20 60"/>
+                    </wheel>
+					<wheel>
+                        <physics yOffset="0.2"/>
+						<innerRim filename="$data/shared/wheels/rims/johnDeere/x9_14.i3d" nodeLeft="0|0" nodeRight="0|1" widthAndDiam="20 60"/>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
+            
         </wheelConfigurations>
 
         <hubs>
-            <hub linkNode="wheelBackLeft"  filename="$data/shared/wheels/hubs/hub_n8_10.xml" isLeft="true"  scale="0.3 0.3 0.3" offset="0.15"/>
-            <hub linkNode="wheelBackRight" filename="$data/shared/wheels/hubs/hub_n8_10.xml" isLeft="false" scale="0.3 0.3 0.3" offset="0.15"/>
-        </hubs>
+            <hub linkNode="0>0|6|2|0|0|0|0"  filename="$data/shared/wheels/hubs/hub_n8_10.xml" isLeft="true"  scale="0.3 0.3 0.3" offset="0.15"/>
+            <hub linkNode="0>0|6|2|0|0|1|0" filename="$data/shared/wheels/hubs/hub_n8_10.xml" isLeft="false" scale="0.3 0.3 0.3" offset="0.15"/>
+        </hubs>-->
 
         <ackermannSteeringConfigurations>
             <ackermannSteering rotSpeed="38" rotMax="50" rotCenterWheels="3 4"/>
@@ -150,13 +222,13 @@
         <configurationSet name="$l10n_configuration_boxBody">
             <configuration name="design" index="1"/>
             <configuration name="design2" index="3"/>
-            <configuration name="designColor3" index="1"/>
+            <!-- <configuration name="designColor3" index="1"/> -->
             <configuration name="fillUnit" index="1"/>
             <configuration name="fillVolume" index="2"/>
             <configuration name="dischargeable" index="2"/>
             <configuration name="folding" index="1"/>
             <configuration name="trailer" index="2"/>
-            <configuration name="attacherJoint" index="2"/>
+            <configuration name="attacherJoint" index="1"/>
             <configuration name="tensionBelts" index="1"/>
         </configurationSet>
 
@@ -168,6 +240,7 @@
             <configuration name="dischargeable" index="2"/>
             <configuration name="folding" index="3"/>
             <configuration name="trailer" index="2"/>
+            <configuration name="attacherJoint" index="2"/>
             <configuration name="tensionBelts" index="2"/>
         </configurationSet>
 
@@ -179,18 +252,89 @@
             <configuration name="dischargeable" index="1"/>
             <configuration name="folding" index="2"/>
             <configuration name="trailer" index="1"/>
+            <configuration name="attacherJoint" index="2"/>
             <configuration name="tensionBelts" index="3"/>
         </configurationSet>
 		
-        <configurationSet name="$l10n_configuration_valueNo" isDefault="true">
+        <configurationSet name="x0.75" isDefault="true">
             <configuration name="design" index="4"/>
             <configuration name="design2" index="3"/>
+            <configuration name="designColor3" index="1"/>
             <configuration name="fillUnit" index="1"/>
             <configuration name="fillVolume" index="2"/>
             <configuration name="dischargeable" index="2"/>
             <configuration name="folding" index="4"/>
-            <configuration name="trailer" index="1"/>
+            <configuration name="trailer" index="2"/>
+            <configuration name="attacherJoint" index="1"/>
             <configuration name="tensionBelts" index="3"/>
+        </configurationSet>
+		
+		<configurationSet name="x1">
+            <configuration name="design" index="5"/>
+            <configuration name="design2" index="3"/>
+            <configuration name="designColor3" index="1"/>
+            <configuration name="fillUnit" index="1"/>
+            <configuration name="fillVolume" index="2"/>
+            <configuration name="dischargeable" index="2"/>
+            <configuration name="folding" index="4"/>
+            <configuration name="trailer" index="2"/>
+            <configuration name="attacherJoint" index="1"/>
+            <configuration name="tensionBelts" index="3"/>
+            <!--<configuration name="enterablePassenger" index="4"/>-->
+        </configurationSet>
+		
+        <configurationSet name="x1.5">
+            <configuration name="design" index="6"/>
+            <configuration name="design2" index="3"/>
+            <configuration name="designColor3" index="1"/>
+            <configuration name="fillUnit" index="1"/>
+            <configuration name="fillVolume" index="2"/>
+            <configuration name="dischargeable" index="2"/>
+            <configuration name="folding" index="4"/>
+            <configuration name="trailer" index="2"/>
+            <configuration name="attacherJoint" index="1"/>
+            <configuration name="tensionBelts" index="3"/>
+        </configurationSet>
+		
+		<!--<configurationSet name="x1.9" isSelectable="false">
+            <configuration name="design" index="6"/>
+            <configuration name="design2" index="3"/>
+            <configuration name="designColor3" index="1"/>
+            <configuration name="fillUnit" index="1"/>
+            <configuration name="fillVolume" index="2"/>
+            <configuration name="dischargeable" index="2"/>
+            <configuration name="folding" index="4"/>
+            <configuration name="trailer" index="2"/>
+            <configuration name="attacherJoint" index="1"/>
+            <configuration name="tensionBelts" index="3"/>
+            <configuration name="enterablePassenger" index="3"/>
+        </configurationSet>-->
+		
+        <configurationSet name="x2">
+            <configuration name="design" index="7"/>
+            <configuration name="design2" index="3"/>
+            <configuration name="designColor3" index="1"/>
+            <configuration name="fillUnit" index="1"/>
+            <configuration name="fillVolume" index="2"/>
+            <configuration name="dischargeable" index="2"/>
+            <configuration name="folding" index="4"/>
+            <configuration name="trailer" index="2"/>
+            <configuration name="tensionBelts" index="3"/>
+            <configuration name="attacherJoint" index="1"/>
+        </configurationSet>
+		
+        <configurationSet name="x3">
+            <configuration name="design" index="8"/>
+            <configuration name="design2" index="3"/>
+            <configuration name="designColor3" index="1"/>
+            <configuration name="fillUnit" index="1"/>
+            <configuration name="fillVolume" index="2"/>
+            <configuration name="dischargeable" index="2"/>
+            <configuration name="folding" index="4"/>
+            <configuration name="trailer" index="2"/>
+            <configuration name="tensionBelts" index="3"/>
+            <configuration name="attacherJoint" index="1"/>
+            <!--<configuration name="enterablePassenger" index="3"/>-->
         </configurationSet>
     </configurationSets>
 
@@ -266,7 +410,89 @@
             <objectChange node="colDumperFrame" compoundChildActive="true" compoundChildInactive="false"/>
         </designConfiguration>
 		
-		<designConfiguration name="$l10n_configuration_valueNo"/>
+        <designConfiguration name="x0.75">
+            <objectChange node="frameBack" translationActive="0 0.678 0.8"/>
+            <objectChange node="frameExtension01" visibilityActive="false"/>
+            <objectChange node="frameExtension02" visibilityActive="false"/>
+            <objectChange node="frameExtension03" visibilityActive="false"/>
+            <objectChange node="kardanShaftPart06" visibilityActive="true"/>
+            <objectChange node="kardanShaftPart07" visibilityActive="false"/>
+            <objectChange node="kardanShaftPart08" visibilityActive="true"/>
+            <objectChange node="kardanShaftPart09" visibilityActive="false"/>
+            <objectChange node="frameBackFuelPart" visibilityActive="false" visibilityInactive="true"/>
+            <objectChange node="electricBack" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="attacherJointRMCBed" translationActive="0 0.869 -0.915"/>
+            <objectChange node="outdoorCameraTarget" translationActive="0 1.523 0.57"/>
+            <size width="2.3" length="8.7" height="3.25" lengthOffset="-1.18"/>
+            <foliageBendingModifier index="1" minZ="-4.75"/>
+        </designConfiguration>
+
+		<designConfiguration name="x1">
+            <objectChange node="frameExtensions01" visibilityActive="true"/>
+            <objectChange node="frameExtensions02" visibilityActive="true"/>
+            <objectChange node="frameExtension01" visibilityActive="true"/>
+            <objectChange node="frameExtension02" visibilityActive="true"/>
+            <objectChange node="frameExtension03" visibilityActive="true"/>
+			<objectChange node="electricBack" visibilityActive="false"/>
+		</designConfiguration>
+
+        <designConfiguration name="x1.5">
+            <objectChange node="frameBack" translationActive="0 0.678 -0.5"/>
+            <objectChange node="frameExtensions01" visibilityActive="true"/>
+            <objectChange node="frameExtensions02" visibilityActive="true"/>
+            <objectChange node="frameExtension01" visibilityActive="true"/>
+            <objectChange node="frameExtension02" visibilityActive="true"/>
+            <objectChange node="frameExtension03" visibilityActive="true"/>
+            <objectChange node="kardanShaftPart06" visibilityActive="false"/>
+            <objectChange node="kardanShaftPart07" visibilityActive="true"/>
+            <objectChange node="kardanShaftPart08" visibilityActive="false"/>
+            <objectChange node="kardanShaftPart09" visibilityActive="true"/>
+            <objectChange node="frameBackFuelPart" visibilityActive="false" visibilityInactive="true"/>
+            <objectChange node="electricBack" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="attacherJointRMCBed" translationActive="0 0.869 -2.215"/>
+            <objectChange node="outdoorCameraTarget" translationActive="0 1.523 -0.27"/>
+            <size width="2.3" length="8.7" height="3.25" lengthOffset="-1.18"/>
+            <foliageBendingModifier index="1" minZ="-4.75"/>
+        </designConfiguration>
+
+        <designConfiguration name="x2">
+            <objectChange node="frameBack" translationActive="0 0.678 -1.75"/>
+            <objectChange node="frameExtensions01" visibilityActive="true"/>
+            <objectChange node="frameExtensions02" visibilityActive="true" translationActive="0 0 -0.54"/>
+            <objectChange node="frameExtension01" visibilityActive="true"/>
+            <objectChange node="frameExtension02" visibilityActive="true"/>
+            <objectChange node="frameExtension03" visibilityActive="true" translationActive="0 0.668 -2.51" scaleActive="1 1 2"/>
+            <objectChange node="kardanShaftPart06" visibilityActive="false"/>
+            <objectChange node="kardanShaftPart07" visibilityActive="true"/>
+            <objectChange node="kardanShaftPart08" visibilityActive="false"/>
+            <objectChange node="kardanShaftPart09" visibilityActive="true"/>
+            <objectChange node="frameBackFuelPart" visibilityActive="false" visibilityInactive="true"/>
+            <objectChange node="electricBack" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="attacherJointRMCBed" translationActive="0 0.869 -3.45"/>
+            <objectChange node="outdoorCameraTarget" translationActive="0 1.523 -1.07"/>
+            <size width="2.3" length="8.7" height="3.25" lengthOffset="-1.18"/>
+            <foliageBendingModifier index="1" minZ="-4.75"/>
+        </designConfiguration>
+
+        <designConfiguration name="x3">
+            <objectChange node="frameBack" translationActive="0 0.678 -3.175"/>
+            <objectChange node="frameExtensions01" visibilityActive="true"/>
+            <objectChange node="frameExtensions02" visibilityActive="true" translationActive="0 0 -0.54"/>
+            <objectChange node="frameExtension01" visibilityActive="true"/>
+            <objectChange node="frameExtension02" visibilityActive="true"/>
+            <objectChange node="frameExtension03" visibilityActive="true" translationActive="0 0.668 -3.5" scaleActive="1 1 3"/>
+            <objectChange node="kardanShaftPart06" visibilityActive="false"/>
+            <objectChange node="kardanShaftPart07" visibilityActive="true"/>
+            <objectChange node="kardanShaftPart08" visibilityActive="false"/>
+            <objectChange node="kardanShaftPart09" visibilityActive="true"/>
+            <objectChange node="frameBackFuelPart" visibilityActive="false" visibilityInactive="true"/>
+            <objectChange node="electricBack" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="attacherJointRMCBed" translationActive="0 0.869 -4.9"/>
+            <objectChange node="outdoorCameraTarget" translationActive="0 1.523 -1.57"/>
+            <size width="2.3" length="8.7" height="3.25" lengthOffset="-1.18"/>
+            <foliageBendingModifier index="1" minZ="-4.75"/>
+        </designConfiguration>
+
     </designConfigurations>
 
     <design2Configurations title="$l10n_configuration_sideGuards">
@@ -281,7 +507,14 @@
         </design2Configuration>
 
         <!-- Empty config -->
-        <design2Configuration name="3"/>
+        <design2Configuration name="$l10n_configuration_valueNo" isSelectable="false">
+            <objectChange node="flatbedPanelsBack" visibilityActive="false"/>
+            <objectChange node="colFlatbedWallBack" visibilityActive="false" compoundChildActive="false"/>
+            <objectChange node="flatbedPanelsSide" visibilityActive="false"/>
+            <objectChange node="0>0|6|5|1|1|0" visibilityActive="false"/>
+            <objectChange node="colFlatbedWallLeft" visibilityActive="false" compoundChildActive="false"/>
+            <objectChange node="colFlatbedWallRight" visibilityActive="false" compoundChildActive="false"/>
+		</design2Configuration>
     </design2Configurations>
 
     <lights>
@@ -494,8 +727,8 @@
                 <objectChange node="attacherJoints" translationActive="0 0 -0.816" translationInactive="0 0 0"/>
                 <objectChange node="frameBackTrans" translationActive="0 0 -0.816" translationInactive="0 0 0"/>
 
-                <objectChange node="frameExtensions01" visibilityActive="false" visibilityInactive="true"/>
-                <objectChange node="frameExtensions02" visibilityActive="true" visibilityInactive="false"/>
+                <!--<objectChange node="frameExtensions01" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="frameExtensions02" visibilityActive="true" visibilityInactive="false"/>-->
 
                 <objectChange node="kardanExtension01" visibilityActive="false" visibilityInactive="true"/>
                 <objectChange node="kardanExtension02" visibilityActive="true" visibilityInactive="false"/>
@@ -505,6 +738,74 @@
                 <objectChange node="colFrameExtension" compoundChildActive="true" compoundChildInactive="false"/>
                 <foliageBendingModifier index="1" minZ="-4.55"/>
             </enterablePassengerConfiguration>
+			
+            <enterablePassengerConfiguration name="x3" isSelectable="false">
+
+                <objectChange node="dayCab" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="vocations" translationActive="0 0 -0.816" translationInactive="0 0 0"/>
+                <!--<objectChange node="attacherJoints" translationActive="0 0 -0.816" translationInactive="0 0 0"/>-->
+                <objectChange node="frameBackTrans" translationActive="0 0 -0.816" translationInactive="0 0 0"/>
+
+                <objectChange node="frameExtensions01" visibilityActive="false"/>
+                <objectChange node="frameExtensions02" visibilityActive="true"/>
+
+                <objectChange node="kardanExtension01" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="kardanExtension02" visibilityActive="true" visibilityInactive="false"/>
+
+                <objectChange node="outdoorCameraTargetTrans" translationActive="0 0 -0.408" translationInactive="0 0 0"/>
+                <objectChange node="colCrewCab" compoundChildActive="false" compoundChildInactive="false"/>
+                <objectChange node="colFrameExtension" compoundChildActive="true" compoundChildInactive="false"/>
+                <foliageBendingModifier index="1" minZ="-4.55"/>
+            </enterablePassengerConfiguration>
+			
+			<enterablePassengerConfiguration name="Crew Cab Short" isSelectable="false">
+                <passengerSeat node="passengerSeatFrontRight" exitPoint="exitPointPassenger01" outdoorCameraIndex="1">
+                    <camera node="indoorCameraPassenger01" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" positionSmoothingParameter="0" shadowFocusBox="shadowFocusBox"/>
+                    <characterNode node="playerSkinPassenger01" cameraMinDistance="0.5">
+                        <target ikChain="leftArm" targetNode="playerLeftHandTargetPassenger01" poseId="flatFingers"/>
+                        <target ikChain="rightArm" targetNode="playerRightHandTargetPassenger01" poseId="flatFingers"/>
+                        <target ikChain="leftFoot" targetNode="playerLeftFootTargetPassenger01"/>
+                        <target ikChain="rightFoot" targetNode="playerRightFootTargetPassenger01"/>
+                    </characterNode>
+                </passengerSeat>
+
+                <passengerSeat node="passengerSeatBackLeft" exitPoint="exitPointPassenger02" outdoorCameraIndex="1">
+                    <camera node="indoorCameraPassenger02" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" positionSmoothingParameter="0" shadowFocusBox="shadowFocusBox"/>
+                    <characterNode node="playerSkinPassenger02" cameraMinDistance="0.5">
+                        <target ikChain="leftArm" targetNode="playerLeftHandTargetPassenger02" poseId="flatFingers"/>
+                        <target ikChain="rightArm" targetNode="playerRightHandTargetPassenger02" poseId="flatFingers"/>
+                        <target ikChain="leftFoot" targetNode="playerLeftFootTargetPassenger02"/>
+                        <target ikChain="rightFoot" targetNode="playerRightFootTargetPassenger02"/>
+                    </characterNode>
+                </passengerSeat>
+
+                <passengerSeat node="passengerSeatBackRight" exitPoint="exitPointPassenger03" outdoorCameraIndex="1">
+                    <camera node="indoorCameraPassenger03" rotatable="true" limit="true" rotMinX="-1.1" rotMaxX="0.4" transMin="0" transMax="0" useMirror="true" isInside="true" positionSmoothingParameter="0" shadowFocusBox="shadowFocusBox"/>
+                    <characterNode node="playerSkinPassenger03" cameraMinDistance="0.5">
+                        <target ikChain="leftArm" targetNode="playerLeftHandTargetPassenger03" poseId="flatFingers"/>
+                        <target ikChain="rightArm" targetNode="playerRightHandTargetPassenger03" poseId="flatFingers"/>
+                        <target ikChain="leftFoot" targetNode="playerLeftFootTargetPassenger03"/>
+                        <target ikChain="rightFoot" targetNode="playerRightFootTargetPassenger03"/>
+                    </characterNode>
+                </passengerSeat>
+
+                <objectChange node="crewCab" visibilityActive="true" visibilityInactive="false"/>
+                <objectChange node="vocations" translationActive="0 0 -0.816" translationInactive="0 0 0"/>
+                <!--<objectChange node="attacherJoints" translationActive="0 0 -0.816" translationInactive="0 0 0"/>
+                <objectChange node="frameBackTrans" translationActive="0 0 -0.816" translationInactive="0 0 0"/>-->
+
+                <!--<objectChange node="frameExtensions01" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="frameExtensions02" visibilityActive="true" visibilityInactive="false"/>
+
+                <objectChange node="kardanExtension01" visibilityActive="false" visibilityInactive="true"/>
+                <objectChange node="kardanExtension02" visibilityActive="true" visibilityInactive="false"/>
+
+                <objectChange node="outdoorCameraTargetTrans" translationActive="0 0 -0.408" translationInactive="0 0 0"/>-->
+                <objectChange node="colCrewCab" compoundChildActive="true" compoundChildInactive="false"/>
+                <objectChange node="colFrameExtension" compoundChildActive="true" compoundChildInactive="false"/>
+                <foliageBendingModifier index="1" minZ="-4.55"/>
+            </enterablePassengerConfiguration>
+			
         </enterablePassengerConfigurations>
 
         <mirrors>
@@ -521,14 +822,46 @@
 
     <attacherJoints>
         <attacherJointConfigurations isYesNoOption="true">
-            <attacherJointConfiguration name="$l10n_configuration_valueNo" isSelectable="false"/> <!-- Empty config -->
+            <attacherJointConfiguration name="$l10n_configuration_valueNo" isDefault="true"/> <!-- Empty config -->
 
-            <attacherJointConfiguration name="$l10n_configuration_valueYes">
+            <attacherJointConfiguration name="$l10n_configuration_valueYes" isSelectable="false">
                 <attacherJoint node="trailerAttacherJointBackLow" jointType="trailer" lowerRotLimit="25 70 50" upperRotationOffset="0" allowsJointLimitMovement="false" canTurnOnImplement="true" comboTime="1">
                     <schema position="1 0" rotation="0" invertX="false"/>
                 </attacherJoint>
             </attacherJointConfiguration>
         </attacherJointConfigurations>
+		
+		<attacherJoint node="attacherJointRMCBed" jointType="RMCBed" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0 0 0" enableCollision="false" >
+            <schema position="0.5 0.5" rotation="0" invertX="false" />
+        </attacherJoint>
+		<attacherJoint node="attacherJointRMCBed" jointType="RMCBed2" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0 0 0" enableCollision="false" >
+            <schema position="0.5 0.5" rotation="0" invertX="false" />
+        </attacherJoint>
+		<attacherJoint node="attacherJointRMCBed" jointType="RMCDump" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0 0 0" enableCollision="false" >
+            <schema position="0.5 0.5" rotation="0" invertX="false" />
+			<objectChange node="rearLight80_left" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="rearLight80_right" visibilityActive="false" visibilityInactive="true"/>
+        </attacherJoint>
+		<attacherJoint node="attacherJointWIAx2" jointType="82JointTipperX2" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="false">
+            <schema position="0.5 0.5" rotation="0" invertX="false"/>
+        </attacherJoint>
+        <attacherJoint node="attacherJointWIAx3" jointType="82JointX3" lowerRotLimit="0 0 0" upperRotationOffset="0" allowsJointLimitMovement="false" allowsLowering="false" enableCollision="false">
+            <schema position="0.5 0.5" rotation="0" invertX="false"/>
+        </attacherJoint>
+        <attacherJoint node="attacherJointU535" jointType="implement" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0 0 0" enableCollision="false" >
+            <schema position="0.5 0.5" rotation="0" invertX="false" />
+			<subType name="u535" showWarning="false"/>
+        </attacherJoint>
+		<attacherJoint node="attacherJointHooklift" jointType="hookLift" lowerRotLimit="0 0 40" upperRotLimit="0 0 40" allowsLowering="false" enableCollision="true">
+            <schema position="0.5 0.5" rotation="0" invertX="false"/>
+        </attacherJoint>
+        
+		<attacherJoint node="attacherJoint5thWheel" jointType="semitrailer" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="5 120 15">
+			<schema position="1 0" rotation="0" invertX="false"/>
+			<subType showWarning="false"/>
+			<objectChange node="attacherJoint5thWheelVis" visibilityActive="true" visibilityInactive="false"/>
+		</attacherJoint>
+        
     </attacherJoints>
 
     <connectionHoses>
@@ -555,7 +888,31 @@
         <motorConfigurations>
             <motorConfiguration name="CV Series" hp="350">
                 <!-- International 6.6L V8 Turbocharged Diesel 950Nm -->
-                <motor torqueScale="1.083" minRpm="800" maxRpm="3000" maxForwardSpeed="120" maxBackwardSpeed="20" brakeForce="3.4" lowBrakeForceScale="0.1" dampingRateScale="0.4">
+                <motor torqueScale="1.083" minRpm="800" maxRpm="3000" maxForwardSpeed="90" maxBackwardSpeed="20" brakeForce="3.4" lowBrakeForceScale="0.1" dampingRateScale="0.4">
+                    <torque normRpm="0.45" torque="0.9"/>
+                    <torque normRpm="0.50" torque="0.97"/>
+                    <torque normRpm="0.59" torque="1.00"/>
+                    <torque normRpm="0.72" torque="1.00"/>
+                    <torque normRpm="0.86" torque="0.88"/>
+                    <torque normRpm="1.00" torque="0.72"/>
+                </motor>
+
+                <!-- Allison 6-Speed: 1700, 1750, 2700 Series; Ratios are all the same -->
+                <transmission autoGearChangeTime="0.3" gearChangeTime="0.3" name="$l10n_info_transmission_automatic" axleRatio="19" startGearThreshold="0.3">
+                    <directionChange useGear="true"/>
+                    <forwardGear gearRatio="3.10"/>
+                    <forwardGear gearRatio="1.81"/>
+                    <forwardGear gearRatio="1.41"/>
+                    <forwardGear gearRatio="1.00"/>
+                    <forwardGear gearRatio="0.71"/>
+                    <forwardGear gearRatio="0.61"/>
+                    <backwardGear gearRatio="4.49" name="R1"/>
+					<backwardGear gearRatio="2" name="R2"/>
+                </transmission>
+            </motorConfiguration>
+			<motorConfiguration name="CV Series Plus" hp="350">
+                <!-- International 6.6L V8 Turbocharged Diesel 950Nm -->
+                <motor torqueScale="1.083" minRpm="800" maxRpm="3000" maxForwardSpeed="97.6" maxBackwardSpeed="29.8" brakeForce="3.4" lowBrakeForceScale="0.1" dampingRateScale="0.4">
                     <torque normRpm="0.45" torque="0.9"/>
                     <torque normRpm="0.50" torque="0.97"/>
                     <torque normRpm="0.59" torque="1.00"/>
@@ -579,7 +936,7 @@
             </motorConfiguration>
 			
             <motorConfiguration name="CV Series 5000 Flat Map Edition" hp="5000">
-                <motor torqueScale="20" minRpm="650" maxRpm="1000" maxForwardSpeed="250" maxBackwardSpeed="100" brakeForce="10" lowBrakeForceScale="0.1" lowBrakeForceSpeedLimit="0" ptoMotorRpmRatio="3" dampingRateScale="3.3" accelerationLimit="10">
+                <motor torqueScale="20" minRpm="650" maxRpm="1000" maxForwardSpeed="250" maxBackwardSpeed="100" brakeForce="10" lowBrakeForceScale="0.1" lowBrakeForceSpeedLimit="0" ptoMotorRpmRatio="3" dampingRateScale="3.3" accelerationLimit="5">
                     <torque normRpm="0.1" torque="2"/>
                     <torque normRpm="0.25" torque="10"/>
                     <torque normRpm="0.45" torque="20"/>
@@ -1036,24 +1393,24 @@
     </baseColorConfigurations>
 
     <designColorConfigurations title="$l10n_configuration_grillColor">
-        <designColorConfiguration materialTemplateName="chrome" name="$l10n_ui_colorChrome"/>
-        <designColorConfiguration materialTemplateName="INTERNATIONAL_BLACK1" name="$l10n_ui_colorBlack"/>
+        <designColorConfiguration materialTemplateName="chrome"/>
+        <designColorConfiguration materialTemplateName="INTERNATIONAL_BLACK1"/>
 
         <material materialSlotName="cvSeries_grill_mat"/>
         <material materialSlotName="cvSeries_grill_grid_mat"/>
     </designColorConfigurations>
 
     <designColor2Configurations>
-        <designColor2Configuration materialTemplateName="chrome" name="$l10n_ui_colorChrome"/>
-        <designColor2Configuration materialTemplateName="INTERNATIONAL_BLACK1" name="$l10n_ui_colorBlack"/>
+        <designColor2Configuration materialTemplateName="chrome"/>
+        <designColor2Configuration materialTemplateName="INTERNATIONAL_BLACK1"/>
 
         <material materialSlotName="cvSeries_design_mat"/>
         <material materialSlotName="cvSeries_gridSteps_mat"/>
     </designColor2Configurations>
 
-    <designColor3Configurations>
-        <designColor3Configuration materialTemplateName="INTERNATIONAL_GREY3" name="$l10n_ui_colorGrey"/>
-        <designColor3Configuration materialTemplateName="INTERNATIONAL_BLACK1" name="$l10n_ui_colorBlack"/>
+    <designColor3Configurations title="$l10n_configuration_extension" defaultColorIndex="3">
+        <designColor3Configuration materialTemplateName="INTERNATIONAL_GREY3"/>
+        <designColor3Configuration materialTemplateName="INTERNATIONAL_BLACK1"/>
 
         <material materialSlotName="cvSeries_tipper_mat"/>
     </designColor3Configurations>
@@ -1104,6 +1461,13 @@
         <i3dMapping id="turnLightRightFront" node="0>0|2|2|1" />
         <i3dMapping id="attacherJoints" node="0>0|3" />
         <i3dMapping id="trailerAttacherJointBackLow" node="0>0|3|0" />
+        <i3dMapping id="attacherJointRMCBed" node="0>0|3|2|0" />
+        <i3dMapping id="attacherJointWIAx2" node="0>0|3|2|1" />
+        <i3dMapping id="attacherJointWIAx3" node="0>0|3|2|2" />
+        <i3dMapping id="attacherJointU535" node="0>0|3|2|0|1" />
+        <i3dMapping id="attacherJoint5thWheel" node="0>0|3|2|0|0" />
+        <i3dMapping id="attacherJoint5thWheelVis" node="0>0|3|2|0|0|0" />
+        <i3dMapping id="attacherJointHooklift" node="0>0|3|2|3" />
         <i3dMapping id="electricBack" node="0>0|3|1" />
         <i3dMapping id="exitPoint" node="0>0|4" />
         <i3dMapping id="steeringWheel" node="0>0|5|0|0|0" />

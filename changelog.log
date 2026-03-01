@@ -40,7 +40,7 @@ Dec 30, 2025
 Adjusted position of some support wheels for crawler configs
 
 Dec 31, 2025
-Added "No" configuration set for international cv series
+Added "No" configuration set for international cvSeries
 
 Jan 3, 2026
 Added work area config to z2840 windrower
@@ -83,7 +83,7 @@ Jan 20, 2026
 Added extra content vehicles
 	cr11 gold
 	fd250 gold
-	jcb world's fastest tractor
+	JCB world's fastest tractor
 	caseIH quadtrac715 black
 quadtrac715 black doesn't load, any suggestions let me know. In the meantime, use other version in mod (custom colors)
 
@@ -107,7 +107,7 @@ Adjusted 'maxDeformation' for monster truck wheels on series200 pickup
 
 Jan 25, 2026
 Added more wheel sizes to 'special edition' racing wheels on series200
-Minor naming change to frontweight config for quadtrac715
+Minor naming change to front weight config for quadtrac715
 Added wheel sizes to pickup2017/RC car
 
 Jan 26, 2026
@@ -116,21 +116,21 @@ Adjusted positions of rear trailer attachers for dolly10L
 
 Jan 26, 2026
 Added extra 3point attacher for extra weight/load near front of dolly10L
-Added wheel configs to jcb wft (yes, it IS possible to edit extra content, but only as a separate vehicle)
+Added wheel configs to JCB WFT (yes, it IS possible to edit extra content, but only as a separate vehicle)
 	communal (original tires + a few more)
 	standard
 	medium
 	wide
-Lowered volume of wft slightly
+Lowered volume of WFT slightly
 
 Jan 27, 2026
-Added wheel sizes to wft
+Added wheel sizes to WFT
 Added/adjusted additional attachers for dolly10L, it will now attach the following:
-	Unimog bedpack (and anything else for MB trucks unimogs) by Bb mods
+	Unimog bed pack (and anything else for MB trucks Unimogs) by Bb mods
 	Custom beds pack + any bed from pickup trucks by Roughneck Modding Crew
-	Basegame Annaburger tools (using multiple dollies is suggested for more length)
+	Base game Annaburger tools (using multiple dollies is suggested for more length)
 	Bulk truck X2 and X3 beds (ditto) by Bcbuhler
-	Anything hooklift/IT runner
+	Anything hook lift/IT runner
 	Unimog U1250/U1450/U1650 beds + crane by AlexL353_modding
 Added invisible semitruck attacher at front for better linking of multiple dollies (back up further to use regular hitch)
 Added Unimog U1250/U1450/U1650 crane attacher to fh16
@@ -211,10 +211,20 @@ Removed AgroTruck attacher config, attacher is now always there for fh16
 Added wheel options to z2840
 
 Feb 20, 2026
-Moved mod to Github
+Moved mod to GitHub
 
 Feb 21, 2026
-Some Github stuff changed.
+Some GitHub stuff changed.
 
 Feb 23, 2026
-More Github stuff changed.
+More GitHub stuff changed.
+
+Feb 27, 2026
+Added/fixed bus wheels config on cvSeries
+Fixed wheel sizes on cvSeries
+Added wheel sizes to cvSeries
+Added chassis extension options to cvSeries, now has attachers for the following:
+	Custom beds pack + any bed from pickup trucks by Roughneck Modding Crew
+	Bulk truck x2 and x3 beds by Bcbuhler
+	Unimog 535 attachments
+	Anything hook lift/IT runner
