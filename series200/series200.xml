@@ -78,19 +78,37 @@
             <wheelConfiguration name="$l10n_configuration_valueTwinWheelsBack" price="0" saveId="TWIN_BACK">
                 <wheels baseConfig="DEFAULT">
 					<wheel/>
+                    <wheel/>
+                    <wheel configId="dual">
+                        <physics xOffset="0.1"/>
+                        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|0" widthAndDiam="19 18.8" offset="0.049"/>
+                        <additionalWheel offset="-0.555">
+                            <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|1" widthAndDiam="19 18.8" offset="-0.049"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel configId="dual">
+                        <physics xOffset="0.1"/>
+                        <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|1" widthAndDiam="19 18.8" offset="0.049"/>
+                        <additionalWheel offset="-0.555">
+                            <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|0" widthAndDiam="19 18.8" offset="-0.049"/>
+                        </additionalWheel>
+                    </wheel>
+					<!--<wheel/>
 					<wheel/>
                     <wheel>
 						<physics xOffset="-0.1"/>
                         <additionalWheel configId="dual" offset="0.05">
-                            <connector filename="$data/shared/wheels/rims/dual001_2.xml"/>-->
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml"/>
+							<innerRim filename="-"/>
                         </additionalWheel>
                     </wheel>
                     <wheel>
 						<physics xOffset="-0.1"/>
                         <additionalWheel configId="dual" offset="0.05">
-                            <connector filename="$data/shared/wheels/rims/dual001_2.xml"/>-->
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml"/>
+							<innerRim filename="-"/>
                         </additionalWheel>
-                    </wheel>
+                    </wheel>-->
                 </wheels>
             </wheelConfiguration>
 			<wheelConfiguration name="$l10n_configuration_valueWheelMedium" saveId="MEDIUM">
@@ -178,7 +196,28 @@
                 </wheels>
                 <objectChange node="series200_main_component1"      massActive="1475"          centerOfMassActive="0 0.6 0.11"/>
             </wheelConfiguration>
-            <wheelConfiguration name="%s V2" params="$l10n_configuration_specialEdition" price="0" saveId="FILENAME_DEFAULT" brand="LIZARDMOTORS" isSelectable="false">
+            <wheelConfiguration name="%s V2" params="$l10n_configuration_specialEdition" saveId="OFFROAD_BAJA_SUSP2">
+                <wheels baseConfig="MEDIUM">
+                    <wheel dimensions="500_70R24 620_55R26 710_45__26_5">
+                        <physics restLoad="0.21" xOffset="0.25" forcePointRatio="0.5" initialCompression="20" suspTravel="0.5" spring="2" damper="3" transRatio="1"/>
+                        <tire maxDeformation="0.1"/>
+                    </wheel>
+                    <wheel dimensions="500_70R24 620_55R26 710_45__26_5">
+                        <physics restLoad="0.21" xOffset="0.25" forcePointRatio="0.5" initialCompression="20" suspTravel="0.5" spring="2" damper="3" transRatio="1"/>
+                        <tire maxDeformation="0.1"/>
+                    </wheel>
+                    <wheel dimensions="500_70R24 620_55R26 710_45__26_5">
+                        <physics restLoad="0.21" xOffset="0.25" forcePointRatio="0.5" initialCompression="20" suspTravel="0.5" spring="2" damper="3" transRatio="1"/>
+                        <tire maxDeformation="0.1"/>
+                    </wheel>
+                    <wheel dimensions="500_70R24 620_55R26 710_45__26_5">
+                        <physics restLoad="0.21" xOffset="0.25" forcePointRatio="0.5" initialCompression="20" suspTravel="0.5" spring="2" damper="3" transRatio="1"/>
+                        <tire maxDeformation="0.1"/>
+                    </wheel>
+                </wheels>
+                <objectChange node="series200_main_component1"      massActive="1475"          centerOfMassActive="0 0.6 0.11"/>
+            </wheelConfiguration>
+            <wheelConfiguration name="%s V1.5" params="$l10n_configuration_specialEdition" price="0" saveId="FILENAME_DEFAULT" brand="LIZARDMOTORS" isSelectable="false">
                 <wheels autoRotateBackSpeed="2.3">
                     <wheel filename="$data/shared/wheels/tires/mitas/AR04/440_50R17.xml" isLeft="true" hasTireTracks="true" hasParticles="true">
                         <physics rotSpeed="1" restLoad="0.5" repr="wheelFrontLeftReprPhys"  driveNode="wheelFrontLeftPhys"  forcePointRatio="0.3" initialCompression="75" suspTravel="0.9" spring="0.75" damper="1" frictionScale="2.7" yOffset="-0.25" transRatio="1" useReprOffset="true" xOffset="0.25" radius="0.86"/>

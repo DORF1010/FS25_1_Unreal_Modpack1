@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="iso-8859-1"?>
+<i3D name="cvSeries5thWheel.i3d" version="1.6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://i3d.giants.ch/schema/i3d-1.6.xsd">
+    <Asset>
+        <Export program="GIANTS Editor 64bit" version="10.0.11"/>
+    </Asset>
+    <Files>
+        <File fileId="1" filename="$data/shared/assets/carHitches/lizard/fifthWheel.i3d"/>
+    </Files>
+    <Materials/>
+    <Shapes/>
+    <Scene>
+        <TransformGroup name="beds" nodeId="289">
+            <TransformGroup name="attacherJointRMCBed" translation="0 0.869031 -1.7" nodeId="290">
+                <TransformGroup name="5thWheel" translation="0 0.30243 -0.246572" rotation="-1.33555e-05 90 -1.33206e-05" nodeId="291">
+                    <ReferenceNode name="fifthWheel_hitch" translation="0 -0.379483 0" rotation="-1.53317e-18 -90 0" scale="0.806976 1 1" referenceId="1" nodeId="299"/>
+                </TransformGroup>
+            </TransformGroup>
+            <TransformGroup name="WIAx2" translation="0 -0.335101 -0.311738" nodeId="301"/>
+            <TransformGroup name="WIAx3" translation="0 -0.335101 -0.311738" nodeId="302"/>
+        </TransformGroup>
+    </Scene>
+</i3D>

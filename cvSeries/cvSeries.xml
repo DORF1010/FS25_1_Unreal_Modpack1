@@ -132,6 +132,28 @@
                     </wheel>
                 </wheels>
             </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsBackNarrow" saveId="NARROW_TWINS_BACK">
+                <wheels baseConfig="NARROW" isCareWheelConfiguration="true">
+                    <wheel>
+                        <physics yOffset="-0.3"/>
+                    </wheel>
+                    <wheel>
+                        <physics yOffset="-0.3"/>
+                    </wheel>
+                    <wheel>
+                        <physics yOffset="-0.3"/>
+						<additionalWheel offset="-0.555">
+                            <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|1" widthAndDiam="19 22.5" offset="-0.049"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <physics yOffset="-0.3"/>
+						<additionalWheel offset="-0.555">
+                            <innerRim filename="$data/shared/wheels/hubs/hubTrucks.i3d" node="9|0" widthAndDiam="19 22.5" offset="-0.049"/>
+                        </additionalWheel>
+                    </wheel>
+                </wheels>
+            </wheelConfiguration>
             <wheelConfiguration name="$l10n_configuration_valueWheelCommunal" saveId="COMMUNAL">
                 <wheels baseConfig="DEFAULT_SINGLE">
                     <wheel dimensions="295_75R22_5 16_5L__16_1 285_70R19_5 285_60R20">
@@ -256,7 +278,7 @@
             <configuration name="tensionBelts" index="3"/>
         </configurationSet>
 		
-        <configurationSet name="x0.75" isDefault="true">
+        <configurationSet name="x0.5">
             <configuration name="design" index="4"/>
             <configuration name="design2" index="3"/>
             <configuration name="designColor3" index="1"/>
@@ -269,8 +291,21 @@
             <configuration name="tensionBelts" index="3"/>
         </configurationSet>
 		
-		<configurationSet name="x1">
+		<configurationSet name="x0.75" isDefault="true">
             <configuration name="design" index="5"/>
+            <configuration name="design2" index="3"/>
+            <configuration name="designColor3" index="1"/>
+            <configuration name="fillUnit" index="1"/>
+            <configuration name="fillVolume" index="2"/>
+            <configuration name="dischargeable" index="2"/>
+            <configuration name="folding" index="4"/>
+            <configuration name="trailer" index="2"/>
+            <configuration name="attacherJoint" index="1"/>
+            <configuration name="tensionBelts" index="3"/>
+        </configurationSet>
+		
+		<configurationSet name="x1">
+            <configuration name="design" index="6"/>
             <configuration name="design2" index="3"/>
             <configuration name="designColor3" index="1"/>
             <configuration name="fillUnit" index="1"/>
@@ -284,7 +319,7 @@
         </configurationSet>
 		
         <configurationSet name="x1.5">
-            <configuration name="design" index="6"/>
+            <configuration name="design" index="7"/>
             <configuration name="design2" index="3"/>
             <configuration name="designColor3" index="1"/>
             <configuration name="fillUnit" index="1"/>
@@ -311,7 +346,7 @@
         </configurationSet>-->
 		
         <configurationSet name="x2">
-            <configuration name="design" index="7"/>
+            <configuration name="design" index="8"/>
             <configuration name="design2" index="3"/>
             <configuration name="designColor3" index="1"/>
             <configuration name="fillUnit" index="1"/>
@@ -324,7 +359,7 @@
         </configurationSet>
 		
         <configurationSet name="x3">
-            <configuration name="design" index="8"/>
+            <configuration name="design" index="9"/>
             <configuration name="design2" index="3"/>
             <configuration name="designColor3" index="1"/>
             <configuration name="fillUnit" index="1"/>
@@ -410,6 +445,23 @@
             <objectChange node="colDumperFrame" compoundChildActive="true" compoundChildInactive="false"/>
         </designConfiguration>
 		
+        <designConfiguration name="x0.5">
+            <objectChange node="frameBack" translationActive="0 0.678 1.5"/>
+            <objectChange node="frameExtension01" visibilityActive="false"/>
+            <objectChange node="frameExtension02" visibilityActive="false"/>
+            <objectChange node="frameExtension03" visibilityActive="false"/>
+            <objectChange node="kardanShaftPart06" visibilityActive="true"/>
+            <objectChange node="kardanShaftPart07" visibilityActive="false"/>
+            <objectChange node="kardanShaftPart08" visibilityActive="true"/>
+            <objectChange node="kardanShaftPart09" visibilityActive="false"/>
+            <objectChange node="frameBackFuelPart" visibilityActive="false" visibilityInactive="true"/>
+            <objectChange node="electricBack" visibilityActive="false" visibilityInactive="true"/>
+			<objectChange node="attacherJointRMCBed" translationActive="0 0.869 -0.255"/>
+            <objectChange node="outdoorCameraTarget" translationActive="0 1.523 0.757"/>
+            <size width="2.3" length="8.7" height="3.25" lengthOffset="-1.18"/>
+            <foliageBendingModifier index="1" minZ="-4.75"/>
+        </designConfiguration>
+
         <designConfiguration name="x0.75">
             <objectChange node="frameBack" translationActive="0 0.678 0.8"/>
             <objectChange node="frameExtension01" visibilityActive="false"/>
@@ -488,7 +540,7 @@
             <objectChange node="frameBackFuelPart" visibilityActive="false" visibilityInactive="true"/>
             <objectChange node="electricBack" visibilityActive="false" visibilityInactive="true"/>
 			<objectChange node="attacherJointRMCBed" translationActive="0 0.869 -4.9"/>
-            <objectChange node="outdoorCameraTarget" translationActive="0 1.523 -1.57"/>
+            <objectChange node="outdoorCameraTarget" translationActive="0 1.523 -1.27"/>
             <size width="2.3" length="8.7" height="3.25" lengthOffset="-1.18"/>
             <foliageBendingModifier index="1" minZ="-4.75"/>
         </designConfiguration>
@@ -851,6 +903,10 @@
         <attacherJoint node="attacherJointU535" jointType="implement" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0 0 0" enableCollision="false" >
             <schema position="0.5 0.5" rotation="0" invertX="false" />
 			<subType name="u535" showWarning="false"/>
+        </attacherJoint>
+		<attacherJoint node="attacherJointU2400" jointType="implement" allowsJointLimitMovement="false" allowsLowering="false" lowerRotLimit="0 0 0" enableCollision="false" >
+            <schema position="0.5 0.5" rotation="0" invertX="false" />
+			<subType name="u2400" showWarning="false"/>
         </attacherJoint>
 		<attacherJoint node="attacherJointHooklift" jointType="hookLift" lowerRotLimit="0 0 40" upperRotLimit="0 0 40" allowsLowering="false" enableCollision="true">
             <schema position="0.5 0.5" rotation="0" invertX="false"/>
@@ -1465,6 +1521,7 @@
         <i3dMapping id="attacherJointWIAx2" node="0>0|3|2|1" />
         <i3dMapping id="attacherJointWIAx3" node="0>0|3|2|2" />
         <i3dMapping id="attacherJointU535" node="0>0|3|2|0|1" />
+        <i3dMapping id="attacherJointU2400" node="0>0|3|2|0|2" />
         <i3dMapping id="attacherJoint5thWheel" node="0>0|3|2|0|0" />
         <i3dMapping id="attacherJoint5thWheelVis" node="0>0|3|2|0|0|0" />
         <i3dMapping id="attacherJointHooklift" node="0>0|3|2|3" />

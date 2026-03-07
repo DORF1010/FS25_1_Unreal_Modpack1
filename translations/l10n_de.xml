@@ -2,6 +2,65 @@
 <l10n>
     <translationContributors>ChrisS, 82 Studios, Jos Modding</translationContributors>
     <texts>
+    <!--  Colors  -->	
+		<text name="colorHarvestMoonBlue" 			text="Erntemond-Blau" />
+        <text name="colorHarvestMoonSilver" 		text="Erntemond-Silber" />
+		<text name="colorCarbonFiber" 				text="Kohlefaser"/>
+		<text name="colorFrostbite" 				text="Frostbeulen" />
+		<text name="color_raceRed" 					text="JTM Rot"/>
+		<text name="color_bronze_fire" 				text="Bronze Feuer"/>		
+		<text name="color_alohaOrange" 				text="Maui-Orange"/>
+		<text name="color_claasYellow" 				text="Claas Gelb"/>	
+		<text name="color_barbadosYellow" 			text="Barbados Gelb"/>
+		
+		<text name="color_pineapple" 				text="Maui-Ananas"/>
+		<text name="color_slimeGreen" 				text="Schleimgrün"/>
+		<text name="color_alohaGreen" 				text="Maui-Grün"/>
+        <text name="colorToothpaste" 				text="Zahnpasta" />
+		<text name="color_fendtBlue" 				text="Fendt Blau Satin"/>
+        <text name="colorRyeBlue" 					text="Roggenblau" />
+		<text name="colorCsCyan" 					text="Cs-Cyan" />
+		<text name="color_alohaBlue1" 				text="Maui-Blau 1"/>
+		
+		<text name="color_richBlue1" 				text="Richard Blau"/>
+		<text name="color_alohaBlue2" 				text="Maui-Blau 2"/>
+		<text name="color_raceBlue1" 				text="JTM Blau 1"/>		
+		<text name="color_raceBlue2" 				text="JTM Blau 2"/>
+        <text name="colorNorthernWildBerry" 		text="Nördliche Waldbeere" />
+        <text name="colorRyePurple" 				text="Roggen-Violett" />
+		<text name="color_alohaPink" 				text="Maui-Rosa"/>		
+		<text name="color_tayPink" 					text="Tay-Rosa"/>		
+		<text name="color_raceMelon" 				text="JTM Melone"/>	
+
+		<text name="color_java" 					text="Java"/>		
+		<text name="color_espresso" 				text="Espresso"/>
+		<text name="color_dark_moon" 				text="Dunkler Mond"/>
+		<text name="color_raceSilver" 				text="JTM Silber"/>
+		<text name="color_pearl_white" 				text="Perle Weiß"/>
+		<text name="color_stainless_steel" 			text="Schulbusgelb Stahl"/>
+		<text name="color_diamondplate_1" 			text="Diamantplatte"/>
+		<text name="color_diamondplate_2" 			text="Diamantplatte Schwarz"/>
+        <text name="colorWood" 						text="Holz" />					
+
+		<text name="color_chromeRed" 				text="Chrom Rot"/>	
+		<text name="color_chromeOrange" 			text="Chrom Orange"/>				
+		<text name="color_chromeYellow" 			text="Chrom Gelb"/>
+		<text name="color_chromeGreen" 				text="Chrom Grün"/>
+		<text name="color_chromeTooth" 				text="Chrom Zahnpasta"/>
+		<text name="color_chromeBlue" 				text="Chrom Blau"/>
+		<text name="color_chromePurple" 			text="Chrom Violett"/>
+		<text name="color_chromePink" 				text="Chrom Rosa"/>
+		<text name="color_chrome_blackout_1" 		text="Schwarzchrom"/>		
+		<text name="color_copperfection_1" 			text="Copperfection 1" />
+		
+		<text name="color_neonRed"		 			text="Neonrot" />	
+		<text name="color_neonOrange"		 		text="Neonorange" />	
+		<text name="color_neonYellow"	 			text="Neongelb" />	
+		<text name="color_neonGreen"	 			text="Neongrün" />	
+		<text name="color_neonBlue"		 			text="Neonblau" />	
+		<text name="color_neonPurple"	 			text="Neon-Lila" />	
+		<text name="color_neonPink"		 			text="Neon-Rosa" />			
+
 	<!--  Configurations  -->
         <text name="configuration_frame" 			text="Rahmen" />
 		<text name="configuration_gridColor" 		text="Gitterfarbe" />
@@ -21,7 +80,8 @@
 		<text name="configuration_rearLights" 		text="Heckleuchten-Design"/>
 		<text name="configuration_rearUSLights" 	text="Heckleuchten-Design US"/>		
 		<text name="configuration_plow" 			text="Pflug"/>	
-		<text name="color_disc" 					text="Scheibe"/>		
+		<text name="color_disc" 					text="Scheibe"/>
+		<text name="configuration_workSpeed"		text="Arbeitsgeschwindigkeit" />		
 		
         <text name="configuration_windowTint" 		text="Fenstertönung" />
         <text name="configuration_med" 				text="Mittel" />			
@@ -41,7 +101,6 @@
 
 		<text name="configuration_capacity"		 	text="Kapazität" />
 		<text name="configuration_specialEdition" 	text="Sonderedition" />
-		<text name="configuration_special" 			text="Sonderedition" />
 		<text name="configuration_blink"			text="Blinken" />
 		<text name="configuration_rotate"			text="Rotieren" />	
 		<text name="configuration_unreal1"			text="Unrealistisch" />

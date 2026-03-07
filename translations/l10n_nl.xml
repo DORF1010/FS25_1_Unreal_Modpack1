@@ -2,6 +2,65 @@
 <l10n>
 	<translationContributors>ChrisS, 82 Studios, Jos Modding</translationContributors>
 	<texts>
+	<!--  Colors  -->
+		<text name="colorHarvestMoonBlue" 			text="Oogstmaanblauw"/>
+		<text name="colorFrostbite" 				text="Vriesbeet"/>
+		<text name="colorHarvestMoonSilver" 		text="Oogstmaan Zilver"/>
+		<text name="colorCarbonFiber" 				text="Koolstofvezel"/>
+		<text name="color_raceRed" 					text="JTM Rood"/>
+		<text name="color_bronze_fire" 				text="Bronsvuur"/>
+		<text name="color_alohaOrange" 				text="Maui Oranje"/>
+		<text name="color_claasYellow" 				text="Claas Geel"/>
+		<text name="color_barbadosYellow" 			text="Barbados Geel"/>
+		
+		<text name="color_pineapple" 				text="Maui Ananas"/>
+		<text name="color_slimeGreen" 				text="Slijmgroen"/>
+		<text name="color_alohaGreen" 				text="Maui Groen"/>
+		<text name="colorToothpaste" 				text="Tandpasta"/>
+		<text name="color_fendtBlue" 				text="Fendt Blauw Satijn"/>
+		<text name="colorRyeBlue" 					text="Roggeblauw"/>
+		<text name="colorCsCyan" 					text="Cs Cyaan"/>
+		<text name="color_alohaBlue1" 				text="Maui Blauw 1"/>
+		
+		<text name="color_richBlue1" 				text="Richard Blauw"/>
+		<text name="color_alohaBlue2" 				text="Maui Blauw 2"/>
+		<text name="color_raceBlue1" 				text="JTM Blauw"/>
+		<text name="color_raceBlue2" 				text="JTM Blauw 2"/>
+		<text name="colorNorthernWildBerry" 		text="Noordelijke Wilde Bes"/>
+		<text name="colorRyePurple" 				text="Roggepaars"/>
+		<text name="color_alohaPink" 				text="Maui Roze"/>
+		<text name="color_tayPink" 					text="Tay Roze"/>
+		<text name="color_raceMelon" 				text="JTM Meloen"/>
+		
+		<text name="color_java" 					text="Java"/>
+		<text name="color_espresso" 				text="Espresso"/>
+		<text name="color_dark_moon" 				text="Donkere Maan"/>
+		<text name="color_raceSilver" 				text="JTM Zilver"/>
+		<text name="color_pearl_white" 				text="Parelwit"/>
+		<text name="color_stainless_steel" 			text="Roestvrij Staal"/>
+		<text name="color_diamondplate_1" 			text="Diamantplaat"/>
+		<text name="color_diamondplate_2" 			text="Diamantplaat Zwart"/>
+		<text name="colorWood" 						text="Hout"/>
+		
+		<text name="color_chromeRed" 				text="Chroomrood"/>
+		<text name="color_chromeOrange" 			text="Chroomoranje"/>
+		<text name="color_chromeYellow" 			text="Chroomgeel"/>
+		<text name="color_chromeGreen" 				text="Chroomgroen"/>
+		<text name="color_chromeTooth" 				text="Chroom Tandpasta"/>
+		<text name="color_chromeBlue" 				text="Chroomblaauw"/>
+		<text name="color_chromePurple" 			text="Chroompaars"/>
+		<text name="color_chromePink" 				text="Chroomroze"/>
+		<text name="color_chrome_blackout_1" 		text="Chroom Zwart-out"/>
+		<text name="color_copperfection_1" 			text="Koperfectie"/>
+		
+		<text name="color_neonRed"		 			text="Neonrood" />	
+		<text name="color_neonOrange"		 		text="Neon oranje" />	
+		<text name="color_neonYellow"	 			text="Neon Geel" />	
+		<text name="color_neonGreen"	 			text="Neon groen" />	
+		<text name="color_neonBlue"		 			text="Neonblauw" />	
+		<text name="color_neonPurple"	 			text="Neon Paars" />	
+		<text name="color_neonPink"		 			text="Neon Roze" />			
+		
 	<!--  Configurations  -->
 		<text name="configuration_frame" 			text="Frame"/>
 		<text name="configuration_gridColor" 		text="Rasterkleur"/>
@@ -22,6 +81,7 @@
 		<text name="configuration_rearUSLights" 	text="Achterlichtontwerp US"/>
 		<text name="configuration_plow" 			text="Ploeg"/>	
 		<text name="color_disc" 					text="Schijf"/>		
+		<text name="configuration_workSpeed"		text="werksnelheid" />	
 		
 		<text name="configuration_windowTint" 		text="Raamtint"/>
 		<text name="configuration_med" 				text="Medium"/>
@@ -41,7 +101,6 @@
 		
 		<text name="configuration_capacity" 		text="Capaciteit"/>
 		<text name="configuration_specialEdition" 	text="Speciale Editie"/>
-		<text name="configuration_special" 			text="Speciale"/>
 		<text name="configuration_blink" 			text="Knipperen"/>
 		<text name="configuration_rotate" 			text="Draaien"/>
 		<text name="configuration_unreal1" 			text="Onrealistisch"/>

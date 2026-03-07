@@ -1509,7 +1509,7 @@
 		</design3Configuration>
 	</design3Configurations>
 	
-	<design4Configurations title="US Configuration">
+	<design4Configurations title="US">
 		<design4Configuration name="$l10n_configuration_valueNo">
 		<objectChange node="configurationUS" visibilityActive="false" visibilityInactive="true"/>
 		</design4Configuration>
@@ -1527,7 +1527,7 @@
 		</design4Configuration>
 	</design4Configurations>
 	
-	<design5Configurations title="EU Configuration">
+	<design5Configurations title="EU">
 		<design5Configuration name="$l10n_configuration_valueNo">
 			<objectChange node="configurationEU" visibilityActive="false" visibilityInactive="true"/>
 		</design5Configuration>
@@ -1589,6 +1589,12 @@
 		<material materialSlotName="cr11_metalPaintedBlack_01_mat"/>
 		<designColorConfiguration color="metalPaintedBlack"/>
 		<designColorConfiguration color="NEWHOLLAND_YELLOW1"/>
+		<designColorConfiguration color="LIZARD_OLIVE1" name="$l10n_configuration_valueCamouflage">
+            <material materialSlotName="cr11_metalPaintedBlack_01_mat">
+                <colorScale value="1 1 1"/>
+                <detail diffuse="$data/vehicles/newHolland/cr11/cr11Pattern_diffuse.png"/>
+            </material>
+		</designColorConfiguration>
 		<designColorConfiguration materialTemplateName="NEWHOLLAND_GOLD1"/>
 		<designColorConfiguration color="NEWHOLLAND_BLUE1"/>
 		<designColorConfiguration color="CASEIH_RED1"/>
@@ -1601,6 +1607,20 @@
 		<material materialSlotName="cr11_coloredScrewDecal_mat"/>
 		<material materialSlotName="cr11_coloredAlphaParts_mat"/>
 		<designColor2Configuration color="NEWHOLLAND_YELLOW1"/>
+		<designColor2Configuration color="LIZARD_OLIVE1" name="$l10n_configuration_valueCamouflage">
+            <material materialSlotName="cr11_chassis_mat">
+                <colorScale value="1 1 1"/>
+                <detail diffuse="$data/vehicles/newHolland/cr11/cr11Pattern_diffuse.png"/>
+            </material>
+            <material materialSlotName="cr11_coloredScrewDecal_mat">
+                <colorScale value="1 1 1"/>
+                <detail diffuse="$data/vehicles/newHolland/cr11/cr11Pattern_diffuse.png"/>
+            </material>
+            <material materialSlotName="cr11_coloredAlphaParts_mat">
+                <colorScale value="1 1 1"/>
+                <detail diffuse="$data/vehicles/newHolland/cr11/cr11Pattern_diffuse.png"/>
+            </material>
+		</designColor2Configuration>
 		<designColor2Configuration materialTemplateName="NEWHOLLAND_GOLD1"/>
 		<designColor2Configuration color="NEWHOLLAND_BLUE1"/>
 		<designColor2Configuration color="CASEIH_RED1"/>
@@ -1613,6 +1633,16 @@
 		<material materialSlotName="cr11_outsideShielding_mat"/>
 		<material materialSlotName="af11_shieldings_mat"/>
 		<designColor3Configuration color="NEWHOLLAND_YELLOW1"/>
+		<designColor3Configuration color="LIZARD_OLIVE1" name="$l10n_configuration_valueCamouflage">
+            <material materialSlotName="cr11_outsideShielding_mat">
+                <colorScale value="1 1 1"/>
+                <detail diffuse="$data/vehicles/newHolland/cr11/cr11Pattern_diffuse.png"/>
+            </material>
+            <material materialSlotName="af11_shieldings_mat">
+                <colorScale value="1 1 1"/>
+                <detail diffuse="$data/vehicles/newHolland/cr11/cr11Pattern_diffuse.png"/>
+            </material>
+		</designColor3Configuration>
 		<designColor3Configuration materialTemplateName="NEWHOLLAND_GOLD1"/>
 		<designColor3Configuration color="NEWHOLLAND_BLUE1"/>
 		<designColor3Configuration color="CASEIH_RED1"/>
@@ -1624,6 +1654,16 @@
 		<material materialSlotName="cr11_pipe_mat"/>
 		<designColor4Configuration color="metalPaintedBlack"/>
 		<designColor4Configuration color="NEWHOLLAND_YELLOW1"/>
+		<designColor4Configuration color="LIZARD_OLIVE1" name="$l10n_configuration_valueCamouflage">
+            <material materialSlotName="cr11_pipe_mat">
+                <colorScale value="1 1 1"/>
+                <detail diffuse="$data/vehicles/newHolland/cr11/cr11Pattern_diffuse.png"/>
+            </material>
+            <material materialSlotName="af11_shieldings_mat">
+                <colorScale value="1 1 1"/>
+                <detail diffuse="$data/vehicles/newHolland/cr11/cr11Pattern_diffuse.png"/>
+            </material>
+		</designColor4Configuration>
 		<designColor4Configuration materialTemplateName="NEWHOLLAND_GOLD1"/>
 		<designColor4Configuration color="NEWHOLLAND_BLUE1"/>
 		<designColor4Configuration color="CASEIH_RED1"/>
@@ -1634,6 +1674,12 @@
 		<material materialSlotName="cr11_stripe_mat"/>
 		<designColor5Configuration color="NEWHOLLAND_DARKBLUE1"/>
 		<designColor5Configuration color="NEWHOLLAND_YELLOW1"/>
+		<designColor5Configuration color="LIZARD_OLIVE1" name="$l10n_configuration_valueCamouflage">
+            <material materialSlotName="cr11_stripe_mat">
+                <colorScale value="1 1 1"/>
+                <detail diffuse="$data/vehicles/newHolland/cr11/cr11Pattern_diffuse.png"/>
+            </material>
+		</designColor5Configuration>
 		<designColor5Configuration materialTemplateName="NEWHOLLAND_GOLD1"/>
 		<designColor5Configuration color="metalPaintedBlack"/>
 		<designColor5Configuration color="CASEIH_RED1"/>
@@ -1660,6 +1706,16 @@
 		<rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
 		<rimColorConfiguration color="RIM_CONFIGURATION_BLACK"/>
 		<rimColorConfiguration color="NEWHOLLAND_BLUE1"/>
+		<rimColorConfiguration color="LIZARD_OLIVE1" name="$l10n_configuration_valueCamouflage">
+            <material materialSlotName="rim_inner_mat">
+                <colorScale value="1 1 1"/>
+                <detail diffuse="$data/vehicles/newHolland/cr11/cr11Pattern_diffuse.png"/>
+            </material>
+            <material materialSlotName="rim_outer_mat">
+                <colorScale value="1 1 1"/>
+                <detail diffuse="$data/vehicles/newHolland/cr11/cr11Pattern_diffuse.png"/>
+            </material>
+		</rimColorConfiguration>
 	</rimColorConfigurations>
 	
     <i3dMappings>
