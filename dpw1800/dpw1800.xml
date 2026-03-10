@@ -7,7 +7,7 @@
         <functions>
             <function>$l10n_function_baleTrailer</function>
         </functions>
-        <image>$data/vehicles/farmtech/dpw1800/store_dpw1800.png</image>
+        <image>dpw1800/store_dpw1800.png</image>
         <price>20000</price>
         <lifetime>6000</lifetime>
         <rotation>0</rotation>
@@ -27,14 +27,37 @@
         <typeDesc>$l10n_typeDesc_tipper</typeDesc>
         <filename>dpw1800/dpw1800.i3d</filename>
         <size width="2.65" length="12" height="3.1" lengthOffset="-0.05"/>
-        <components>
-            <component centerOfMass="0 0.7 -2" solverIterationCount="10" mass="1080" inertiaScale="1 1 8"/>
-            <component centerOfMass="0 0 -1" solverIterationCount="10" mass="500" inertiaScale="4 2 2"/>
-            <component centerOfMass="0 0 -1" solverIterationCount="10" mass="300" inertiaScale="2 2 6"/>
-            <joint component1="1" component2="2" node="componentJointFront" rotLimit="0 120 0" transLimit="0 0 0"/>
-            <joint component1="2" component2="3" node="componentJointDrawbar" rotLimit="0 0 0" transLimit="0 0 0"/>
-            <collisionPair component1="1" component2="3" enabled="false"/>
-        </components>
+        <componentConfigurations isYesNoOption="true">
+            <componentConfiguration numComponents="3" name="$l10n_configuration_valueDefault">
+                <component centerOfMass="0 0.7 -2" solverIterationCount="10" mass="1080" inertiaScale="1 1 8"/>
+				<component centerOfMass="0 0 -1" solverIterationCount="10" mass="500" inertiaScale="4 2 2"/>
+				<component centerOfMass="0 0 -1" solverIterationCount="10" mass="300" inertiaScale="2 2 6"/>
+				<joint component1="1" component2="2" node="componentJointFront" rotLimit="0 120 0" transLimit="0 0 0"/>
+				<joint component1="2" component2="3" node="componentJointDrawbar" rotLimit="0 0 0" transLimit="0 0 0"/>
+				<collisionPair component1="1" component2="3" enabled="false"/>
+				<shopOffset translation="0 0.5 0" rotation="0 0.044 0"/>
+				<objectChange node="0>0|7|0" visibilityActive="false" visibilityInactive="true"/> <!--support-->
+				<xmlOverwrites>
+					<set path="vehicle.animations.animation(0).part(1)#endTrans" value="0 -0.75 -1" />
+				</xmlOverwrites>
+            </componentConfiguration>
+            <componentConfiguration numComponents="1" name="5th %s" params="$l10n_configuration_attacherJoint">
+                <component centerOfMass="0 0.7 -2" solverIterationCount="10" mass="1080" inertiaScale="1 1 8"/>
+				<!--<component centerOfMass="0 0 -1" solverIterationCount="10" mass="500" inertiaScale="4 2 2"/>
+				<component centerOfMass="0 0 -1" solverIterationCount="10" mass="300" inertiaScale="2 2 6"/>-->
+				<!--<joint component1="1" component2="2" node="componentJointFront" rotLimit="0 120 0" transLimit="0 0 0"/>
+				<joint component1="2" component2="3" node="componentJointDrawbar" rotLimit="0 0 0" transLimit="0 0 0"/>
+				<collisionPair component1="1" component2="3" enabled="false"/>-->
+				<shopOffset translation="0 0.51 0" rotation="0 0.044 0"/>
+				<objectChange node="componentJointFront" rotationActive="0 90 0" rotationInactive="0 0 0"/>
+				<objectChange node="attacherJoint" translationActive="0 90 0" translationInactive="0 0.034 1.028"/>
+				<objectChange node="0>2|0" visibilityActive="false" visibilityInactive="true"/> <!--hose-->
+				<xmlOverwrites>
+					<remove path="vehicle.animations.animation(0).part(0)"/>
+					<set path="vehicle.animations.animation(0).part(0)#endRot" value="0 0 0" />
+				</xmlOverwrites>
+            </componentConfiguration>
+        </componentConfigurations>
         <schemaOverlay attacherJointPosition="0 0" name="IMPLEMENT"/>
         <mapHotspot type="TRAILER"/>
     </base>
@@ -132,61 +155,61 @@
                 </wheels>
             </wheelConfiguration>
             <wheelConfiguration name="$l10n_configuration_valueWheelNarrow" price="0" saveId="NARROW">
-                <wheels baseConfig="DEFAULT">
+                <wheels baseConfig="MEDIUM">
                     <wheel dimensions="275_70R22_5">
-						<physics yOffset="-0.1"/>
+						<physics/>
 					</wheel>
                     <wheel dimensions="275_70R22_5">
-						<physics yOffset="-0.1"/>
+						<physics/>
 					</wheel>
                     <wheel dimensions="275_70R22_5">
-						<physics yOffset="-0.1"/>
+						<physics/>
 					</wheel>
                     <wheel dimensions="275_70R22_5">
-						<physics yOffset="-0.1"/>
+						<physics/>
 					</wheel>
                     <wheel dimensions="275_70R22_5">
-						<physics yOffset="-0.1"/>
+						<physics/>
 					</wheel>
                     <wheel dimensions="275_70R22_5">
-						<physics yOffset="-0.1"/>
+						<physics/>
 					</wheel>
                 </wheels>
             </wheelConfiguration>
             <wheelConfiguration name="$l10n_configuration_valueTwinWheelsAll" saveId="TWIN_ALL">
-                <wheels baseConfig="DEFAULT">
+                <wheels baseConfig="MEDIUM">
                     <wheel dimensions="9_5R24 9_5__24 275_70R22_5">
-						<physics xOffset="-0.1" yOffset="-0.1"/>
+						<physics xOffset="-0.1"/>
                         <additionalWheel configId="dual" offset="0.08">
                             <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
                         </additionalWheel>
                     </wheel>
                     <wheel dimensions="9_5R24 9_5__24 275_70R22_5">
-						<physics xOffset="-0.1" yOffset="-0.1"/>
+						<physics xOffset="-0.1"/>
                         <additionalWheel configId="dual" offset="0.08">
                             <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.06 1.06"/>
                         </additionalWheel>
                     </wheel>
                     <wheel dimensions="9_5R24 9_5__24 275_70R22_5">
-						<physics xOffset="-0.1" yOffset="-0.1"/>
+						<physics xOffset="-0.1"/>
                         <additionalWheel configId="dual" offset="0.1">
                             <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.03 1.03"/>
                         </additionalWheel>
                     </wheel>
                     <wheel dimensions="9_5R24 9_5__24 275_70R22_5">
-						<physics xOffset="-0.1" yOffset="-0.1"/>
+						<physics xOffset="-0.1"/>
                         <additionalWheel configId="dual" offset="0.1">
                             <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.03 1.03"/>
                         </additionalWheel>
                     </wheel>
                     <wheel dimensions="9_5R24 9_5__24 275_70R22_5">
-						<physics xOffset="-0.1" yOffset="-0.1"/>
+						<physics xOffset="-0.1"/>
                         <additionalWheel configId="dual" offset="0.1">
                             <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.03 1.03"/>
                         </additionalWheel>
                     </wheel>
                     <wheel dimensions="9_5R24 9_5__24 275_70R22_5">
-						<physics xOffset="-0.1" yOffset="-0.1"/>
+						<physics xOffset="-0.1"/>
                         <additionalWheel configId="dual" offset="0.1">
                             <connector filename="$data/shared/wheels/rims/dual001_2.xml" scale="1 1.03 1.03"/>
                         </additionalWheel>
@@ -209,6 +232,7 @@
     <attachable>
         <inputAttacherJoints>
             <inputAttacherJoint node="attacherJoint" jointType="trailer" rootNode="dpw1800_drawbar_component3" attacherHeight="0.68" />
+            <inputAttacherJoint node="componentJointFront" jointType="semitrailer" attacherHeight="1.2" /> rootNode="dpw1800_main_component3"
         </inputAttacherJoints>
         <brakeForce force="0.6"/>
         <support animationName="lockDrawbarLimit" delayedOnAttach="false" detachAfterAnimation="false"/>
@@ -296,6 +320,7 @@
     <animations>
         <animation name="lockDrawbarLimit">
             <part componentJointIndex="2" startTime="0.0" endTime="0.1" startRotLimit="60 0 0" endRotLimit="0 0 0"/>
+            <part node="0>0|7|0|0" startTime="0" endTime="0.1" startTrans="0 -0.75 1" endTrans="0 -1.475 1" startRot="90 0 0" endRot="0 0 90"/>
         </animation>
     </animations>
 
@@ -308,34 +333,42 @@
         </movingParts>
     </cylindered>
 
-    <designConfigurations title="$l10n_configuration_extension" isYesNoOption="true">
-        <designConfiguration name="$l10n_configuration_valueNo">
+    <designConfigurations isYesNoOption="true">
+        <designConfiguration name="$l10n_configuration_valueDefault">
+            
+        </designConfiguration>
+        <designConfiguration name="5th wheel" isSelectable="false">
+            
+        </designConfiguration>
+    </designConfigurations>
+
+    <design2Configurations title="$l10n_configuration_extension" isYesNoOption="true">
+        <design2Configuration name="$l10n_configuration_valueNo">
             <objectChange node="barFront" visibilityActive="false" />
             <objectChange node="barBack" visibilityActive="false" />
             <objectChange node="colPart01" compoundChildActive="false" />
             <objectChange node="colPart02" compoundChildActive="false" />
             <objectChange node="colPart03" compoundChildActive="false" />
             <objectChange node="colPart04" compoundChildActive="false" />
-        </designConfiguration>
-        <designConfiguration name="$l10n_configuration_valueYes">
+        </design2Configuration>
+        <design2Configuration name="$l10n_configuration_valueYes">
             <objectChange node="barFront" visibilityActive="true" />
             <objectChange node="barBack" visibilityActive="true" />
             <objectChange node="colPart01" compoundChildActive="true" />
             <objectChange node="colPart02" compoundChildActive="true" />
             <objectChange node="colPart03" compoundChildActive="true" />
             <objectChange node="colPart04" compoundChildActive="true" />
-        </designConfiguration>
-    </designConfigurations>
+        </design2Configuration>
+    </design2Configurations>
 
-    <design2Configurations title="$l10n_configuration_frame" isYesNoOption="true">
-        <design2Configuration name="4x4">
+    <design3Configurations title="$l10n_configuration_frame" isYesNoOption="true">
+        <design3Configuration name="4x4">
             <objectChange node="0>0|0" translationActive="0 -1.596 -0.5"/>-->
             <objectChange node="wheelBackLeft"  visibilityActive="false" translationActive="0 0.453 -2.799"/>
             <objectChange node="wheelBackRight" visibilityActive="false" translationActive="0 0.453 -2.799"/>
-        </design2Configuration>
-        <design2Configuration name="6x6" isDefault="true">
-        </design2Configuration>
-    </design2Configurations>
+        </design3Configuration>
+        <design3Configuration name="6x6" isDefault="true"/>
+    </design3Configurations>
 
     <tensionBelts>
         <tensionBeltsConfigurations>

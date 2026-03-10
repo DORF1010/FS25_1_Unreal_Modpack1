@@ -46,7 +46,7 @@
 
 
   <Materials>
-    <Material name="dpw1800_chrome_mat" materialId="287" customShaderId="5">
+    <Material name="dpw1800_chrome_mat" materialId="5" customShaderId="5">
       <Texture fileId="2"/>
       <Normalmap fileId="3"/>
       <Glossmap fileId="4"/>
@@ -144,7 +144,7 @@
 
   <Scene>
     <Shape name="dpw1800_main_component1" shapeId="1" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="49" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="15">
-      <Shape name="dpw1800_vis" translation="0 1.596 0.000351" shapeId="2" clipDistance="300" nodeId="50" castsShadows="true" receiveShadows="true" skinBindNodeIds="50 91 207 212 214 217" materialIds="287,6,11,8,7">
+      <Shape name="dpw1800_vis" translation="0 1.596 0.000351" shapeId="2" clipDistance="300" nodeId="50" castsShadows="true" receiveShadows="true" skinBindNodeIds="50 91 207 212 214 217" materialIds="5,6,11,8,7">
         <TransformGroup name="wheels" translation="0 -1.596 -0.000351" nodeId="51">
           <TransformGroup name="wheelMiddleLeft" translation="0.906 0.453 -2.799" nodeId="52"/>
           <TransformGroup name="wheelMiddleRight" translation="-0.906 0.453 -2.799" nodeId="53"/>
@@ -246,40 +246,45 @@
         </TransformGroup>
         <TransformGroup name="componentJointFront" translation="-2e-05 -0.681603 3.41518" nodeId="199"/>
         <TransformGroup name="rootJoint" translation="0 -1.596 -0.000351" nodeId="200"/>
+        <TransformGroup name="other" nodeId="231">
+          <TransformGroup name="support" nodeId="238">
+            <Shape name="colPart01" shapeId="21" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="241" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="15"/>
+          </TransformGroup>
+        </TransformGroup>
       </Shape>
       <TransformGroup name="collisions" nodeId="201">
-        <Shape name="colPart" translation="0 0.841702 -5.5922" shapeId="21" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="202" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="15"/>
+        <Shape name="colPart" translation="0 0.841702 -5.5922" shapeId="22" compoundChild="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" density="0.001" nodeId="202" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="15"/>
       </TransformGroup>
       <TransformGroup name="skinnedMeshes" nodeId="203">
-        <Shape name="hoses" shapeId="22" clipDistance="300" nodeId="204" castsShadows="true" receiveShadows="true" skinBindNodeIds="226 200" materialIds="9"/>
+        <Shape name="hoses" shapeId="23" clipDistance="300" nodeId="204" castsShadows="true" receiveShadows="true" skinBindNodeIds="226 200" materialIds="9"/>
       </TransformGroup>
     </Shape>
-    <Shape name="dpw1800_axis_component2" translation="0 0.645445 3.46117" shapeId="23" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="205" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="15">
+    <Shape name="dpw1800_axis_component2" translation="0 0.645445 3.46117" shapeId="24" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="205" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="15">
       <TransformGroup name="componentJointDrawbar" translation="0 0.034152 0.495125" nodeId="206"/>
       <TransformGroup name="axis" translation="-2e-05 0.268953 -0.045647" clipDistance="300" nodeId="207">
-        <Shape name="sticker_decal" translation="0.221456 -0.126966 0.454028" shapeId="24" clipDistance="50" nodeId="208" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="12"/>
-        <Shape name="screws_decal2" translation="0.146448 -0.195575 -3.60013" shapeId="25" clipDistance="50" nodeId="209" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="10"/>
+        <Shape name="sticker_decal" translation="0.221456 -0.126966 0.454028" shapeId="25" clipDistance="50" nodeId="208" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="12"/>
+        <Shape name="screws_decal2" translation="0.146448 -0.195575 -3.60013" shapeId="26" clipDistance="50" nodeId="209" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="10"/>
       </TransformGroup>
       <TransformGroup name="wheelFrontLeft" translation="0.906 -0.192745 -0.053074" nodeId="210"/>
       <TransformGroup name="wheelFrontRight" translation="-0.906 -0.192745 -0.053074" nodeId="211"/>
       <TransformGroup name="springRightPart" translation="-0.30665 0.268802 0.466925" rotation="14.6582 -7.02293 0" clipDistance="300" nodeId="212">
-        <Shape name="springRight" translation="-5.8e-05 0.005004 0.316499" rotation="1.17078 0.0136 -0.003557" shapeId="26" clipDistance="140" nodeId="213" castsShadows="true" receiveShadows="true" materialIds="11"/>
+        <Shape name="springRight" translation="-5.8e-05 0.005004 0.316499" rotation="1.17078 0.0136 -0.003557" shapeId="27" clipDistance="140" nodeId="213" castsShadows="true" receiveShadows="true" materialIds="11"/>
       </TransformGroup>
       <TransformGroup name="springLeftPart" translation="0.30665 0.268802 0.466925" rotation="14.6582 7.02293 0" clipDistance="300" nodeId="214">
-        <Shape name="springLeft" translation="5.8e-05 0.005004 0.316499" rotation="1.17078 -0.0136 0.003557" shapeId="27" clipDistance="140" nodeId="215" castsShadows="true" receiveShadows="true" materialIds="11"/>
+        <Shape name="springLeft" translation="5.8e-05 0.005004 0.316499" rotation="1.17078 -0.0136 0.003557" shapeId="28" clipDistance="140" nodeId="215" castsShadows="true" receiveShadows="true" materialIds="11"/>
       </TransformGroup>
     </Shape>
-    <Shape name="dpw1800_drawbar_component3" translation="0 0.645445 4.92686" shapeId="28" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="216" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="15">
+    <Shape name="dpw1800_drawbar_component3" translation="0 0.645445 4.92686" shapeId="29" dynamic="true" compound="true" collisionFilterGroup="0x10004" collisionFilterMask="0xfe3ffb83" clipDistance="300" nodeId="216" castsShadows="true" receiveShadows="true" nonRenderable="true" materialIds="15">
       <TransformGroup name="drawbar" translation="0 0.034152 -0.970558" clipDistance="300" nodeId="217">
         <TransformGroup name="connectionHoses" translation="0 -0.679597 -3.9563" nodeId="218">
-          <Shape name="electric_detached" translation="0.061322 0.544174 4.97073" rotation="90 0 0" shapeId="29" clipDistance="100" nodeId="219" castsShadows="true" receiveShadows="true" materialIds="9"/>
-          <Shape name="airOut_detached" translation="-0.030119 0.578687 4.97073" rotation="90 0 0" shapeId="30" clipDistance="80" nodeId="220" castsShadows="true" receiveShadows="true" materialIds="9"/>
-          <Shape name="airIn_detached" translation="0.013053 0.578687 4.97073" rotation="90 0 0" shapeId="31" clipDistance="80" nodeId="221" castsShadows="true" receiveShadows="true" materialIds="9"/>
+          <Shape name="electric_detached" translation="0.061322 0.544174 4.97073" rotation="90 0 0" shapeId="30" clipDistance="100" nodeId="219" castsShadows="true" receiveShadows="true" materialIds="9"/>
+          <Shape name="airOut_detached" translation="-0.030119 0.578687 4.97073" rotation="90 0 0" shapeId="31" clipDistance="80" nodeId="220" castsShadows="true" receiveShadows="true" materialIds="9"/>
+          <Shape name="airIn_detached" translation="0.013053 0.578687 4.97073" rotation="90 0 0" shapeId="32" clipDistance="80" nodeId="221" castsShadows="true" receiveShadows="true" materialIds="9"/>
           <TransformGroup name="airOut" translation="-0.039657 0.719739 4.85477" nodeId="222"/>
           <TransformGroup name="airIn" translation="0.001795 0.719739 4.85477" nodeId="223"/>
           <TransformGroup name="electric" translation="0.048744 0.719708 4.85477" nodeId="224"/>
         </TransformGroup>
-        <Shape name="screws_decal1" translation="0.146427 0.039226 -4.1409" shapeId="32" clipDistance="20" nodeId="225" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="10"/>
+        <Shape name="screws_decal1" translation="0.146427 0.039226 -4.1409" shapeId="33" clipDistance="20" nodeId="225" castsShadows="false" receiveShadows="true" decalLayer="1" materialIds="10"/>
         <TransformGroup name="drawbarJoint" nodeId="226"/>
       </TransformGroup>
       <TransformGroup name="attacherJoint" translation="0 0.034 1.02804" rotation="0 90 0" nodeId="227"/>
