@@ -239,3 +239,9 @@ Added u2400 attacher to cvSeries
 
 Mar 8, 2026
 Added 5th wheel attacher to dpw1800
+
+Mar 10, 2026
+Started rework of bigM450
+	Working speed depends on motor config (standard is standard, plus is faster, and 5000 series is 50 km/h)
+	Added more wheel configs and sizes
+	Added color configs

@@ -3,24 +3,25 @@
     <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
 
     <storeData>
-        <name>BiG M 450 unreal</name>
+        <name>BiG M 450</name>
         <specs>
-            <power>5000</power>
-            <maxSpeed>100</maxSpeed>
-            <workingWidth>60</workingWidth>
+            <power>449 - 5000</power>
+            <maxSpeed>40 - 250</maxSpeed>
+            <workingWidth>9.95 - 50</workingWidth>
         </specs>
         <functions>
             <function>$l10n_function_mower</function>
         </functions>
-        <image>$data/vehicles/krone/bigM450/store_bigM450.png</image>
-        <price>1000</price>
-        <lifetime>6000</lifetime>
+        <image>bigM450/store_bigM450.png</image>
+        <price>400000</price>
+        <lifetime>600</lifetime>
         <rotation>0</rotation>
         <brand>KRONE</brand>
         <category>mowers</category>
+        <shopFoldingState>1</shopFoldingState>
         <shopTranslationOffset>0 -0.134 0</shopTranslationOffset>
         <shopRotationOffset>-0.099 0 0</shopRotationOffset>
-        <vertexBufferMemoryUsage>5232896</vertexBufferMemoryUsage>
+        <vertexBufferMemoryUsage>5228032</vertexBufferMemoryUsage>
         <indexBufferMemoryUsage>1864192</indexBufferMemoryUsage>
         <textureMemoryUsage>1769472</textureMemoryUsage>
         <instanceVertexBufferMemoryUsage>0</instanceVertexBufferMemoryUsage>
@@ -33,7 +34,7 @@
         <filename>bigM450/bigM450.i3d</filename>
         <sounds filename="$data/vehicles/krone/bigM450/sounds/bigM450.xml" volumeFactor="0.87"/>
         <size width="3.35" length="8.6" height="4.4"/>
-        <speedLimit value="50" />
+        <speedLimit value="25"/>
         <components>
             <component centerOfMass="0 1 -0.5" solverIterationCount="30" mass="7325" />
             <component centerOfMass="0 0 0" solverIterationCount="20" mass="3400" />
@@ -51,7 +52,7 @@
 
     <wheels>
         <wheelConfigurations>
-            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" saveId="DEFAULT" numDynamicConfigurations="1">
+            <wheelConfiguration name="$l10n_configuration_valueDefault" price="0" saveId="DEFAULT">
                 <wheels autoRotateBackSpeed="2">
                     <wheel dimensions="800_65R32" isLeft="true" hasTireTracks="true" hasParticles="true" >
                         <physics rotSpeed="0" restLoad="4.8" repr="wheelFrontLeft"  forcePointRatio="0.3" initialCompression="40" suspTravel="0.12" spring="90" damper="45" yOffset="0.015"/>
@@ -66,6 +67,44 @@
                     <wheel dimensions="600_65R28" isLeft="false" hasTireTracks="true" hasParticles="true">
                         <physics rotSpeed="1" restLoad="3.2" repr="axisBackRight" driveNode="wheelBackRight" forcePointRatio="0.3" initialCompression="40" suspTravel="0.12" spring="61" frictionScale="2.2" damper="30" yOffset="0.035"/>
                     </wheel>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueTwinWheelsFront" saveId="TWIN_FRONT">
+                <wheels baseConfig="DEFAULT">
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.17">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml"/>
+                            <innerRim filename="-"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel>
+                        <additionalWheel configId="dual" offset="0.17">
+                            <connector filename="$data/shared/wheels/rims/dual001_2.xml"/>
+                            <innerRim filename="-"/>
+                        </additionalWheel>
+                    </wheel>
+                    <wheel/>
+                    <wheel/>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelMedium" saveId="MEDIUM">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="600_65R42 710_72R32 650_65R38"/>
+                    <wheel dimensions="600_65R42 710_72R32 650_65R38"/>
+                    <wheel dimensions="600_65R28 600_65R28 600_65R28"/>
+                    <wheel dimensions="600_65R28 600_65R28 600_65R28"/>
+                </wheels>
+            </wheelConfiguration>
+            <wheelConfiguration name="$l10n_configuration_valueWheelBroad" saveId="BROAD">
+                <wheels baseConfig="DEFAULT">
+                    <wheel dimensions="1050_50R32">
+                        <physics xOffset="0.2"/>
+                    </wheel>
+                    <wheel dimensions="1050_50R32">
+                        <physics xOffset="0.2"/>
+                    </wheel>
+                    <wheel/>
+                    <wheel/>
                 </wheels>
             </wheelConfiguration>
         </wheelConfigurations>
@@ -190,7 +229,7 @@
     </licensePlates>
 
     <attacherJoints>
-        <attacherJoint node="trailerAttacherJointBack" jointType="trailer" lowerRotLimit="25 70 50" allowsJointLimitMovement="false" comboTime="1" canTurnOnImplement="true">
+        <attacherJoint node="trailerAttacherJointBack" jointType="trailer" lowerRotLimit="25 70 50" allowsJointLimitMovement="false" comboTime="1">
             <schema position="1 0" rotation="0" invertX="false" />
         </attacherJoint>
     </attacherJoints>
@@ -254,8 +293,36 @@
         </differentialConfigurations>
 
         <motorConfigurations>
-            <motorConfiguration price="0" hp="5000" consumerConfigurationIndex="1">
-                <motor torqueScale="20" minRpm="650" maxRpm="1000" maxForwardSpeed="250" maxBackwardSpeed="100" brakeForce="30" lowBrakeForceScale="0.1" lowBrakeForceSpeedLimit="0" ptoMotorRpmRatio="3" dampingRateScale="3.3" accelerationLimit="10">
+            <motorConfiguration name="BiG M 450" hp="449" price="0">
+                <motor torqueScale="2.527" minRpm="850" maxRpm="1650" maxForwardSpeed="43" maxBackwardSpeed="22" brakeForce="13.5" lowBrakeForceScale="0.1" dampingRateScale="3.9">
+                    <torque normRpm="0.45" torque="0.9"/>
+                    <torque normRpm="0.5" torque="0.97"/>
+                    <torque normRpm="0.59" torque="1"/>
+                    <torque normRpm="0.72" torque="1"/>
+                    <torque normRpm="0.86" torque="0.88"/>
+                    <torque normRpm="1" torque="0.72"/>
+                </motor>
+                <transmission minForwardGearRatio="12.4" maxForwardGearRatio="320" minBackwardGearRatio="24.4" maxBackwardGearRatio="320" name="$l10n_info_transmission_cvt"/>
+                <xmlOverwrites>
+                    <set path="vehicle.base.speedLimit#value" value="25" />
+                </xmlOverwrites>
+            </motorConfiguration>
+            <motorConfiguration name="BiG M 450 Plus" hp="450" price="0">
+                <motor torqueScale="2.527" minRpm="850" maxRpm="1650" maxForwardSpeed="50" maxBackwardSpeed="30" brakeForce="13.5" lowBrakeForceScale="0.1" dampingRateScale="3.9">
+                    <torque normRpm="0.45" torque="0.9"/>
+                    <torque normRpm="0.5" torque="0.97"/>
+                    <torque normRpm="0.59" torque="1"/>
+                    <torque normRpm="0.72" torque="1"/>
+                    <torque normRpm="0.86" torque="0.88"/>
+                    <torque normRpm="1" torque="0.72"/>
+                </motor>
+                <transmission minForwardGearRatio="12.4" maxForwardGearRatio="320" minBackwardGearRatio="24.4" maxBackwardGearRatio="320" name="$l10n_info_transmission_cvt"/>
+                <xmlOverwrites>
+                    <set path="vehicle.base.speedLimit#value" value="40" />
+                </xmlOverwrites>
+            </motorConfiguration>
+            <motorConfiguration name="BiG M 5000 Flat Map Edition" hp="5000">
+                <motor torqueScale="20" minRpm="650" maxRpm="1000" maxForwardSpeed="250" maxBackwardSpeed="70" brakeForce="30" lowBrakeForceScale="0.1" lowBrakeForceSpeedLimit="0" ptoMotorRpmRatio="3" dampingRateScale="3.3" accelerationLimit="10">
                     <torque normRpm="0.1" torque="2"/>
                     <torque normRpm="0.25" torque="10"/>
                     <torque normRpm="0.45" torque="20"/>
@@ -263,8 +330,10 @@
                     <torque normRpm="0.75" torque="60"/>
                     <torque normRpm="1" torque="100"/>
                 </motor>
-                
-				<transmission minForwardGearRatio="0.1" maxForwardGearRatio="100" minBackwardGearRatio="0.1" maxBackwardGearRatio="100" name="$l10n_info_transmission_cvt"/>
+                <transmission minForwardGearRatio="0.1" maxForwardGearRatio="100" minBackwardGearRatio="0.1" maxBackwardGearRatio="100" name="$l10n_info_transmission_cvt"/>
+                <xmlOverwrites>
+                    <set path="vehicle.base.speedLimit#value" value="50" />
+                </xmlOverwrites>
             </motorConfiguration>
         </motorConfigurations>
 
@@ -272,7 +341,7 @@
             <exhaustEffect node="exhaustParticle" filename="$data/effects/exhaust/exhaust.i3d" minRpmColor="0.9 0.9 0.9 0.1" maxRpmColor="0.9 0.9 0.9 0.4" minRpmScale="0.05" maxRpmScale="0.5" />
         </exhaustEffects>
 
-        <motorStartDuration>1100</motorStartDuration>
+        <motorStartDuration>2500</motorStartDuration>
 
         <dashboards>
             <dashboard displayType="NUMBER" valueType="rpm"   numbers="numbersRpm01"   precision="0" numberColor="SHARED_BLACK1" font="GENERIC" groups="MOTOR_ACTIVE"/>
@@ -797,12 +866,12 @@
         <fillUnitConfigurations>
             <fillUnitConfiguration>
                 <fillUnits>
-                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" fillTypes="diesel" capacity="1000" >
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" fillTypes="diesel" capacity="780" >
                         <dashboard displayType="NUMBER" valueType="fillLevelPct" numbers="numbersFuelPct" precision="0" groups="MOTOR_ACTIVE"/>
                         <dashboard displayType="ANIMATION" valueType="fillLevel" animName="fuelDisplay" groups="MOTOR_ACTIVE"/>
                         <exactFillRootNode node="exactFillRootNodeFuel"/>
                     </fillUnit>
-                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" showOnInfoHud="false" fillTypes="def" capacity="100" >
+                    <fillUnit unitTextOverride="$l10n_unit_literShort" showOnHud="false" showInShop="false" showOnInfoHud="false" fillTypes="def" capacity="80" >
                         <dashboard displayType="NUMBER" valueType="fillLevelPct" numbers="numbersDEFPct" precision="1" groups="MOTOR_ACTIVE"/>
                         <dashboard displayType="ANIMATION" valueType="fillLevel" animName="defDisplay" groups="MOTOR_ACTIVE"/>
                     </fillUnit>
@@ -826,7 +895,7 @@
 
     <ai>
         <agent frontWheelNodes="wheelBackLeft wheelBackRight"/>
-        <areaMarkers leftNode="leftWorkAreaWidth" rightNode="rightWorkAreaWidth" backNode="aiSizeMarkerBack"/>
+        <areaMarkers leftNode="aiMarkerLeft" rightNode="aiMarkerRight" backNode="aiMarkerBack"/>
         <sizeMarkers leftNode="aiSizeMarkerLeft" rightNode="aiSizeMarkerRight" backNode="aiSizeMarkerBack"/>
         <hasNoFullCoverageArea value="true"/>
         <collisionTrigger node="aiCollisionNode" width="10.5" height="4.2" length="8"/>
@@ -838,6 +907,92 @@
         <bendingNode minX="-1.9" maxX="2.15" minZ="-1.2" maxZ="1.1" yOffset="-0.2" node="bigm450_leftArm_component3"/>
         <bendingNode minX="-2.15" maxX="1.9" minZ="-1.2" maxZ="1.1" yOffset="-0.2" node="bigm450_rightArm_component4"/>
     </foliageBending>
+
+    <designConfigurations title="$l10n_configuration_workWidth">
+        <designConfiguration name="10MPH / 17KPH">
+        </designConfiguration>
+    </designConfigurations>        
+
+    <baseColorConfigurations useDefaultColors="true">
+        <material materialSlotName="KRONE_YELLOW1_02_mat"/>
+        <baseColorConfiguration materialTemplateName="KRONE_GREEN1"/>
+        <baseColorConfiguration materialTemplateName="KRONE_YELLOW1" isDefault="true"/>
+        <baseColorConfiguration materialTemplateName="KRONE_YELLOW2"/>
+        <baseColorConfiguration materialTemplateName="KRONE_BLUE5"/>
+        <baseColorConfiguration materialTemplateName="KRONE_RED1"/>
+        <baseColorConfiguration materialTemplateName="KRONE_YELLOW4"/>
+        <baseColorConfiguration materialTemplateName="KRONE_GREY"/>
+        <baseColorConfiguration materialTemplateName="KRONE_BLACK2"/>
+        <baseColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+    </baseColorConfigurations>
+
+    <designColorConfigurations title="$l10n_configuration_chassisColor" useDefaultColors="true">
+        <material materialSlotName="KRONE_GREEN1_01_mat"/>
+        <material materialSlotName="KRONE_GREEN1_03_mat"/>
+        <designColorConfiguration materialTemplateName="KRONE_GREEN1"/>
+        <designColorConfiguration materialTemplateName="KRONE_YELLOW1"/>
+        <designColorConfiguration materialTemplateName="KRONE_YELLOW2"/>
+        <designColorConfiguration materialTemplateName="KRONE_BLUE5"/>
+        <designColorConfiguration materialTemplateName="KRONE_RED1"/>
+        <designColorConfiguration materialTemplateName="KRONE_YELLOW4"/>
+        <designColorConfiguration materialTemplateName="KRONE_GREY"/>
+        <designColorConfiguration materialTemplateName="KRONE_BLACK2"/>
+        <designColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+    </designColorConfigurations>
+
+    <designColor2Configurations useDefaultColors="true">
+        <material materialSlotName="KRONE_GREEN1_mat_wing"/>
+        <designColor2Configuration materialTemplateName="KRONE_GREEN1"/>
+        <designColor2Configuration materialTemplateName="KRONE_YELLOW1"/>
+        <designColor2Configuration materialTemplateName="KRONE_YELLOW2"/>
+        <designColor2Configuration materialTemplateName="KRONE_BLUE5"/>
+        <designColor2Configuration materialTemplateName="KRONE_RED1"/>
+        <designColor2Configuration materialTemplateName="KRONE_YELLOW4"/>
+        <designColor2Configuration materialTemplateName="KRONE_GREY"/>
+        <designColor2Configuration materialTemplateName="KRONE_BLACK2"/>
+        <designColor2Configuration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+    </designColor2Configurations>
+
+    <designColor3Configurations useDefaultColors="true">
+        <material materialSlotName="KRONE_YELLOW1_mat_wing"/>
+        <material materialSlotName="KRONE_YELLOW1_mat_fabric"/>
+        <material materialSlotName="KRONE_YELLOW1_02_mat_fabric"/>
+        <designColor3Configuration materialTemplateName="KRONE_GREEN1"/>
+        <designColor3Configuration materialTemplateName="KRONE_YELLOW1" isDefault="true"/>
+        <designColor3Configuration materialTemplateName="KRONE_YELLOW2"/>
+        <designColor3Configuration materialTemplateName="KRONE_BLUE5"/>
+        <designColor3Configuration materialTemplateName="KRONE_RED1"/>
+        <designColor3Configuration materialTemplateName="KRONE_YELLOW4"/>
+        <designColor3Configuration materialTemplateName="KRONE_GREY"/>
+        <designColor3Configuration materialTemplateName="KRONE_BLACK2"/>
+        <designColor3Configuration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+    </designColor3Configurations>
+
+    <designColor4Configurations title="$l10n_configuration_coverColor" useDefaultColors="true">
+        <material materialSlotName="KRONE_GREEN1_02_mat"/>
+        <designColor4Configuration materialTemplateName="KRONE_GREEN1"/>
+        <designColor4Configuration materialTemplateName="KRONE_YELLOW1"/>
+        <designColor4Configuration materialTemplateName="KRONE_YELLOW2"/>
+        <designColor4Configuration materialTemplateName="KRONE_BLUE5"/>
+        <designColor4Configuration materialTemplateName="KRONE_RED1"/>
+        <designColor4Configuration materialTemplateName="KRONE_YELLOW4"/>
+        <designColor4Configuration materialTemplateName="KRONE_GREY"/>
+        <designColor4Configuration materialTemplateName="KRONE_BLACK2"/>
+        <designColor4Configuration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+    </designColor4Configurations>
+
+    <rimColorConfigurations useDefaultColors="true">
+        <rimColorConfiguration materialTemplateName="RIM_DEFAULT"/>
+        <rimColorConfiguration materialTemplateName="KRONE_GREEN1"/>
+        <rimColorConfiguration materialTemplateName="KRONE_YELLOW1"/>
+        <rimColorConfiguration materialTemplateName="KRONE_YELLOW2"/>
+        <rimColorConfiguration materialTemplateName="KRONE_BLUE5"/>
+        <rimColorConfiguration materialTemplateName="KRONE_RED1"/>
+        <rimColorConfiguration materialTemplateName="KRONE_YELLOW4"/>
+        <rimColorConfiguration materialTemplateName="KRONE_GREY"/>
+        <rimColorConfiguration materialTemplateName="KRONE_BLACK2"/>
+        <rimColorConfiguration materialTemplateName="RIM_CONFIGURATION_CHROME"/>
+    </rimColorConfigurations>
 
     <wearable wearDuration="480" workMultiplier="5" fieldMultiplier="2"/>
     <washable dirtDuration="90" washDuration="1" workMultiplier="4" fieldMultiplier="2"/>
